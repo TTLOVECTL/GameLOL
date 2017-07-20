@@ -1,14 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLOL", "Assembly-CSharp-Editor.csproj", "{EA092A12-45FC-DBBE-259A-7F2C976D9D1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-
+		{EA092A12-45FC-DBBE-259A-7F2C976D9D1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA092A12-45FC-DBBE-259A-7F2C976D9D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA092A12-45FC-DBBE-259A-7F2C976D9D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA092A12-45FC-DBBE-259A-7F2C976D9D1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
