@@ -27,7 +27,7 @@ public class ExportAssetBundles : MonoBehaviour
         BookElementHolder holder = ScriptableObject.CreateInstance<BookElementHolder>();
         //holder.attribute = ExcelReader.InitAttrtibute("Attribute.xlsx");
         holder.inscription = ExcelReader.IninInscription("Inscription.xlsx");
-        
+        //.x
         //InscriptionFactory.Instance.inscription;
         //foreach (Inscription ip in holder.inscription) {
         //    Debug.Log(ip.inscriptionAttribute.Count);

@@ -15,51 +15,392 @@ MonoBehaviour:
   - _inscriptionID: 1
     _inscriptionLevel: 5
     _inscriptionName: "\u601C\u60AF"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 1
     _inscriptionAttribute:
-    - _attributeValue: 0.01
+    - _attributeId: 9
+      _attributeName: "\u51B7\u5374\u7F29\u51CF"
+      _valueType: 1
+      _attributeValue: 0.01
   - _inscriptionID: 2
     _inscriptionLevel: 5
     _inscriptionName: "\u68A6\u9B47"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
     _inscriptionAttribute:
-    - _attributeValue: 4.2
-    - _attributeValue: 2.4
+    - _attributeId: 1
+      _attributeName: "\u6CD5\u672F\u653B\u51FB"
+      _valueType: 0
+      _attributeValue: 4.2
+    - _attributeId: 7
+      _attributeName: "\u6CD5\u672F\u7A7F\u900F"
+      _valueType: 0
+      _attributeValue: 2.4
   - _inscriptionID: 3
     _inscriptionLevel: 5
-    _inscriptionName: "\u5723\u4EBA"
+    _inscriptionName: "\u51F6\u5146"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
     _inscriptionAttribute:
-    - _attributeValue: 5.3
+    - _attributeId: 1
+      _attributeName: "\u6CD5\u672F\u653B\u51FB"
+      _valueType: 0
+      _attributeValue: 4.2
+    - _attributeId: 10
+      _attributeName: "\u653B\u51FB\u901F\u5EA6"
+      _valueType: 1
+      _attributeValue: 0.006
   - _inscriptionID: 4
     _inscriptionLevel: 5
-    _inscriptionName: "\u51F6\u5146"
+    _inscriptionName: "\u656C\u754F"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 1
     _inscriptionAttribute:
-    - _attributeValue: 4.2
-    - _attributeValue: 0.006
+    - _attributeId: 4
+      _attributeName: "\u7269\u7406\u9632\u5FA1"
+      _valueType: 0
+      _attributeValue: 5.9
+    - _attributeId: 5
+      _attributeName: "\u6CD5\u672F\u5438\u8840"
+      _valueType: 1
+      _attributeValue: 0.007
   - _inscriptionID: 5
     _inscriptionLevel: 5
-    _inscriptionName: "\u656C\u754F"
+    _inscriptionName: "\u5FC3\u773C"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 1
     _inscriptionAttribute:
-    - _attributeValue: 5.9
-    - _attributeValue: 0.007
+    - _attributeId: 7
+      _attributeName: "\u6CD5\u672F\u7A7F\u900F"
+      _valueType: 0
+      _attributeValue: 6.4
+    - _attributeId: 10
+      _attributeName: "\u653B\u51FB\u901F\u5EA6"
+      _valueType: 1
+      _attributeValue: 0.006
   - _inscriptionID: 6
     _inscriptionLevel: 5
-    _inscriptionName: "\u5FC3\u773C"
+    _inscriptionName: "\u732E\u796D"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 1
     _inscriptionAttribute:
-    - _attributeValue: 6.4
-    - _attributeValue: 0.006
+    - _attributeId: 1
+      _attributeName: "\u6CD5\u672F\u653B\u51FB"
+      _valueType: 0
+      _attributeValue: 2.4
+    - _attributeId: 9
+      _attributeName: "\u51B7\u5374\u7F29\u51CF"
+      _valueType: 1
+      _attributeValue: 0.007
   - _inscriptionID: 7
     _inscriptionLevel: 5
-    _inscriptionName: "\u732E\u796D"
+    _inscriptionName: "\u8F6E\u56DE"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 2
     _inscriptionAttribute:
-    - _attributeValue: 2.4
-    - _attributeValue: 0.007
+    - _attributeId: 1
+      _attributeName: "\u6CD5\u672F\u653B\u51FB"
+      _valueType: 0
+      _attributeValue: 2.4
+    - _attributeId: 5
+      _attributeName: "\u6CD5\u672F\u5438\u8840"
+      _valueType: 1
+      _attributeValue: 0.01
   - _inscriptionID: 8
     _inscriptionLevel: 5
-    _inscriptionName: "\u8F6E\u56DE"
+    _inscriptionName: "\u8D2A\u5A6A"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 2
     _inscriptionAttribute:
-    - _attributeValue: 2.4
-    - _attributeValue: 0.01
+    - _attributeId: 5
+      _attributeName: "\u6CD5\u672F\u5438\u8840"
+      _valueType: 1
+      _attributeValue: 0.016
   - _inscriptionID: 9
     _inscriptionLevel: 5
-    _inscriptionName: "\u8D2A\u5A6A"
+    _inscriptionName: "\u4F20\u627F"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
     _inscriptionAttribute:
-    - _attributeValue: 0.016
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _valueType: 0
+      _attributeValue: 3.2
+  - _inscriptionID: 10
+    _inscriptionLevel: 5
+    _inscriptionName: "\u5F02\u53D8"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
+    _inscriptionAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _valueType: 0
+      _attributeValue: 2
+    - _attributeId: 8
+      _attributeName: "\u7269\u7406\u7A7F\u900F"
+      _valueType: 0
+      _attributeValue: 3.6
+  - _inscriptionID: 11
+    _inscriptionLevel: 5
+    _inscriptionName: "\u7EB7\u4E89"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
+    _inscriptionAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _valueType: 0
+      _attributeValue: 2.5
+    - _attributeId: 6
+      _attributeName: "\u7269\u7406\u5438\u8840"
+      _valueType: 1
+      _attributeValue: 0.005
+  - _inscriptionID: 12
+    _inscriptionLevel: 5
+    _inscriptionName: "\u65E0\u53CC"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
+    _inscriptionAttribute:
+    - _attributeId: 12
+      _attributeName: "\u66B4\u51FB\u7387"
+      _valueType: 1
+      _attributeValue: 0.007
+    - _attributeId: 13
+      _attributeName: "\u66B4\u51FB\u6548\u679C"
+      _valueType: 1
+      _attributeValue: 0.036
+  - _inscriptionID: 13
+    _inscriptionLevel: 5
+    _inscriptionName: "\u5BBF\u547D"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
+    _inscriptionAttribute:
+    - _attributeId: 10
+      _attributeName: "\u653B\u51FB\u901F\u5EA6"
+      _valueType: 1
+      _attributeValue: 0.01
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _valueType: 0
+      _attributeValue: 33.7
+    - _attributeId: 4
+      _attributeName: "\u7269\u7406\u9632\u5FA1"
+      _valueType: 0
+      _attributeValue: 2.3
+  - _inscriptionID: 14
+    _inscriptionLevel: 5
+    _inscriptionName: "\u7978\u6E90"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
+    _inscriptionAttribute:
+    - _attributeId: 12
+      _attributeName: "\u66B4\u51FB\u7387"
+      _valueType: 1
+      _attributeValue: 0.016
+  - _inscriptionID: 15
+    _inscriptionLevel: 5
+    _inscriptionName: "\u7EA2\u6708"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
+    _inscriptionAttribute:
+    - _attributeId: 10
+      _attributeName: "\u653B\u51FB\u901F\u5EA6"
+      _valueType: 1
+      _attributeValue: 0.016
+    - _attributeId: 12
+      _attributeName: "\u66B4\u51FB\u7387"
+      _valueType: 1
+      _attributeValue: 0.005
+  - _inscriptionID: 16
+    _inscriptionLevel: 5
+    _inscriptionName: "\u957F\u751F"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 2
+    _inscriptionAttribute:
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _valueType: 0
+      _attributeValue: 75
+  - _inscriptionID: 17
+    _inscriptionLevel: 5
+    _inscriptionName: "\u593A\u8403"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 2
+    _inscriptionAttribute:
+    - _attributeId: 6
+      _attributeName: "\u7269\u7406\u5438\u8840"
+      _valueType: 1
+      _attributeValue: 0.016
+  - _inscriptionID: 18
+    _inscriptionLevel: 5
+    _inscriptionName: "\u517D\u75D5"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 2
+    _inscriptionAttribute:
+    - _attributeId: 12
+      _attributeName: "\u66B4\u51FB\u7387"
+      _valueType: 1
+      _attributeValue: 0.005
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _valueType: 0
+      _attributeValue: 60
+  - _inscriptionID: 19
+    _inscriptionLevel: 5
+    _inscriptionName: "\u51A5\u60F3"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 2
+    _inscriptionAttribute:
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _valueType: 0
+      _attributeValue: 60
+    - _attributeId: 14
+      _attributeName: "\u6BCF5\u79D2\u56DE\u8840"
+      _valueType: 0
+      _attributeValue: 4.5
+  - _inscriptionID: 20
+    _inscriptionLevel: 5
+    _inscriptionName: "\u7E41\u8363"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 2
+    _inscriptionAttribute:
+    - _attributeId: 6
+      _attributeName: "\u7269\u7406\u5438\u8840"
+      _valueType: 1
+      _attributeValue: 0.01
+    - _attributeId: 15
+      _attributeName: "\u79FB\u901F"
+      _valueType: 1
+      _attributeValue: 0.01
+  - _inscriptionID: 21
+    _inscriptionLevel: 5
+    _inscriptionName: "\u8C03\u548C"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 2
+    _inscriptionAttribute:
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _valueType: 0
+      _attributeValue: 45
+    - _attributeId: 14
+      _attributeName: "\u6BCF5\u79D2\u56DE\u8840"
+      _valueType: 0
+      _attributeValue: 5.2
+    - _attributeId: 15
+      _attributeName: "\u79FB\u901F"
+      _valueType: 1
+      _attributeValue: 0.004
+  - _inscriptionID: 22
+    _inscriptionLevel: 5
+    _inscriptionName: "\u9690\u533F"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 2
+    _inscriptionAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _valueType: 0
+      _attributeValue: 1.6
+    - _attributeId: 15
+      _attributeName: "\u79FB\u901F"
+      _valueType: 1
+      _attributeValue: 0.01
+  - _inscriptionID: 23
+    _inscriptionLevel: 5
+    _inscriptionName: "\u72E9\u730E"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 2
+    _inscriptionAttribute:
+    - _attributeId: 10
+      _attributeName: "\u653B\u51FB\u901F\u5EA6"
+      _valueType: 1
+      _attributeValue: 0.01
+    - _attributeId: 15
+      _attributeName: "\u79FB\u901F"
+      _valueType: 1
+      _attributeValue: 0.01
+  - _inscriptionID: 24
+    _inscriptionLevel: 5
+    _inscriptionName: "\u9738\u8005"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
+    _inscriptionAttribute:
+    - _attributeId: 4
+      _attributeName: "\u7269\u7406\u9632\u5FA1"
+      _valueType: 0
+      _attributeValue: 9
+  - _inscriptionID: 25
+    _inscriptionLevel: 5
+    _inscriptionName: "\u5747\u8861"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
+    _inscriptionAttribute:
+    - _attributeId: 4
+      _attributeName: "\u7269\u7406\u9632\u5FA1"
+      _valueType: 0
+      _attributeValue: 5
+    - _attributeId: 3
+      _attributeName: "\u6CD5\u672F\u9632\u5FA1"
+      _valueType: 0
+      _attributeValue: 5
+  - _inscriptionID: 26
+    _inscriptionLevel: 5
+    _inscriptionName: "\u865A\u7A7A"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
+    _inscriptionAttribute:
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _valueType: 0
+      _attributeValue: 37.5
+    - _attributeId: 9
+      _attributeName: "\u51B7\u5374\u7F29\u51CF"
+      _valueType: 1
+      _attributeValue: 0.006
+  - _inscriptionID: 27
+    _inscriptionLevel: 5
+    _inscriptionName: "\u7075\u5C71"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
+    _inscriptionAttribute:
+    - _attributeId: 3
+      _attributeName: "\u6CD5\u672F\u9632\u5FA1"
+      _valueType: 0
+      _attributeValue: 9
+  - _inscriptionID: 28
+    _inscriptionLevel: 5
+    _inscriptionName: "\u9E70\u773C"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
+    _inscriptionAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _valueType: 0
+      _attributeValue: 1.1
+    - _attributeId: 8
+      _attributeName: "\u7269\u7406\u7A7F\u900F"
+      _valueType: 0
+      _attributeValue: 6.4
+  - _inscriptionID: 29
+    _inscriptionLevel: 5
+    _inscriptionName: "\u56DE\u58F0"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
+    _inscriptionAttribute:
+    - _attributeId: 4
+      _attributeName: "\u7269\u7406\u9632\u5FA1"
+      _valueType: 0
+      _attributeValue: 2.7
+    - _attributeId: 3
+      _attributeName: "\u6CD5\u672F\u9632\u5FA1"
+      _valueType: 0
+      _attributeValue: 2.7
+  - _inscriptionID: 30
+    _inscriptionLevel: 5
+    _inscriptionName: "\u5723\u4EBA"
+    _inscriptionIcon: {fileID: 0}
+    _inscriptionColor: 0
+    _inscriptionAttribute:
+    - _attributeId: 1
+      _attributeName: "\u6CD5\u672F\u653B\u51FB"
+      _valueType: 0
+      _attributeValue: 5.3

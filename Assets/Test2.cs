@@ -9,8 +9,8 @@ public class Test2 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         readAsset();
-        //Init();
-        //InitFactory();
+        Init();
+        InitFactory();
 	}
 
     private void readAsset()

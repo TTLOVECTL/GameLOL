@@ -4,11 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
-<<<<<<< HEAD
-  productGUID: b428018cd91aa864bae0ddc076d527d6
-=======
-  productGUID: 6899a7b7af7d14d4a9c56d1d9b3a8434
->>>>>>> fde55267e4d35e89e5654320a92b7253cbb7f9ac
+  productGUID: 2b429496bb9119844aa6f8ac1fb06d44
   AndroidProfiler: 0
   defaultScreenOrientation: 4
   targetDevice: 2
@@ -505,11 +501,7 @@ PlayerSettings:
   scriptingBackend: {}
   incrementalIl2cppBuild: {}
   additionalIl2CppArgs: 
-<<<<<<< HEAD
-  scriptingRuntimeVersion: 0
-=======
   scriptingRuntimeVersion: 1
->>>>>>> fde55267e4d35e89e5654320a92b7253cbb7f9ac
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
@@ -591,18 +583,12 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled:
-    UNet: 1
+  cloudServicesEnabled: {}
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
-<<<<<<< HEAD
-  cloudProjectId: 9195c0e3-d130-46b9-b025-196d3ed9ce87
-  projectName: GameLOL
-=======
-  cloudProjectId: 5aae0c50-6e4f-46e6-bfe0-d5c3e8dc15b6
-  projectName: GameLOL (1)
->>>>>>> fde55267e4d35e89e5654320a92b7253cbb7f9ac
-  organizationId: ttlovectl
+  apiCompatibilityLevel: 3
+  cloudProjectId: 
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

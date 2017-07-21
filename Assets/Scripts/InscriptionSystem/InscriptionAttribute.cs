@@ -11,11 +11,11 @@ namespace InscriptionSystem
     /// </summary>
     public class InscriptionAttribute
     {
-        private  int _attributeId;
+        public  int _attributeId;
 
-        private   string _attributeName;
+        public   string _attributeName;
 
-        private AttributeValue _valueType;
+        public AttributeValue _valueType;
 
         public  float _attributeValue;
 

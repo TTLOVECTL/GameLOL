@@ -10,15 +10,15 @@ namespace InscriptionSystem
     public class Inscription
     {
 
-        public int _inscriptionID;
+        public  int _inscriptionID;
 
-        public int _inscriptionLevel;
+        public  int _inscriptionLevel;
 
         public string _inscriptionName;
 
-        private Sprite _inscriptionIcon;
+        public Sprite _inscriptionIcon;
 
-        private InscriptionColor _inscriptionColor;
+        public InscriptionColor _inscriptionColor;
 
         public  List<InscriptionAttribute> _inscriptionAttribute;
 

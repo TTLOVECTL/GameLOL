@@ -1,12 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-<<<<<<< HEAD
-namespace HeroSystom
-=======
+
 
 namespace HeroSystem
->>>>>>> fde55267e4d35e89e5654320a92b7253cbb7f9ac
 {
     /// <summary>
     /// 人物角色的攻击属性

@@ -34,6 +34,7 @@ public class ExcelReader {
             //inscription.inscriptionIcon = int.Parse(collect[i][4].ToString());
             for (int j = 5; collect[i][j].ToString() != ""; j = j + 2)
             {
+                //Debug.Log(collect[i][j].ToString());
                 InscriptionAttribute a = new InscriptionAttribute();
                 a.attributeId = int.Parse(collect[i][j].ToString());
                 a.attributeName = b[a.attributeId];
