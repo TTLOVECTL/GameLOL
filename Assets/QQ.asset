@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c55c27518d69574e8c1537d8e9763eb, type: 3}
+  m_Name: QQ
+  m_EditorClassIdentifier: 
+  inscription:
+  - _inscriptionID: 1
+    _inscriptionLevel: 5
+    _inscriptionName: "\u601C\u60AF"
+    _inscriptionAttribute:
+    - _attributeValue: 0.01
+  - _inscriptionID: 2
+    _inscriptionLevel: 5
+    _inscriptionName: "\u68A6\u9B47"
+    _inscriptionAttribute:
+    - _attributeValue: 4.2
+    - _attributeValue: 2.4
+  - _inscriptionID: 3
+    _inscriptionLevel: 5
+    _inscriptionName: "\u5723\u4EBA"
+    _inscriptionAttribute:
+    - _attributeValue: 5.3
+  - _inscriptionID: 4
+    _inscriptionLevel: 5
+    _inscriptionName: "\u51F6\u5146"
+    _inscriptionAttribute:
+    - _attributeValue: 4.2
+    - _attributeValue: 0.006
+  - _inscriptionID: 5
+    _inscriptionLevel: 5
+    _inscriptionName: "\u656C\u754F"
+    _inscriptionAttribute:
+    - _attributeValue: 5.9
+    - _attributeValue: 0.007
+  - _inscriptionID: 6
+    _inscriptionLevel: 5
+    _inscriptionName: "\u5FC3\u773C"
+    _inscriptionAttribute:
+    - _attributeValue: 6.4
+    - _attributeValue: 0.006
+  - _inscriptionID: 7
+    _inscriptionLevel: 5
+    _inscriptionName: "\u732E\u796D"
+    _inscriptionAttribute:
+    - _attributeValue: 2.4
+    - _attributeValue: 0.007
+  - _inscriptionID: 8
+    _inscriptionLevel: 5
+    _inscriptionName: "\u8F6E\u56DE"
+    _inscriptionAttribute:
+    - _attributeValue: 2.4
+    - _attributeValue: 0.01
+  - _inscriptionID: 9
+    _inscriptionLevel: 5
+    _inscriptionName: "\u8D2A\u5A6A"
+    _inscriptionAttribute:
+    - _attributeValue: 0.016
