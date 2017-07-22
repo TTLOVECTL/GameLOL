@@ -16,6 +16,10 @@ namespace EquipmentSystem {
         public string equipmentName;
 
         /// <summary>
+        /// 装备分类
+        /// </summary>
+        public SearchType seaechType;
+        /// <summary>
         /// 装备价格
         /// </summary>
         public int equipmentPrice;
