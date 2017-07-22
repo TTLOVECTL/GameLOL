@@ -13,4 +13,14 @@ namespace EquipmentSystem {
         PASSIVE,
         INITIATIVE
     }
+
+    public enum SearchType
+    {
+        ATTACK,
+        MEGIC,
+        DEFENSE,
+        MOVE,
+        DAYE,
+        FUZHU
+    }
 }
