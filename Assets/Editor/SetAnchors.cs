@@ -20,6 +20,23 @@ public class SetAnchors : MonoBehaviour {
         t.offsetMin = t.offsetMax = new Vector2(0, 0);
     }
 
+      [MenuItem("UGUI Tools/Anchors to Corners22 %Q")]
+    static void Abs() {
+        RectTransform t = Selection.activeTransform as RectTransform;
+        RectTransform pt = Selection.activeTransform.parent as RectTransform;
+        float length=t.rect.height;
+        if (t == null || pt == null)
+            return;
+
+        t.anchorMin = new Vector2(t.anchorMin.x + t.offsetMin.x / pt.rect.width, t.anchorMin.y + t.offsetMin.y / pt.rect.height);
+        t.anchorMax = new Vector2(t.anchorMax.x + t.offsetMax.x / pt.rect.width, t.anchorMax.y + t.offsetMax.y / pt.rect.height);
+
+        t.offsetMin = t.offsetMax = new Vector2(0, 0);
+        t.anchorMin = new Vector2(t.anchorMin.x,t.anchorMax.y);
+        t.offsetMax = new Vector2(0,0);
+        t.offsetMin = new Vector2(0, -length);
+    }
+
     [MenuItem("UGUI Tools/Corners to Anchors %]")]
     static void CornersToAnchors()
     {
@@ -141,18 +158,4 @@ public class SetAnchors : MonoBehaviour {
         }
     }
 
-
-    [MenuItem("UGUI Tools/Mirror Vertically Around Parent Center %Q")]
-    static void setUP() {
-        RectTransform t = Selection.activeTransform as RectTransform;
-        RectTransform pt = Selection.activeTransform.parent as RectTransform;
-
-        if (t == null || pt == null)
-            return;
-        t.anchoredPosition = new Vector2(0, 1);
-        //t.anchorMin = new Vector2(t.anchorMin.x + t.offsetMin.x / pt.rect.width, t.anchorMin.y + t.offsetMin.y / pt.rect.height);
-        //t.anchorMax = new Vector2(t.anchorMax.x + t.offsetMax.x / pt.rect.width, t.anchorMax.y + t.offsetMax.y / pt.rect.height);
-
-        //t.offsetMin = t.offsetMax = new Vector2(0, 0);
-    }
 }

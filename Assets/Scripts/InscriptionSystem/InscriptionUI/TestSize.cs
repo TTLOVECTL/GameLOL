@@ -6,8 +6,10 @@ public class TestSize : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Debug.Log(GetComponent<RectTransform>().rect);
-        GetComponent<RectTransform>().sizeDelta = new Vector3(0,1000);
+        Debug.Log(GetComponent<RectTransform>().sizeDelta);
+        Debug.Log(GetComponent<RectTransform>().localPosition);
+
+        Debug.Log(GetComponent<RectTransform>().rect.size);
 	}
 	
 	// Update is called once per frame

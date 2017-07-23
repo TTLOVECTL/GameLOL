@@ -21,6 +21,12 @@ namespace InscriptionSystem
 
         private float buttonwidth;
 
+        private float rectWidth;
+
+        private float rectHeight;
+
+        private float buttonheight;
+
         void Start()
         {
             InscriptionHolder ceh = AssetDatabase.LoadAssetAtPath<InscriptionHolder>("Assets/Resources/Inscription.asset");
@@ -30,9 +36,15 @@ namespace InscriptionSystem
             }
             _inscriptionList = ceh.inscription;
             contentTransform = contentObj.GetComponent<RectTransform>();
-            buttonwidth = (GetComponent<RectTransform>().rect.width - 40) / 3;
+
+            rectWidth = GetComponent<RectTransform>().rect.width;
+            rectHeight = GetComponent<RectTransform>().rect.height;
+            buttonwidth = (rectWidth- 4) / 3;
+            buttonheight = buttonwidth / 2;
+
             ChooseDeal();
         }
+
         void Update()
         {
 
@@ -55,15 +67,30 @@ namespace InscriptionSystem
             {
                 number = resultList.Count / 3 + 1;
             }
-            Debug.Log(buttonwidth);
-            Debug.Log(number);
-            float height = number * buttonwidth / 2 + (number + 1) * 10;
-            Debug.Log(height);
+            float height = number*buttonheight+number;
+            if (height < rectHeight) {
+                height = rectHeight;
+            }
             contentTransform.sizeDelta = new Vector2(0, height);
-            GameObject ga = Instantiate(instance);
-            ga.GetComponent<RectTransform>().sizeDelta = new Vector2(buttonwidth,buttonwidth/2);
-            ga.GetComponent<RectTransform>().localPosition = new Vector2(-buttonwidth - 10, 0);
-            ga.transform.SetParent(contentObj.transform);
+            float y = -(buttonwidth / 4 + 1);
+            int count = 0;
+            for (int i = 0; i < number; i++)
+            {
+                float x = -(buttonwidth +1);
+                for (int j = 0; j < 3; j++)
+                {
+                    count++;
+                    if (count <= resultList.Count)
+                    {
+                        GameObject ga = Instantiate(instance);
+                        ga.GetComponent<RectTransform>().SetParent(contentObj.transform);
+                        ga.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth - buttonwidth), buttonheight);
+                        ga.GetComponent<RectTransform>().localPosition = new Vector2(j * (buttonwidth +1) + x, -i * (buttonheight + 1) + y);
+                    }
+                }
+            }
+            
+            //ga.transform.SetParent(contentObj.transform);
            
 
 
@@ -103,14 +130,30 @@ namespace InscriptionSystem
             return false;
         }
 
-
-        private void SetAnchors(RectTransform t) {
+        private void SetAnchorsToCorner(RectTransform t) {
             RectTransform pt = t.parent as RectTransform;
             if (t == null || pt == null)
                 return;
             t.anchorMin = new Vector2(t.anchorMin.x + t.offsetMin.x / pt.rect.width, t.anchorMin.y + t.offsetMin.y / pt.rect.height);
             t.anchorMax = new Vector2(t.anchorMax.x + t.offsetMax.x / pt.rect.width, t.anchorMax.y + t.offsetMax.y / pt.rect.height);
             t.offsetMin = t.offsetMax = new Vector2(0, 0);
+        }
+
+        private void SetAnschorToUp(RectTransform t)
+        {
+            RectTransform pt = t.parent as RectTransform;
+            float length = t.rect.height;
+            Debug.Log(length);
+            if (t == null || pt == null)
+                return;
+
+            t.anchorMin = new Vector2(t.anchorMin.x + t.offsetMin.x / pt.rect.width, t.anchorMin.y + t.offsetMin.y / pt.rect.height);
+            t.anchorMax = new Vector2(t.anchorMax.x + t.offsetMax.x / pt.rect.width, t.anchorMax.y + t.offsetMax.y / pt.rect.height);
+
+            t.offsetMin = t.offsetMax = new Vector2(0, 0);
+            //t.anchorMin = new Vector2(t.anchorMin.x, t.anchorMax.y);
+            //t.offsetMax = new Vector2(0, 0);
+            //t.offsetMin = new Vector2(0, -length);
         }
     }
 }
