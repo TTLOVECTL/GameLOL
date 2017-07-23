@@ -10,27 +10,27 @@ namespace EquipmentSystem
     {
         public override void AddChildEquipment(BaseEquipment baseEquipment)
         {
-            throw new NotImplementedException();
+            //Debug.Log(1);
         }
 
         public override List<BaseEquipment> GetChildEquipmet()
         {
-            throw new NotImplementedException();
+            return new List<BaseEquipment>();
         }
 
         public override void RemoveChildEquipment(BaseEquipment baseEquipment)
         {
-            throw new NotImplementedException();
+            //Debug.Log(2);
         }
 
         public override void SetInitiativeSkill()
         {
-            throw new NotImplementedException();
+            //Debug.Log(2);
         }
 
         public override void SetPassiveSkill()
         {
-            throw new NotImplementedException();
+            //Debug.Log(2);
         }
 
     }

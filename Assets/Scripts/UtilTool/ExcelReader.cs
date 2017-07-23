@@ -78,7 +78,7 @@ public class ExcelReader {
         {
             if (collect[i][1].ToString() == "") continue;
             BaseEquipment be;
-            if (collect[i][4].ToString() == "0")
+            if (collect[i][6].ToString() == "0")
             {
                 be = new EquipmentLeaf();
             }
@@ -99,13 +99,17 @@ public class ExcelReader {
             }
             be.equipmentType = (EqunipmentType)int.Parse(collect[i][6].ToString());
             List<EquipmentSkill> eqlist = new List<EquipmentSkill>();
-            string[] b = collect[i][6].ToString().Split('/');     
+
+            string[] b = collect[i][7].ToString().Split('/');     
             for (int j = 0; j < b.Length; j++)
             {
                 int num = int.Parse(b[j]);
                 if (num != 0)
                 {
-                    eqlist.Add(skillList[num]);
+                    if (skillList.ContainsKey(num))
+                    {
+                        eqlist.Add(skillList[num]);
+                    }
                 }
             }
             string[] c = collect[i][8].ToString().Split('/');
@@ -114,12 +118,27 @@ public class ExcelReader {
                 int num = int.Parse(c[j]);
                 if (num != 0)
                 {
-                    eqlist.Add(skillList[num]);
+                    if (skillList.ContainsKey(num))
+                    {
+                        eqlist.Add(skillList[num]);
+                    }
                 }
             }
             be.equipmentSkill = eqlist;
+
+            List<int> numList = new List<int>();
+            string[] k = collect[i][9].ToString().Split('/');
+            if (!k[0].Equals("0"))
+            {
+                for (int j = 0; j < k.Length; j++)
+                {
+                    numList.Add(int.Parse(k[j]));
+                }
+            }
+            be.parientEquipentList = numList;
+
             List<EquipmentAttribute> aList = new List<EquipmentAttribute>();
-            for (int j = 9; collect[i][j].ToString() != ""; j = j + 2)
+            for (int j = 10; collect[i][j].ToString() != ""; j = j + 2)
             {
                 EquipmentAttribute eqa = new EquipmentAttribute();
                 eqa._attributeId = int.Parse(collect[i][j].ToString());
@@ -139,6 +158,8 @@ public class ExcelReader {
             beList.Add(be.equipmentId,be);
         }
 
+       
+
         List<BaseEquipment> tole = new List<BaseEquipment>();
         foreach (KeyValuePair<int, BaseEquipment> item in beList) {
             tole.Add(item.Value);
@@ -153,11 +174,12 @@ public class ExcelReader {
         for (int i = 1; i < collect.Count; i++)
         {
             if (collect[i][1].ToString() == "") continue;
-
             EquipmentSkill eq = new EquipmentSkill();
             eq.skillID = int.Parse(collect[i][0].ToString());
-            eq.skillName = collect[i][1].ToString();
-            eq.skillDescription= collect[i][1].ToString();
+            eq.skillType = (SkillType)int.Parse(collect[i][1].ToString());
+            eq.skillName = collect[i][2].ToString();
+            //Debug.Log(eq.skillName);
+            eq.skillDescription= collect[i][3].ToString();
             a.Add(eq.skillID, eq);
         }
         return a;

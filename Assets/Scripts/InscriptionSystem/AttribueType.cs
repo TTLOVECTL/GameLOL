@@ -2,13 +2,15 @@
 
 namespace InscriptionSystem
 {
-    public class AttribueType
+    public enum AttribueType
     {
-        public static int MAGIC_ATTACK = 1;         //法术攻击
-        public static int MAGIC_PENETRATION = 2;    //法术穿透
-        public static int COLL_REDUCE = 3;          //冷却缩减
-        public static int PHYSICAL_DEFENSE = 4;     //物理防御
-        public static int MAGIC_VAMPIRE = 5;        //法术吸血
-        public static int ATTACK_SPEED = 6;         //攻击速度
+        ATTACK,            //攻击
+        PENETRATION,       //穿透
+        Tool,                //功能
+        DEFENSE,            //防御
+        VAMPIRE,             //吸血
+        SPEED,              //攻速
+        BAOJI,                //暴击
+        ALL                  //全部
     }
 }

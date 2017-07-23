@@ -13,6 +13,11 @@ namespace EquipmentSystem
         public int skillID;
 
         /// <summary>
+        /// 武器技能类型
+        /// </summary>
+        public SkillType skillType;
+
+        /// <summary>
         /// 武器技能名称
         /// </summary>
         public string skillName;

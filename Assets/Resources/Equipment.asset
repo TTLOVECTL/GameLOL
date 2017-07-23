@@ -1,0 +1,2887 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d7b1ad778f7614786abe2258cdcbb8, type: 3}
+  m_Name: Equipment
+  m_EditorClassIdentifier: 
+  description: "\u5B58\u50A8\u6240\u6709\u7684\u88C5\u5907\u4FE1\u606F"
+  equipmentLeaf:
+  - equipmentId: 1
+    equipmentName: "\u5438\u8840\u4E4B\u9570"
+    seaechType: 0
+    equipmentPrice: 410
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 10
+    - _attributeId: 6
+      _attributeName: "\u7269\u7406\u5438\u8840"
+      _attributeType: 1
+      _attributeValue: 0.08
+    equipmentSkill: []
+    parientEquipentList: 36000000
+  - equipmentId: 2
+    equipmentName: "\u94C1\u5251"
+    seaechType: 0
+    equipmentPrice: 250
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 20
+    equipmentSkill: []
+    parientEquipentList: 13000000140000001700000018000000190000001c000000
+  - equipmentId: 3
+    equipmentName: "\u5315\u9996"
+    seaechType: 0
+    equipmentPrice: 290
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 10
+      _attributeName: "\u653B\u51FB\u901F\u5EA6"
+      _attributeType: 1
+      _attributeValue: 0.1
+    equipmentSkill: []
+    parientEquipentList: 150000001b0000003b0000003d000000
+  - equipmentId: 4
+    equipmentName: "\u640F\u51FB\u62F3\u5957"
+    seaechType: 0
+    equipmentPrice: 320
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 12
+      _attributeName: "\u66B4\u51FB\u7387"
+      _attributeType: 1
+      _attributeValue: 0.08
+    equipmentSkill: []
+    parientEquipentList: 1500000039000000
+  - equipmentId: 5
+    equipmentName: "\u5492\u7B26\u5178\u7C4D"
+    seaechType: 1
+    equipmentPrice: 300
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 1
+      _attributeName: "\u6CD5\u672F\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 40
+    equipmentSkill: []
+    parientEquipentList: 1d000000
+  - equipmentId: 6
+    equipmentName: "\u84DD\u5B9D\u77F3"
+    seaechType: 1
+    equipmentPrice: 220
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 16
+      _attributeName: "\u6700\u5927\u6CD5\u529B"
+      _attributeType: 0
+      _attributeValue: 300
+    equipmentSkill: []
+    parientEquipentList: 
+  - equipmentId: 7
+    equipmentName: "\u70BC\u91D1\u62A4\u80A4"
+    seaechType: 1
+    equipmentPrice: 120
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 17
+      _attributeName: "\u6BCF5\u79D2\u56DE\u84DD"
+      _attributeType: 0
+      _attributeValue: 10
+    equipmentSkill: []
+    parientEquipentList: 
+  - equipmentId: 8
+    equipmentName: "\u5723\u8005\u6CD5\u5178"
+    seaechType: 1
+    equipmentPrice: 500
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 1
+      _attributeName: "\u6CD5\u672F\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 20
+    - _attributeId: 9
+      _attributeName: "\u51B7\u5374\u7F29\u51CF"
+      _attributeType: 1
+      _attributeValue: 0.08
+    equipmentSkill: []
+    parientEquipentList: 
+  - equipmentId: 9
+    equipmentName: "\u72E9\u730E\u5BBD\u5203"
+    seaechType: 4
+    equipmentPrice: 250
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute: []
+    equipmentSkill:
+    - skillID: 1
+      skillType: 0
+      skillName: "\u6253\u91CE"
+      skillDescription: "\u589E\u52A020%\u5BF9\u91CE\u602A\u7684\u4F24\u5BB3\uFF0C\u51FB\u6740\u91CE\u602A\u83B7\u5F97\u7ECF\u9A8C\u63D0\u534720%\u3002"
+    parientEquipentList: 
+  - equipmentId: 10
+    equipmentName: "\u795E\u901F\u4E4B\u9774"
+    seaechType: 3
+    equipmentPrice: 250
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute: []
+    equipmentSkill:
+    - skillID: 2
+      skillType: 0
+      skillName: "\u79FB\u901F"
+      skillDescription: "\u589E\u52A030%\u7684\u79FB\u52A8\u901F\u5EA6"
+    parientEquipentList: 
+  - equipmentId: 11
+    equipmentName: "\u7EA2\u739B\u7459"
+    seaechType: 2
+    equipmentPrice: 300
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _attributeType: 0
+      _attributeValue: 300
+    equipmentSkill: []
+    parientEquipentList: 
+  - equipmentId: 12
+    equipmentName: "\u5E03\u7532"
+    seaechType: 2
+    equipmentPrice: 220
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 4
+      _attributeName: "\u7269\u7406\u9632\u5FA1"
+      _attributeType: 0
+      _attributeValue: 90
+    equipmentSkill: []
+    parientEquipentList: 
+  - equipmentId: 13
+    equipmentName: "\u6297\u9B54\u62AB\u98CE"
+    seaechType: 2
+    equipmentPrice: 220
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 3
+      _attributeName: "\u6CD5\u672F\u9632\u5FA1"
+      _attributeType: 0
+      _attributeValue: 90
+    equipmentSkill: []
+    parientEquipentList: 
+  - equipmentId: 14
+    equipmentName: "\u63D0\u795E\u6C34\u6676"
+    seaechType: 2
+    equipmentPrice: 140
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 14
+      _attributeName: "\u6BCF5\u79D2\u56DE\u8840"
+      _attributeType: 0
+      _attributeValue: 30
+    equipmentSkill: []
+    parientEquipentList: 
+  - equipmentId: 15
+    equipmentName: "\u96F7\u9E23\u5200"
+    seaechType: 0
+    equipmentPrice: 450
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 40
+    equipmentSkill: []
+    parientEquipentList: 
+  - equipmentId: 16
+    equipmentName: "\u5145\u80FD\u62F3\u5957"
+    seaechType: 0
+    equipmentPrice: 550
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 12
+      _attributeName: "\u66B4\u51FB\u7387"
+      _attributeType: 1
+      _attributeValue: 0.15
+    equipmentSkill: []
+    parientEquipentList: 
+  - equipmentId: 17
+    equipmentName: "\u5143\u7D20\u6756"
+    seaechType: 1
+    equipmentPrice: 540
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 1
+      _attributeName: "\u6CD5\u672F\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 80
+    equipmentSkill: []
+    parientEquipentList: 
+  - equipmentId: 18
+    equipmentName: "\u5B66\u8BC6\u5B9D\u77F3"
+    seaechType: 5
+    equipmentPrice: 300
+    equipmentIcor: {fileID: 0}
+    equipmentType: 0
+    equipmentAttribute:
+    - _attributeId: 15
+      _attributeName: "\u79FB\u901F"
+      _attributeType: 1
+      _attributeValue: 0.05
+    equipmentSkill:
+    - skillID: 3
+      skillType: 0
+      skillName: "\u5949\u732E"
+      skillDescription: "\u5982\u679C\u81EA\u5DF1\u7684\u7ECF\u6D4E\u6216\u7ECF\u9A8C\u662F\u5DF1\u65B9\u6700\u4F4E\uFF0C\u6BCF3\u79D2\u989D\u5916\u83B7\u5F975\u70B9\u7ECF\u6D4E\u6216\u7ECF\u9A8C\u3002"
+    parientEquipentList: 
+  equipmentComponent:
+  - equipmentId: 19
+    equipmentName: "\u98CE\u66B4\u5DE8\u5251"
+    seaechType: 0
+    equipmentPrice: 910
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 80
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 2
+      equipmentName: "\u94C1\u5251"
+      seaechType: 0
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 20
+      equipmentSkill: []
+      parientEquipentList: 13000000140000001700000018000000190000001c000000
+    equipmentCompmenTList: []
+  - equipmentId: 20
+    equipmentName: "\u65E5\u5195"
+    seaechType: 0
+    equipmentPrice: 790
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 40
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _attributeType: 0
+      _attributeValue: 300
+    equipmentSkill:
+    - skillID: 4
+      skillType: 0
+      skillName: "\u6B8B\u5E9F"
+      skillDescription: "\u666E\u901A\u653B\u51FB\u670930%\u51E0\u7387\u964D\u4F4E\u654C\u4EBA20%\u79FB\u52A8\u901F\u5EA6\uFF0C\u6301\u7EED2\u79D2\u3002"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 2
+      equipmentName: "\u94C1\u5251"
+      seaechType: 0
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 20
+      equipmentSkill: []
+      parientEquipentList: 13000000140000001700000018000000190000001c000000
+    - equipmentId: 11
+      equipmentName: "\u7EA2\u739B\u7459"
+      seaechType: 2
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 21
+    equipmentName: "\u72C2\u66B4\u53CC\u5203"
+    seaechType: 0
+    equipmentPrice: 890
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 10
+      _attributeName: "\u653B\u51FB\u901F\u5EA6"
+      _attributeType: 1
+      _attributeValue: 0.15
+    - _attributeId: 12
+      _attributeName: "\u66B4\u51FB\u7387"
+      _attributeType: 1
+      _attributeValue: 0.1
+    - _attributeId: 15
+      _attributeName: "\u79FB\u901F"
+      _attributeType: 1
+      _attributeValue: 0.05
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 3
+      equipmentName: "\u5315\u9996"
+      seaechType: 0
+      equipmentPrice: 290
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 10
+        _attributeName: "\u653B\u51FB\u901F\u5EA6"
+        _attributeType: 1
+        _attributeValue: 0.1
+      equipmentSkill: []
+      parientEquipentList: 150000001b0000003b0000003d000000
+    - equipmentId: 4
+      equipmentName: "\u640F\u51FB\u62F3\u5957"
+      seaechType: 0
+      equipmentPrice: 320
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 12
+        _attributeName: "\u66B4\u51FB\u7387"
+        _attributeType: 1
+        _attributeValue: 0.08
+      equipmentSkill: []
+      parientEquipentList: 1500000039000000
+    equipmentCompmenTList: []
+  - equipmentId: 22
+    equipmentName: "\u9668\u661F"
+    seaechType: 0
+    equipmentPrice: 1080
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 45
+    - _attributeId: 9
+      _attributeName: "\u51B7\u5374\u7F29\u51CF"
+      _attributeType: 1
+      _attributeValue: 0.1
+    equipmentSkill:
+    - skillID: 5
+      skillType: 0
+      skillName: "\u62A4\u7532"
+      skillDescription: "+60\u62A4\u7532\u7A7F\u900F"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 2
+      equipmentName: "\u94C1\u5251"
+      seaechType: 0
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 20
+      equipmentSkill: []
+      parientEquipentList: 13000000140000001700000018000000190000001c000000
+    - equipmentId: 2
+      equipmentName: "\u94C1\u5251"
+      seaechType: 0
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 20
+      equipmentSkill: []
+      parientEquipentList: 13000000140000001700000018000000190000001c000000
+    equipmentCompmenTList: []
+  - equipmentId: 23
+    equipmentName: "\u7834\u9B54\u5200"
+    seaechType: 0
+    equipmentPrice: 2000
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 100
+    equipmentSkill:
+    - skillID: 6
+      skillType: 0
+      skillName: "\u7834\u9B54"
+      skillDescription: "\u589E\u52A0\u7B49\u540C\u4E8E\u81EA\u8EAB\u7269\u7406\u653B\u51FB40%\u7684\u6CD5\u672F\u9632\u5FA1\uFF0C\u6700\u591A\u589E\u52A0300\u70B9\u3002"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 13
+      equipmentName: "\u6297\u9B54\u62AB\u98CE"
+      seaechType: 2
+      equipmentPrice: 220
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 3
+        _attributeName: "\u6CD5\u672F\u9632\u5FA1"
+        _attributeType: 0
+        _attributeValue: 90
+      equipmentSkill: []
+      parientEquipentList: 
+    - equipmentId: 13
+      equipmentName: "\u6297\u9B54\u62AB\u98CE"
+      seaechType: 2
+      equipmentPrice: 220
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 3
+        _attributeName: "\u6CD5\u672F\u9632\u5FA1"
+        _attributeType: 0
+        _attributeValue: 90
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList:
+    - equipmentId: 19
+      equipmentName: "\u98CE\u66B4\u5DE8\u5251"
+      seaechType: 0
+      equipmentPrice: 910
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 80
+      equipmentSkill: []
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 2
+        equipmentName: "\u94C1\u5251"
+        seaechType: 0
+        equipmentPrice: 250
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 2
+          _attributeName: "\u7269\u7406\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 20
+        equipmentSkill: []
+        parientEquipentList: 13000000140000001700000018000000190000001c000000
+      equipmentCompmenTList: []
+  - equipmentId: 24
+    equipmentName: "\u540D\u5200\xB7\u53F8\u547D"
+    seaechType: 0
+    equipmentPrice: 1760
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 60
+    - _attributeId: 9
+      _attributeName: "\u51B7\u5374\u7F29\u51CF"
+      _attributeType: 1
+      _attributeValue: 0.05
+    equipmentSkill:
+    - skillID: 7
+      skillType: 0
+      skillName: "\u6697\u5E55"
+      skillDescription: "\u514D\u75AB\u81F4\u547D\u4F24\u5E76\u514D\u75AB\u4F24\u5BB3\u3001\u589E\u52A020%\u79FB\u52A8\u901F\u5EA6\u6301\u7EED1\u79D2\u8FD1\u6218/0.5\u79D2\u8FDC\u7A0B\uFF0C90\u79D2\u51B7\u5374\u3002"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 2
+      equipmentName: "\u94C1\u5251"
+      seaechType: 0
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 20
+      equipmentSkill: []
+      parientEquipentList: 13000000140000001700000018000000190000001c000000
+    - equipmentId: 15
+      equipmentName: "\u96F7\u9E23\u5200"
+      seaechType: 0
+      equipmentPrice: 450
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 40
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 25
+    equipmentName: "\u7834\u7532\u5F13"
+    seaechType: 0
+    equipmentPrice: 2100
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 80
+    - _attributeId: 9
+      _attributeName: "\u51B7\u5374\u7F29\u51CF"
+      _attributeType: 1
+      _attributeValue: 0.1
+    equipmentSkill:
+    - skillID: 8
+      skillType: 0
+      skillName: "\u62A4\u7532"
+      skillDescription: "+45%\u7269\u7406\u62A4\u7532\u7A7F\u900F"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 2
+      equipmentName: "\u94C1\u5251"
+      seaechType: 0
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 20
+      equipmentSkill: []
+      parientEquipentList: 13000000140000001700000018000000190000001c000000
+    equipmentCompmenTList:
+    - equipmentId: 22
+      equipmentName: "\u9668\u661F"
+      seaechType: 0
+      equipmentPrice: 1080
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 45
+      - _attributeId: 9
+        _attributeName: "\u51B7\u5374\u7F29\u51CF"
+        _attributeType: 1
+        _attributeValue: 0.1
+      equipmentSkill:
+      - skillID: 5
+        skillType: 0
+        skillName: "\u62A4\u7532"
+        skillDescription: "+60\u62A4\u7532\u7A7F\u900F"
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 2
+        equipmentName: "\u94C1\u5251"
+        seaechType: 0
+        equipmentPrice: 250
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 2
+          _attributeName: "\u7269\u7406\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 20
+        equipmentSkill: []
+        parientEquipentList: 13000000140000001700000018000000190000001c000000
+      - equipmentId: 2
+        equipmentName: "\u94C1\u5251"
+        seaechType: 0
+        equipmentPrice: 250
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 2
+          _attributeName: "\u7269\u7406\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 20
+        equipmentSkill: []
+        parientEquipentList: 13000000140000001700000018000000190000001c000000
+      equipmentCompmenTList: []
+  - equipmentId: 26
+    equipmentName: "\u51B0\u971C\u957F\u77DB"
+    seaechType: 0
+    equipmentPrice: 1980
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 80
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _attributeType: 0
+      _attributeValue: 600
+    equipmentSkill:
+    - skillID: 9
+      skillType: 0
+      skillName: "\u788E\u51B0"
+      skillDescription: "\u666E\u653B\u4F1A\u51CF\u5C11\u76EE\u680730%\u653B\u901F\u548C\u79FB\u901F\uFF0C\u6301\u7EED2\u79D2\uFF0C\u8FDC\u7A0B\u82F1\u96C4\u4F7F\u7528\u65F6\u51CF\u901F\u6548\u679C\u6301\u7EED\u65F6\u95F4\u8870\u51CF\u4E3A1\u79D2\u3002"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 11
+      equipmentName: "\u7EA2\u739B\u7459"
+      seaechType: 2
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    - equipmentId: 2
+      equipmentName: "\u94C1\u5251"
+      seaechType: 0
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 20
+      equipmentSkill: []
+      parientEquipentList: 13000000140000001700000018000000190000001c000000
+    equipmentCompmenTList:
+    - equipmentId: 20
+      equipmentName: "\u65E5\u5195"
+      seaechType: 0
+      equipmentPrice: 790
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 40
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill:
+      - skillID: 4
+        skillType: 0
+        skillName: "\u6B8B\u5E9F"
+        skillDescription: "\u666E\u901A\u653B\u51FB\u670930%\u51E0\u7387\u964D\u4F4E\u654C\u4EBA20%\u79FB\u52A8\u901F\u5EA6\uFF0C\u6301\u7EED2\u79D2\u3002"
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 2
+        equipmentName: "\u94C1\u5251"
+        seaechType: 0
+        equipmentPrice: 250
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 2
+          _attributeName: "\u7269\u7406\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 20
+        equipmentSkill: []
+        parientEquipentList: 13000000140000001700000018000000190000001c000000
+      - equipmentId: 11
+        equipmentName: "\u7EA2\u739B\u7459"
+        seaechType: 2
+        equipmentPrice: 300
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 11
+          _attributeName: "\u6700\u5927\u751F\u547D"
+          _attributeType: 0
+          _attributeValue: 300
+        equipmentSkill: []
+        parientEquipentList: 
+      equipmentCompmenTList: []
+  - equipmentId: 27
+    equipmentName: "\u901F\u51FB\u4E4B\u67AA"
+    seaechType: 0
+    equipmentPrice: 890
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 10
+      _attributeName: "\u653B\u51FB\u901F\u5EA6"
+      _attributeType: 1
+      _attributeValue: 0.25
+    equipmentSkill:
+    - skillID: 10
+      skillType: 0
+      skillName: "\u7CBE\u51C6"
+      skillDescription: "\u666E\u901A\u653B\u51FB\u9644\u5E2620-34\u70B9\u7269\u7406\u4F24\u5BB3\uFF08\u968F\u7B49\u7EA7\u63D0\u5347\uFF09"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 3
+      equipmentName: "\u5315\u9996"
+      seaechType: 0
+      equipmentPrice: 290
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 10
+        _attributeName: "\u653B\u51FB\u901F\u5EA6"
+        _attributeType: 1
+        _attributeValue: 0.1
+      equipmentSkill: []
+      parientEquipentList: 150000001b0000003b0000003d000000
+    - equipmentId: 3
+      equipmentName: "\u5315\u9996"
+      seaechType: 0
+      equipmentPrice: 290
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 10
+        _attributeName: "\u653B\u51FB\u901F\u5EA6"
+        _attributeType: 1
+        _attributeValue: 0.1
+      equipmentSkill: []
+      parientEquipentList: 150000001b0000003b0000003d000000
+    equipmentCompmenTList: []
+  - equipmentId: 28
+    equipmentName: "\u5236\u88C1\u4E4B\u5203"
+    seaechType: 0
+    equipmentPrice: 1800
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 100
+    - _attributeId: 6
+      _attributeName: "\u7269\u7406\u5438\u8840"
+      _attributeType: 1
+      _attributeValue: 0.1
+    equipmentSkill:
+    - skillID: 11
+      skillType: 0
+      skillName: "\u91CD\u4F24"
+      skillDescription: "\u9020\u6210\u4F24\u5BB3\u4F7F\u5F97\u76EE\u6807\u7684\u751F\u547D\u6062\u590D\u6548\u679C\u51CF\u5C1150%\uFF0C\u6301\u7EED1.5\u79D2(\u5982\u679C\u8BE5\u4F24\u5BB3\u7531\u666E\u653B\u89E6\u53D1\uFF0C\u5219\u6301\u7EED\u65F6\u95F4\u5EF6\u957F\u81F33\u79D2)"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 1
+      equipmentName: "\u5438\u8840\u4E4B\u9570"
+      seaechType: 0
+      equipmentPrice: 410
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 10
+      - _attributeId: 6
+        _attributeName: "\u7269\u7406\u5438\u8840"
+        _attributeType: 1
+        _attributeValue: 0.08
+      equipmentSkill: []
+      parientEquipentList: 36000000
+    equipmentCompmenTList:
+    - equipmentId: 19
+      equipmentName: "\u98CE\u66B4\u5DE8\u5251"
+      seaechType: 0
+      equipmentPrice: 910
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 80
+      equipmentSkill: []
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 2
+        equipmentName: "\u94C1\u5251"
+        seaechType: 0
+        equipmentPrice: 250
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 2
+          _attributeName: "\u7269\u7406\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 20
+        equipmentSkill: []
+        parientEquipentList: 13000000140000001700000018000000190000001c000000
+      equipmentCompmenTList: []
+  - equipmentId: 29
+    equipmentName: "\u5927\u68D2"
+    seaechType: 1
+    equipmentPrice: 810
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 1
+      _attributeName: "\u6CD5\u672F\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 120
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 5
+      equipmentName: "\u5492\u7B26\u5178\u7C4D"
+      seaechType: 1
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 1
+        _attributeName: "\u6CD5\u672F\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 40
+      equipmentSkill: []
+      parientEquipentList: 1d000000
+    equipmentCompmenTList: []
+  - equipmentId: 30
+    equipmentName: "\u8840\u65CF\u4E4B\u4E66"
+    seaechType: 1
+    equipmentPrice: 1240
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 1
+      _attributeName: "\u6CD5\u672F\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 75
+    - _attributeId: 9
+      _attributeName: "\u51B7\u5374\u7F29\u51CF"
+      _attributeType: 1
+      _attributeValue: 0.1
+    equipmentSkill:
+    - skillID: 12
+      skillType: 0
+      skillName: "\u55DC\u8840"
+      skillDescription: "\u589E\u52A020%\u6CD5\u672F\u5438\u8840"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 5
+      equipmentName: "\u5492\u7B26\u5178\u7C4D"
+      seaechType: 1
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 1
+        _attributeName: "\u6CD5\u672F\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 40
+      equipmentSkill: []
+      parientEquipentList: 1d000000
+    - equipmentId: 8
+      equipmentName: "\u5723\u8005\u6CD5\u5178"
+      seaechType: 1
+      equipmentPrice: 500
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 1
+        _attributeName: "\u6CD5\u672F\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 20
+      - _attributeId: 9
+        _attributeName: "\u51B7\u5374\u7F29\u51CF"
+        _attributeType: 1
+        _attributeValue: 0.08
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 31
+    equipmentName: "\u5149\u8F89\u4E4B\u5251"
+    seaechType: 0
+    equipmentPrice: 730
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 16
+      _attributeName: "\u6700\u5927\u6CD5\u529B"
+      _attributeType: 0
+      _attributeValue: 400
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _attributeType: 0
+      _attributeValue: 400
+    equipmentSkill:
+    - skillID: 13
+      skillType: 0
+      skillName: "\u5F3A\u51FB"
+      skillDescription: "\u4F7F\u7528\u6280\u80FD\u540E\uFF0C\u4E0B\u4E00\u6B21\u666E\u901A\u653B\u51FB\u9644\u52A050%\u7269\u7406\u653B\u51FB(+30%\u6CD5\u672F\u52A0\u6210)\u6CD5\u672F\u4F24\u5BB3\uFF0C\u8FD9\u4E2A\u6548\u679C\u67092\u79D2\u7684\u51B7\u5374\u65F6\u95F4"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 6
+      equipmentName: "\u84DD\u5B9D\u77F3"
+      seaechType: 1
+      equipmentPrice: 220
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 16
+        _attributeName: "\u6700\u5927\u6CD5\u529B"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    - equipmentId: 11
+      equipmentName: "\u7EA2\u739B\u7459"
+      seaechType: 2
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 32
+    equipmentName: "\u9B45\u5F71\u9762\u7F69"
+    seaechType: 1
+    equipmentPrice: 1020
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 1
+      _attributeName: "\u6CD5\u672F\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 70
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _attributeType: 0
+      _attributeValue: 300
+    equipmentSkill:
+    - skillID: 14
+      skillType: 0
+      skillName: "\u6CD5\u7A7F"
+      skillDescription: "75\u6CD5\u672F\u7A7F\u900F"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 5
+      equipmentName: "\u5492\u7B26\u5178\u7C4D"
+      seaechType: 1
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 1
+        _attributeName: "\u6CD5\u672F\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 40
+      equipmentSkill: []
+      parientEquipentList: 1d000000
+    - equipmentId: 11
+      equipmentName: "\u7EA2\u739B\u7459"
+      seaechType: 2
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 33
+    equipmentName: "\u8FDB\u5316\u6C34\u6676"
+    seaechType: 1
+    equipmentPrice: 720
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 16
+      _attributeName: "\u6700\u5927\u6CD5\u529B"
+      _attributeType: 0
+      _attributeValue: 400
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _attributeType: 0
+      _attributeValue: 400
+    equipmentSkill:
+    - skillID: 15
+      skillType: 0
+      skillName: "\u82F1\u52C7\u5956\u8D4F"
+      skillDescription: "\u5347\u7EA7\u540E\u57283\u79D2\u5185\u56DE\u590D20%\u751F\u547D\u503C\u4E0E\u6CD5\u529B\u503C"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 6
+      equipmentName: "\u84DD\u5B9D\u77F3"
+      seaechType: 1
+      equipmentPrice: 220
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 16
+        _attributeName: "\u6700\u5927\u6CD5\u529B"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    - equipmentId: 11
+      equipmentName: "\u7EA2\u739B\u7459"
+      seaechType: 2
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 34
+    equipmentName: "\u70BD\u70ED\u652F\u914D\u8005"
+    seaechType: 1
+    equipmentPrice: 1950
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 1
+      _attributeName: "\u6CD5\u672F\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 160
+    - _attributeId: 16
+      _attributeName: "\u6700\u5927\u6CD5\u529B"
+      _attributeType: 0
+      _attributeValue: 600
+    - _attributeId: 17
+      _attributeName: "\u6BCF5\u79D2\u56DE\u84DD"
+      _attributeType: 0
+      _attributeValue: 15
+    equipmentSkill:
+    - skillID: 16
+      skillType: 0
+      skillName: "\u6CD5\u529B\u62A4\u76FE"
+      skillDescription: "\u751F\u547D\u503C\u4F4E\u4E8E30%\u65F6\uFF0C\u83B7\u5F97\u4E00\u4E2A\u5438\u6536450~1500(+50%\u6CD5\u672F\u52A0\u6210)\u4F24\u5BB3\u7684\u62A4\u76FE\uFF0C\u8FD9\u4E2A\u6548\u679C\u670990\u79D2\u7684\u51B7\u5374\u65F6\u95F4"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 6
+      equipmentName: "\u84DD\u5B9D\u77F3"
+      seaechType: 1
+      equipmentPrice: 220
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 16
+        _attributeName: "\u6700\u5927\u6CD5\u529B"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    - equipmentId: 7
+      equipmentName: "\u70BC\u91D1\u62A4\u80A4"
+      seaechType: 1
+      equipmentPrice: 120
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 17
+        _attributeName: "\u6BCF5\u79D2\u56DE\u84DD"
+        _attributeType: 0
+        _attributeValue: 10
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList:
+    - equipmentId: 29
+      equipmentName: "\u5927\u68D2"
+      seaechType: 1
+      equipmentPrice: 810
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 1
+        _attributeName: "\u6CD5\u672F\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 120
+      equipmentSkill: []
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 5
+        equipmentName: "\u5492\u7B26\u5178\u7C4D"
+        seaechType: 1
+        equipmentPrice: 300
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 1
+          _attributeName: "\u6CD5\u672F\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 40
+        equipmentSkill: []
+        parientEquipentList: 1d000000
+      equipmentCompmenTList: []
+  - equipmentId: 35
+    equipmentName: "\u7834\u788E\u5723\u676F"
+    seaechType: 1
+    equipmentPrice: 900
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 1
+      _attributeName: "\u6CD5\u672F\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 40
+    - _attributeId: 9
+      _attributeName: "\u51B7\u5374\u7F29\u51CF"
+      _attributeType: 1
+      _attributeValue: 0.05
+    - _attributeId: 17
+      _attributeName: "\u6BCF5\u79D2\u56DE\u84DD"
+      _attributeType: 0
+      _attributeValue: 20
+    - _attributeId: 3
+      _attributeName: "\u6CD5\u672F\u9632\u5FA1"
+      _attributeType: 0
+      _attributeValue: 100
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 5
+      equipmentName: "\u5492\u7B26\u5178\u7C4D"
+      seaechType: 1
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 1
+        _attributeName: "\u6CD5\u672F\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 40
+      equipmentSkill: []
+      parientEquipentList: 1d000000
+    - equipmentId: 7
+      equipmentName: "\u70BC\u91D1\u62A4\u80A4"
+      seaechType: 1
+      equipmentPrice: 120
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 17
+        _attributeName: "\u6BCF5\u79D2\u56DE\u84DD"
+        _attributeType: 0
+        _attributeValue: 10
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 36
+    equipmentName: "\u68A6\u9B47\u4E4B\u7259"
+    seaechType: 1
+    equipmentPrice: 2050
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 1
+      _attributeName: "\u6CD5\u672F\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 240
+    - _attributeId: 15
+      _attributeName: "\u79FB\u901F"
+      _attributeType: 1
+      _attributeValue: 0.05
+    equipmentSkill:
+    - skillID: 17
+      skillType: 0
+      skillName: "\u91CD\u4F24"
+      skillDescription: "\u9020\u6210\u4F24\u5BB3\u4F7F\u5F97\u76EE\u6807\u7684\u751F\u547D\u6062\u590D\u6548\u679C\u51CF\u5C1150%\uFF0C\u6301\u7EED1.5\u79D2(\u5982\u679C\u8BE5\u4F24\u5BB3\u7531\u666E\u653B\u89E6\u53D1\uFF0C\u5219\u6301\u7EED\u65F6\u95F4\u5EF6\u957F\u81F33\u79D2)"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 17
+      equipmentName: "\u5143\u7D20\u6756"
+      seaechType: 1
+      equipmentPrice: 540
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 1
+        _attributeName: "\u6CD5\u672F\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 80
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList:
+    - equipmentId: 29
+      equipmentName: "\u5927\u68D2"
+      seaechType: 1
+      equipmentPrice: 810
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 1
+        _attributeName: "\u6CD5\u672F\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 120
+      equipmentSkill: []
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 5
+        equipmentName: "\u5492\u7B26\u5178\u7C4D"
+        seaechType: 1
+        equipmentPrice: 300
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 1
+          _attributeName: "\u6CD5\u672F\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 40
+        equipmentSkill: []
+        parientEquipentList: 1d000000
+      equipmentCompmenTList: []
+  - equipmentId: 37
+    equipmentName: "\u529B\u91CF\u8170\u5E26"
+    seaechType: 2
+    equipmentPrice: 900
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _attributeType: 0
+      _attributeValue: 1000
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 11
+      equipmentName: "\u7EA2\u739B\u7459"
+      seaechType: 2
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    - equipmentId: 11
+      equipmentName: "\u7EA2\u739B\u7459"
+      seaechType: 2
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 38
+    equipmentName: "\u7194\u70BC\u4E4B\u5FC3"
+    seaechType: 2
+    equipmentPrice: 900
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _attributeType: 0
+      _attributeValue: 700
+    equipmentSkill:
+    - skillID: 18
+      skillType: 0
+      skillName: "\u732E\u796D"
+      skillDescription: "\u6BCF\u79D2\u5BF9\u8EAB\u8FB9\u7684\u654C\u519B\u9020\u621060\u70B9\u6CD5\u672F\u4F24\u5BB3,\u6BCF\u53471\u7EA7\u589E\u52A02\u70B9\u4F24\u5BB3"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 11
+      equipmentName: "\u7EA2\u739B\u7459"
+      seaechType: 2
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 39
+    equipmentName: "\u795E\u9690\u6597\u7BF7"
+    seaechType: 2
+    equipmentPrice: 1020
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 3
+      _attributeName: "\u6CD5\u672F\u9632\u5FA1"
+      _attributeType: 0
+      _attributeValue: 120
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _attributeType: 0
+      _attributeValue: 700
+    - _attributeId: 14
+      _attributeName: "\u6BCF5\u79D2\u56DE\u8840"
+      _attributeType: 0
+      _attributeValue: 50
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 11
+      equipmentName: "\u7EA2\u739B\u7459"
+      seaechType: 2
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    - equipmentId: 13
+      equipmentName: "\u6297\u9B54\u62AB\u98CE"
+      seaechType: 2
+      equipmentPrice: 220
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 3
+        _attributeName: "\u6CD5\u672F\u9632\u5FA1"
+        _attributeType: 0
+        _attributeValue: 90
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 40
+    equipmentName: "\u96EA\u5C71\u5706\u76FE"
+    seaechType: 2
+    equipmentPrice: 900
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 9
+      _attributeName: "\u51B7\u5374\u7F29\u51CF"
+      _attributeType: 1
+      _attributeValue: 0.1
+    - _attributeId: 16
+      _attributeName: "\u6700\u5927\u6CD5\u529B"
+      _attributeType: 0
+      _attributeValue: 400
+    - _attributeId: 4
+      _attributeName: "\u7269\u7406\u9632\u5FA1"
+      _attributeType: 0
+      _attributeValue: 110
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 12
+      equipmentName: "\u5E03\u7532"
+      seaechType: 2
+      equipmentPrice: 220
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 4
+        _attributeName: "\u7269\u7406\u9632\u5FA1"
+        _attributeType: 0
+        _attributeValue: 90
+      equipmentSkill: []
+      parientEquipentList: 
+    - equipmentId: 6
+      equipmentName: "\u84DD\u5B9D\u77F3"
+      seaechType: 1
+      equipmentPrice: 220
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 16
+        _attributeName: "\u6700\u5927\u6CD5\u529B"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 41
+    equipmentName: "\u5B88\u62A4\u8005\u4E4B\u94E0"
+    seaechType: 2
+    equipmentPrice: 730
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 4
+      _attributeName: "\u7269\u7406\u9632\u5FA1"
+      _attributeType: 0
+      _attributeValue: 210
+    equipmentSkill:
+    - skillID: 19
+      skillType: 0
+      skillName: "\u5BD2\u94C1"
+      skillDescription: "\u53D7\u5230\u653B\u51FB\u4F1A\u51CF\u5C11\u653B\u51FB\u800530%\u653B\u51FB\u901F\u5EA6,\u6301\u7EED3\u79D2"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 12
+      equipmentName: "\u5E03\u7532"
+      seaechType: 2
+      equipmentPrice: 220
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 4
+        _attributeName: "\u7269\u7406\u9632\u5FA1"
+        _attributeType: 0
+        _attributeValue: 90
+      equipmentSkill: []
+      parientEquipentList: 
+    - equipmentId: 12
+      equipmentName: "\u5E03\u7532"
+      seaechType: 2
+      equipmentPrice: 220
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 4
+        _attributeName: "\u7269\u7406\u9632\u5FA1"
+        _attributeType: 0
+        _attributeValue: 90
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 42
+    equipmentName: "\u53CD\u4F24\u523A\u7532"
+    seaechType: 2
+    equipmentPrice: 1840
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 40
+    - _attributeId: 4
+      _attributeName: "\u7269\u7406\u9632\u5FA1"
+      _attributeType: 0
+      _attributeValue: 420
+    equipmentSkill:
+    - skillID: 20
+      skillType: 0
+      skillName: "\u8346\u68D8"
+      skillDescription: "\u53D7\u5230\u7269\u7406\u4F24\u5BB3\u65F6\uFF0C\u4F1A\u5C06\u4F24\u5BB3\u91CF\u768415%\u4EE5\u6CD5\u672F\u4F24\u5BB3\u7684\u5F62\u5F0F\u56DE\u656C\u7ED9\u5BF9\u65B9\uFF08\u6309\u7167\u8BA1\u7B97\u4F24\u5BB3\u51CF\u514D\u4E4B\u524D\u7684\u521D\u59CB\u4F24\u5BB3\u503C\u8BA1\u7B97\uFF09"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 15
+      equipmentName: "\u96F7\u9E23\u5200"
+      seaechType: 0
+      equipmentPrice: 450
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 40
+      equipmentSkill: []
+      parientEquipentList: 
+    - equipmentId: 12
+      equipmentName: "\u5E03\u7532"
+      seaechType: 2
+      equipmentPrice: 220
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 4
+        _attributeName: "\u7269\u7406\u9632\u5FA1"
+        _attributeType: 0
+        _attributeValue: 90
+      equipmentSkill: []
+      parientEquipentList: 
+    - equipmentId: 12
+      equipmentName: "\u5E03\u7532"
+      seaechType: 2
+      equipmentPrice: 220
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 4
+        _attributeName: "\u7269\u7406\u9632\u5FA1"
+        _attributeType: 0
+        _attributeValue: 90
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 43
+    equipmentName: "\u8840\u9B54\u4E4B\u6012"
+    seaechType: 2
+    equipmentPrice: 2120
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 20
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _attributeType: 0
+      _attributeValue: 1000
+    equipmentSkill:
+    - skillID: 26
+      skillType: 0
+      skillName: "\u8840\u6012"
+      skillDescription: "\u751F\u547D\u503C\u4F4E\u4E8E30%\u65F6\u83B7\u5F97\u8840\u6012\uFF0C\u589E\u52A040\u70B9\u653B\u51FB\u4E0E\u5F3A\u5927\u62A4\u76FE\u6301\u7EED8\u79D2\uFF0C\u6548\u679C\u670990\u79D2CD"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 11
+      equipmentName: "\u7EA2\u739B\u7459"
+      seaechType: 2
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    - equipmentId: 11
+      equipmentName: "\u7EA2\u739B\u7459"
+      seaechType: 2
+      equipmentPrice: 300
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill: []
+      parientEquipentList: 
+    - equipmentId: 2
+      equipmentName: "\u94C1\u5251"
+      seaechType: 0
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 20
+      equipmentSkill: []
+      parientEquipentList: 13000000140000001700000018000000190000001c000000
+    equipmentCompmenTList: []
+  - equipmentId: 44
+    equipmentName: "\u5F71\u5FCD\u4E4B\u8DB3"
+    seaechType: 3
+    equipmentPrice: 690
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 4
+      _attributeName: "\u7269\u7406\u9632\u5FA1"
+      _attributeType: 0
+      _attributeValue: 110
+    equipmentSkill:
+    - skillID: 21
+      skillType: 0
+      skillName: "\u51CF\u4F24"
+      skillDescription: "\u51CF\u5C1115%\u53D7\u5230\u666E\u901A\u653B\u51FB\u7684\u4F24\u5BB3"
+    - skillID: 25
+      skillType: 0
+      skillName: "\u79FB\u901F"
+      skillDescription: "\u589E\u52A060\u79FB\u52A8\u901F\u5EA6"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 10
+      equipmentName: "\u795E\u901F\u4E4B\u9774"
+      seaechType: 3
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute: []
+      equipmentSkill:
+      - skillID: 2
+        skillType: 0
+        skillName: "\u79FB\u901F"
+        skillDescription: "\u589E\u52A030%\u7684\u79FB\u52A8\u901F\u5EA6"
+      parientEquipentList: 
+    - equipmentId: 12
+      equipmentName: "\u5E03\u7532"
+      seaechType: 2
+      equipmentPrice: 220
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 4
+        _attributeName: "\u7269\u7406\u9632\u5FA1"
+        _attributeType: 0
+        _attributeValue: 90
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 45
+    equipmentName: "\u62B5\u6297\u4E4B\u9774"
+    seaechType: 3
+    equipmentPrice: 690
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 3
+      _attributeName: "\u6CD5\u672F\u9632\u5FA1"
+      _attributeType: 0
+      _attributeValue: 110
+    equipmentSkill:
+    - skillID: 22
+      skillType: 0
+      skillName: "\u97E7\u6027"
+      skillDescription: "\u589E\u52A0%35\u97E7\u6027"
+    - skillID: 25
+      skillType: 0
+      skillName: "\u79FB\u901F"
+      skillDescription: "\u589E\u52A060\u79FB\u52A8\u901F\u5EA6"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 10
+      equipmentName: "\u795E\u901F\u4E4B\u9774"
+      seaechType: 3
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute: []
+      equipmentSkill:
+      - skillID: 2
+        skillType: 0
+        skillName: "\u79FB\u901F"
+        skillDescription: "\u589E\u52A030%\u7684\u79FB\u52A8\u901F\u5EA6"
+      parientEquipentList: 
+    - equipmentId: 13
+      equipmentName: "\u6297\u9B54\u62AB\u98CE"
+      seaechType: 2
+      equipmentPrice: 220
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 3
+        _attributeName: "\u6CD5\u672F\u9632\u5FA1"
+        _attributeType: 0
+        _attributeValue: 90
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 46
+    equipmentName: "\u51B7\u9759\u4E4B\u9774"
+    seaechType: 3
+    equipmentPrice: 710
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 9
+      _attributeName: "\u51B7\u5374\u7F29\u51CF"
+      _attributeType: 1
+      _attributeValue: 0.1
+    equipmentSkill:
+    - skillID: 25
+      skillType: 0
+      skillName: "\u79FB\u901F"
+      skillDescription: "\u589E\u52A060\u79FB\u52A8\u901F\u5EA6"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 10
+      equipmentName: "\u795E\u901F\u4E4B\u9774"
+      seaechType: 3
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute: []
+      equipmentSkill:
+      - skillID: 2
+        skillType: 0
+        skillName: "\u79FB\u901F"
+        skillDescription: "\u589E\u52A030%\u7684\u79FB\u52A8\u901F\u5EA6"
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 47
+    equipmentName: "\u79D8\u6CD5\u4E4B\u9774"
+    seaechType: 3
+    equipmentPrice: 790
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute: []
+    equipmentSkill:
+    - skillID: 23
+      skillType: 0
+      skillName: "\u6CD5\u7A7F"
+      skillDescription: "\u589E\u52A075\u6CD5\u672F\u7A7F\u900F"
+    - skillID: 25
+      skillType: 0
+      skillName: "\u79FB\u901F"
+      skillDescription: "\u589E\u52A060\u79FB\u52A8\u901F\u5EA6"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 10
+      equipmentName: "\u795E\u901F\u4E4B\u9774"
+      seaechType: 3
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute: []
+      equipmentSkill:
+      - skillID: 2
+        skillType: 0
+        skillName: "\u79FB\u901F"
+        skillDescription: "\u589E\u52A030%\u7684\u79FB\u52A8\u901F\u5EA6"
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 48
+    equipmentName: "\u6025\u901F\u4E4B\u9774"
+    seaechType: 3
+    equipmentPrice: 710
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute:
+    - _attributeId: 10
+      _attributeName: "\u653B\u51FB\u901F\u5EA6"
+      _attributeType: 1
+      _attributeValue: 0.15
+    equipmentSkill:
+    - skillID: 25
+      skillType: 0
+      skillName: "\u79FB\u901F"
+      skillDescription: "\u589E\u52A060\u79FB\u52A8\u901F\u5EA6"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 10
+      equipmentName: "\u795E\u901F\u4E4B\u9774"
+      seaechType: 3
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute: []
+      equipmentSkill:
+      - skillID: 2
+        skillType: 0
+        skillName: "\u79FB\u901F"
+        skillDescription: "\u589E\u52A030%\u7684\u79FB\u52A8\u901F\u5EA6"
+      parientEquipentList: 
+    - equipmentId: 3
+      equipmentName: "\u5315\u9996"
+      seaechType: 0
+      equipmentPrice: 290
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 10
+        _attributeName: "\u653B\u51FB\u901F\u5EA6"
+        _attributeType: 1
+        _attributeValue: 0.1
+      equipmentSkill: []
+      parientEquipentList: 150000001b0000003b0000003d000000
+    equipmentCompmenTList: []
+  - equipmentId: 49
+    equipmentName: "\u75BE\u6B65\u4E4B\u9774"
+    seaechType: 3
+    equipmentPrice: 630
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute: []
+    equipmentSkill:
+    - skillID: 25
+      skillType: 0
+      skillName: "\u79FB\u901F"
+      skillDescription: "\u589E\u52A060\u79FB\u52A8\u901F\u5EA6"
+    - skillID: 24
+      skillType: 0
+      skillName: "\u795E\u884C"
+      skillDescription: "\u8131\u79BB\u6218\u6597\u540E\u589E\u52A060\u79FB\u52A8\u901F\u5EA6"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 10
+      equipmentName: "\u795E\u901F\u4E4B\u9774"
+      seaechType: 3
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute: []
+      equipmentSkill:
+      - skillID: 2
+        skillType: 0
+        skillName: "\u79FB\u901F"
+        skillDescription: "\u589E\u52A030%\u7684\u79FB\u52A8\u901F\u5EA6"
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 50
+    equipmentName: "\u6E38\u51FB\u5F2F\u5200"
+    seaechType: 4
+    equipmentPrice: 750
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute: []
+    equipmentSkill:
+    - skillID: 27
+      skillType: 0
+      skillName: "\u6253\u91CE"
+      skillDescription: "\u589E\u52A030%\u5BF9\u91CE\u602A\u7684\u4F24\u5BB3\uFF0C\u51FB\u6740\u91CE\u602A\u83B7\u5F97\u7ECF\u9A8C\u63D0\u534730%"
+    - skillID: 28
+      skillType: 0
+      skillName: "\u78E8\u783A"
+      skillDescription: "\u51FB\u6740\u91CE\u602A\u589E\u52A0\u81EA\u8EAB8\u70B9\u6CD5\u672F\u5F3A\u5EA6,\u6700\u591A\u53E0\u52A015\u5C42"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 9
+      equipmentName: "\u72E9\u730E\u5BBD\u5203"
+      seaechType: 4
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute: []
+      equipmentSkill:
+      - skillID: 1
+        skillType: 0
+        skillName: "\u6253\u91CE"
+        skillDescription: "\u589E\u52A020%\u5BF9\u91CE\u602A\u7684\u4F24\u5BB3\uFF0C\u51FB\u6740\u91CE\u602A\u83B7\u5F97\u7ECF\u9A8C\u63D0\u534720%\u3002"
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 51
+    equipmentName: "\u5DE1\u5B88\u5229\u65A7"
+    seaechType: 4
+    equipmentPrice: 750
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute: []
+    equipmentSkill:
+    - skillID: 27
+      skillType: 0
+      skillName: "\u6253\u91CE"
+      skillDescription: "\u589E\u52A030%\u5BF9\u91CE\u602A\u7684\u4F24\u5BB3\uFF0C\u51FB\u6740\u91CE\u602A\u83B7\u5F97\u7ECF\u9A8C\u63D0\u534730%"
+    - skillID: 29
+      skillType: 0
+      skillName: "\u78E8\u783A"
+      skillDescription: "\u51FB\u6740\u91CE\u602A\u589E\u52A0\u81EA\u8EAB70\u70B9\u6700\u5927\u751F\u547D,\u6700\u591A\u53E0\u52A015\u5C42"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 9
+      equipmentName: "\u72E9\u730E\u5BBD\u5203"
+      seaechType: 4
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute: []
+      equipmentSkill:
+      - skillID: 1
+        skillType: 0
+        skillName: "\u6253\u91CE"
+        skillDescription: "\u589E\u52A020%\u5BF9\u91CE\u602A\u7684\u4F24\u5BB3\uFF0C\u51FB\u6740\u91CE\u602A\u83B7\u5F97\u7ECF\u9A8C\u63D0\u534720%\u3002"
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 52
+    equipmentName: "\u8FFD\u51FB\u5200\u950B"
+    seaechType: 4
+    equipmentPrice: 750
+    equipmentIcor: {fileID: 0}
+    equipmentType: 1
+    equipmentAttribute: []
+    equipmentSkill:
+    - skillID: 27
+      skillType: 0
+      skillName: "\u6253\u91CE"
+      skillDescription: "\u589E\u52A030%\u5BF9\u91CE\u602A\u7684\u4F24\u5BB3\uFF0C\u51FB\u6740\u91CE\u602A\u83B7\u5F97\u7ECF\u9A8C\u63D0\u534730%"
+    - skillID: 30
+      skillType: 0
+      skillName: "\u78E8\u783A"
+      skillDescription: "\u51FB\u6740\u91CE\u602A\u589E\u52A0\u81EA\u8EAB2%\u653B\u51FB\u901F\u5EA6,\u6700\u591A\u53E0\u52A015\u5C42"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 9
+      equipmentName: "\u72E9\u730E\u5BBD\u5203"
+      seaechType: 4
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute: []
+      equipmentSkill:
+      - skillID: 1
+        skillType: 0
+        skillName: "\u6253\u91CE"
+        skillDescription: "\u589E\u52A020%\u5BF9\u91CE\u602A\u7684\u4F24\u5BB3\uFF0C\u51FB\u6740\u91CE\u602A\u83B7\u5F97\u7ECF\u9A8C\u63D0\u534720%\u3002"
+      parientEquipentList: 
+    equipmentCompmenTList: []
+  - equipmentId: 53
+    equipmentName: "\u672B\u4E16"
+    seaechType: 0
+    equipmentPrice: 2160
+    equipmentIcor: {fileID: 0}
+    equipmentType: 2
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 60
+    - _attributeId: 9
+      _attributeName: "\u51B7\u5374\u7F29\u51CF"
+      _attributeType: 1
+      _attributeValue: 0.3
+    - _attributeId: 6
+      _attributeName: "\u7269\u7406\u5438\u8840"
+      _attributeType: 1
+      _attributeValue: 0.1
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 15
+      equipmentName: "\u96F7\u9E23\u5200"
+      seaechType: 0
+      equipmentPrice: 450
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 40
+      equipmentSkill: []
+      parientEquipentList: 
+    - equipmentId: 1
+      equipmentName: "\u5438\u8840\u4E4B\u9570"
+      seaechType: 0
+      equipmentPrice: 410
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 10
+      - _attributeId: 6
+        _attributeName: "\u7269\u7406\u5438\u8840"
+        _attributeType: 1
+        _attributeValue: 0.08
+      equipmentSkill: []
+      parientEquipentList: 36000000
+    equipmentCompmenTList:
+    - equipmentId: 27
+      equipmentName: "\u901F\u51FB\u4E4B\u67AA"
+      seaechType: 0
+      equipmentPrice: 890
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 10
+        _attributeName: "\u653B\u51FB\u901F\u5EA6"
+        _attributeType: 1
+        _attributeValue: 0.25
+      equipmentSkill:
+      - skillID: 10
+        skillType: 0
+        skillName: "\u7CBE\u51C6"
+        skillDescription: "\u666E\u901A\u653B\u51FB\u9644\u5E2620-34\u70B9\u7269\u7406\u4F24\u5BB3\uFF08\u968F\u7B49\u7EA7\u63D0\u5347\uFF09"
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 3
+        equipmentName: "\u5315\u9996"
+        seaechType: 0
+        equipmentPrice: 290
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 10
+          _attributeName: "\u653B\u51FB\u901F\u5EA6"
+          _attributeType: 1
+          _attributeValue: 0.1
+        equipmentSkill: []
+        parientEquipentList: 150000001b0000003b0000003d000000
+      - equipmentId: 3
+        equipmentName: "\u5315\u9996"
+        seaechType: 0
+        equipmentPrice: 290
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 10
+          _attributeName: "\u653B\u51FB\u901F\u5EA6"
+          _attributeType: 1
+          _attributeValue: 0.1
+        equipmentSkill: []
+        parientEquipentList: 150000001b0000003b0000003d000000
+      equipmentCompmenTList: []
+  - equipmentId: 54
+    equipmentName: "\u6CE3\u8840\u4E4B\u5200"
+    seaechType: 0
+    equipmentPrice: 1740
+    equipmentIcor: {fileID: 0}
+    equipmentType: 2
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 100
+    - _attributeId: 6
+      _attributeName: "\u7269\u7406\u5438\u8840"
+      _attributeType: 1
+      _attributeValue: 0.25
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 1
+      equipmentName: "\u5438\u8840\u4E4B\u9570"
+      seaechType: 0
+      equipmentPrice: 410
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 10
+      - _attributeId: 6
+        _attributeName: "\u7269\u7406\u5438\u8840"
+        _attributeType: 1
+        _attributeValue: 0.08
+      equipmentSkill: []
+      parientEquipentList: 36000000
+    equipmentCompmenTList:
+    - equipmentId: 19
+      equipmentName: "\u98CE\u66B4\u5DE8\u5251"
+      seaechType: 0
+      equipmentPrice: 910
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 80
+      equipmentSkill: []
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 2
+        equipmentName: "\u94C1\u5251"
+        seaechType: 0
+        equipmentPrice: 250
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 2
+          _attributeName: "\u7269\u7406\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 20
+        equipmentSkill: []
+        parientEquipentList: 13000000140000001700000018000000190000001c000000
+      equipmentCompmenTList: []
+  - equipmentId: 55
+    equipmentName: "\u65E0\u5C3D\u6218\u5203"
+    seaechType: 0
+    equipmentPrice: 2140
+    equipmentIcor: {fileID: 0}
+    equipmentType: 2
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 100
+    - _attributeId: 12
+      _attributeName: "\u66B4\u51FB\u7387"
+      _attributeType: 1
+      _attributeValue: 0.2
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 2
+      equipmentName: "\u94C1\u5251"
+      seaechType: 0
+      equipmentPrice: 250
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 20
+      equipmentSkill: []
+      parientEquipentList: 13000000140000001700000018000000190000001c000000
+    - equipmentId: 16
+      equipmentName: "\u5145\u80FD\u62F3\u5957"
+      seaechType: 0
+      equipmentPrice: 550
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 12
+        _attributeName: "\u66B4\u51FB\u7387"
+        _attributeType: 1
+        _attributeValue: 0.15
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList:
+    - equipmentId: 19
+      equipmentName: "\u98CE\u66B4\u5DE8\u5251"
+      seaechType: 0
+      equipmentPrice: 910
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 80
+      equipmentSkill: []
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 2
+        equipmentName: "\u94C1\u5251"
+        seaechType: 0
+        equipmentPrice: 250
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 2
+          _attributeName: "\u7269\u7406\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 20
+        equipmentSkill: []
+        parientEquipentList: 13000000140000001700000018000000190000001c000000
+      equipmentCompmenTList: []
+  - equipmentId: 56
+    equipmentName: "\u5B97\u5E08\u4E4B\u529B"
+    seaechType: 0
+    equipmentPrice: 2100
+    equipmentIcor: {fileID: 0}
+    equipmentType: 2
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 60
+    - _attributeId: 12
+      _attributeName: "\u66B4\u51FB\u7387"
+      _attributeType: 1
+      _attributeValue: 0.2
+    - _attributeId: 16
+      _attributeName: "\u6700\u5927\u6CD5\u529B"
+      _attributeType: 0
+      _attributeValue: 400
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _attributeType: 0
+      _attributeValue: 400
+    equipmentSkill:
+    - skillID: 4
+      skillType: 0
+      skillName: "\u6B8B\u5E9F"
+      skillDescription: "\u666E\u901A\u653B\u51FB\u670930%\u51E0\u7387\u964D\u4F4E\u654C\u4EBA20%\u79FB\u52A8\u901F\u5EA6\uFF0C\u6301\u7EED2\u79D2\u3002"
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 16
+      equipmentName: "\u5145\u80FD\u62F3\u5957"
+      seaechType: 0
+      equipmentPrice: 550
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 12
+        _attributeName: "\u66B4\u51FB\u7387"
+        _attributeType: 1
+        _attributeValue: 0.15
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList:
+    - equipmentId: 20
+      equipmentName: "\u65E5\u5195"
+      seaechType: 0
+      equipmentPrice: 790
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 40
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill:
+      - skillID: 4
+        skillType: 0
+        skillName: "\u6B8B\u5E9F"
+        skillDescription: "\u666E\u901A\u653B\u51FB\u670930%\u51E0\u7387\u964D\u4F4E\u654C\u4EBA20%\u79FB\u52A8\u901F\u5EA6\uFF0C\u6301\u7EED2\u79D2\u3002"
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 2
+        equipmentName: "\u94C1\u5251"
+        seaechType: 0
+        equipmentPrice: 250
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 2
+          _attributeName: "\u7269\u7406\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 20
+        equipmentSkill: []
+        parientEquipentList: 13000000140000001700000018000000190000001c000000
+      - equipmentId: 11
+        equipmentName: "\u7EA2\u739B\u7459"
+        seaechType: 2
+        equipmentPrice: 300
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 11
+          _attributeName: "\u6700\u5927\u751F\u547D"
+          _attributeType: 0
+          _attributeValue: 300
+        equipmentSkill: []
+        parientEquipentList: 
+      equipmentCompmenTList: []
+    - equipmentId: 31
+      equipmentName: "\u5149\u8F89\u4E4B\u5251"
+      seaechType: 0
+      equipmentPrice: 730
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 16
+        _attributeName: "\u6700\u5927\u6CD5\u529B"
+        _attributeType: 0
+        _attributeValue: 400
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 400
+      equipmentSkill:
+      - skillID: 13
+        skillType: 0
+        skillName: "\u5F3A\u51FB"
+        skillDescription: "\u4F7F\u7528\u6280\u80FD\u540E\uFF0C\u4E0B\u4E00\u6B21\u666E\u901A\u653B\u51FB\u9644\u52A050%\u7269\u7406\u653B\u51FB(+30%\u6CD5\u672F\u52A0\u6210)\u6CD5\u672F\u4F24\u5BB3\uFF0C\u8FD9\u4E2A\u6548\u679C\u67092\u79D2\u7684\u51B7\u5374\u65F6\u95F4"
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 6
+        equipmentName: "\u84DD\u5B9D\u77F3"
+        seaechType: 1
+        equipmentPrice: 220
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 16
+          _attributeName: "\u6700\u5927\u6CD5\u529B"
+          _attributeType: 0
+          _attributeValue: 300
+        equipmentSkill: []
+        parientEquipentList: 
+      - equipmentId: 11
+        equipmentName: "\u7EA2\u739B\u7459"
+        seaechType: 2
+        equipmentPrice: 300
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 11
+          _attributeName: "\u6700\u5927\u751F\u547D"
+          _attributeType: 0
+          _attributeValue: 300
+        equipmentSkill: []
+        parientEquipentList: 
+      equipmentCompmenTList: []
+  - equipmentId: 57
+    equipmentName: "\u95EA\u7535\u5315\u9996"
+    seaechType: 0
+    equipmentPrice: 1840
+    equipmentIcor: {fileID: 0}
+    equipmentType: 2
+    equipmentAttribute:
+    - _attributeId: 10
+      _attributeName: "\u653B\u51FB\u901F\u5EA6"
+      _attributeType: 1
+      _attributeValue: 0.3
+    - _attributeId: 12
+      _attributeName: "\u66B4\u51FB\u7387"
+      _attributeType: 1
+      _attributeValue: 0.2
+    - _attributeId: 15
+      _attributeName: "\u79FB\u901F"
+      _attributeType: 1
+      _attributeValue: 0.08
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 4
+      equipmentName: "\u640F\u51FB\u62F3\u5957"
+      seaechType: 0
+      equipmentPrice: 320
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 12
+        _attributeName: "\u66B4\u51FB\u7387"
+        _attributeType: 1
+        _attributeValue: 0.08
+      equipmentSkill: []
+      parientEquipentList: 1500000039000000
+    equipmentCompmenTList:
+    - equipmentId: 21
+      equipmentName: "\u72C2\u66B4\u53CC\u5203"
+      seaechType: 0
+      equipmentPrice: 890
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 10
+        _attributeName: "\u653B\u51FB\u901F\u5EA6"
+        _attributeType: 1
+        _attributeValue: 0.15
+      - _attributeId: 12
+        _attributeName: "\u66B4\u51FB\u7387"
+        _attributeType: 1
+        _attributeValue: 0.1
+      - _attributeId: 15
+        _attributeName: "\u79FB\u901F"
+        _attributeType: 1
+        _attributeValue: 0.05
+      equipmentSkill: []
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 3
+        equipmentName: "\u5315\u9996"
+        seaechType: 0
+        equipmentPrice: 290
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 10
+          _attributeName: "\u653B\u51FB\u901F\u5EA6"
+          _attributeType: 1
+          _attributeValue: 0.1
+        equipmentSkill: []
+        parientEquipentList: 150000001b0000003b0000003d000000
+      - equipmentId: 4
+        equipmentName: "\u640F\u51FB\u62F3\u5957"
+        seaechType: 0
+        equipmentPrice: 320
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 12
+          _attributeName: "\u66B4\u51FB\u7387"
+          _attributeType: 1
+          _attributeValue: 0.08
+        equipmentSkill: []
+        parientEquipentList: 1500000039000000
+      equipmentCompmenTList: []
+  - equipmentId: 58
+    equipmentName: "\u6697\u5F71\u6218\u65A7"
+    seaechType: 0
+    equipmentPrice: 2090
+    equipmentIcor: {fileID: 0}
+    equipmentType: 2
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 85
+    - _attributeId: 9
+      _attributeName: "\u51B7\u5374\u7F29\u51CF"
+      _attributeType: 1
+      _attributeValue: 0.15
+    - _attributeId: 11
+      _attributeName: "\u6700\u5927\u751F\u547D"
+      _attributeType: 0
+      _attributeValue: 500
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList: []
+    equipmentCompmenTList:
+    - equipmentId: 20
+      equipmentName: "\u65E5\u5195"
+      seaechType: 0
+      equipmentPrice: 790
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 40
+      - _attributeId: 11
+        _attributeName: "\u6700\u5927\u751F\u547D"
+        _attributeType: 0
+        _attributeValue: 300
+      equipmentSkill:
+      - skillID: 4
+        skillType: 0
+        skillName: "\u6B8B\u5E9F"
+        skillDescription: "\u666E\u901A\u653B\u51FB\u670930%\u51E0\u7387\u964D\u4F4E\u654C\u4EBA20%\u79FB\u52A8\u901F\u5EA6\uFF0C\u6301\u7EED2\u79D2\u3002"
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 2
+        equipmentName: "\u94C1\u5251"
+        seaechType: 0
+        equipmentPrice: 250
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 2
+          _attributeName: "\u7269\u7406\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 20
+        equipmentSkill: []
+        parientEquipentList: 13000000140000001700000018000000190000001c000000
+      - equipmentId: 11
+        equipmentName: "\u7EA2\u739B\u7459"
+        seaechType: 2
+        equipmentPrice: 300
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 11
+          _attributeName: "\u6700\u5927\u751F\u547D"
+          _attributeType: 0
+          _attributeValue: 300
+        equipmentSkill: []
+        parientEquipentList: 
+      equipmentCompmenTList: []
+    - equipmentId: 22
+      equipmentName: "\u9668\u661F"
+      seaechType: 0
+      equipmentPrice: 1080
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 45
+      - _attributeId: 9
+        _attributeName: "\u51B7\u5374\u7F29\u51CF"
+        _attributeType: 1
+        _attributeValue: 0.1
+      equipmentSkill:
+      - skillID: 5
+        skillType: 0
+        skillName: "\u62A4\u7532"
+        skillDescription: "+60\u62A4\u7532\u7A7F\u900F"
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 2
+        equipmentName: "\u94C1\u5251"
+        seaechType: 0
+        equipmentPrice: 250
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 2
+          _attributeName: "\u7269\u7406\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 20
+        equipmentSkill: []
+        parientEquipentList: 13000000140000001700000018000000190000001c000000
+      - equipmentId: 2
+        equipmentName: "\u94C1\u5251"
+        seaechType: 0
+        equipmentPrice: 250
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 2
+          _attributeName: "\u7269\u7406\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 20
+        equipmentSkill: []
+        parientEquipentList: 13000000140000001700000018000000190000001c000000
+      equipmentCompmenTList: []
+  - equipmentId: 59
+    equipmentName: "\u5F71\u5203"
+    seaechType: 0
+    equipmentPrice: 2070
+    equipmentIcor: {fileID: 0}
+    equipmentType: 2
+    equipmentAttribute:
+    - _attributeId: 9
+      _attributeName: "\u51B7\u5374\u7F29\u51CF"
+      _attributeType: 1
+      _attributeValue: 0.4
+    - _attributeId: 12
+      _attributeName: "\u66B4\u51FB\u7387"
+      _attributeType: 1
+      _attributeValue: 0.1
+    - _attributeId: 15
+      _attributeName: "\u79FB\u901F"
+      _attributeType: 1
+      _attributeValue: 0.05
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 3
+      equipmentName: "\u5315\u9996"
+      seaechType: 0
+      equipmentPrice: 290
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 10
+        _attributeName: "\u653B\u51FB\u901F\u5EA6"
+        _attributeType: 1
+        _attributeValue: 0.1
+      equipmentSkill: []
+      parientEquipentList: 150000001b0000003b0000003d000000
+    - equipmentId: 3
+      equipmentName: "\u5315\u9996"
+      seaechType: 0
+      equipmentPrice: 290
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 10
+        _attributeName: "\u653B\u51FB\u901F\u5EA6"
+        _attributeType: 1
+        _attributeValue: 0.1
+      equipmentSkill: []
+      parientEquipentList: 150000001b0000003b0000003d000000
+    equipmentCompmenTList:
+    - equipmentId: 21
+      equipmentName: "\u72C2\u66B4\u53CC\u5203"
+      seaechType: 0
+      equipmentPrice: 890
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 10
+        _attributeName: "\u653B\u51FB\u901F\u5EA6"
+        _attributeType: 1
+        _attributeValue: 0.15
+      - _attributeId: 12
+        _attributeName: "\u66B4\u51FB\u7387"
+        _attributeType: 1
+        _attributeValue: 0.1
+      - _attributeId: 15
+        _attributeName: "\u79FB\u901F"
+        _attributeType: 1
+        _attributeValue: 0.05
+      equipmentSkill: []
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 3
+        equipmentName: "\u5315\u9996"
+        seaechType: 0
+        equipmentPrice: 290
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 10
+          _attributeName: "\u653B\u51FB\u901F\u5EA6"
+          _attributeType: 1
+          _attributeValue: 0.1
+        equipmentSkill: []
+        parientEquipentList: 150000001b0000003b0000003d000000
+      - equipmentId: 4
+        equipmentName: "\u640F\u51FB\u62F3\u5957"
+        seaechType: 0
+        equipmentPrice: 320
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 12
+          _attributeName: "\u66B4\u51FB\u7387"
+          _attributeType: 1
+          _attributeValue: 0.08
+        equipmentSkill: []
+        parientEquipentList: 1500000039000000
+      equipmentCompmenTList: []
+  - equipmentId: 60
+    equipmentName: "\u9010\u65E5\u4E4B\u5F13"
+    seaechType: 0
+    equipmentPrice: 2100
+    equipmentIcor: {fileID: 0}
+    equipmentType: 2
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 40
+    - _attributeId: 10
+      _attributeName: "\u653B\u51FB\u901F\u5EA6"
+      _attributeType: 1
+      _attributeValue: 0.2
+    - _attributeId: 12
+      _attributeName: "\u66B4\u51FB\u7387"
+      _attributeType: 1
+      _attributeValue: 0.15
+    - _attributeId: 15
+      _attributeName: "\u79FB\u901F"
+      _attributeType: 1
+      _attributeValue: 0.05
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 15
+      equipmentName: "\u96F7\u9E23\u5200"
+      seaechType: 0
+      equipmentPrice: 450
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 40
+      equipmentSkill: []
+      parientEquipentList: 
+    equipmentCompmenTList:
+    - equipmentId: 21
+      equipmentName: "\u72C2\u66B4\u53CC\u5203"
+      seaechType: 0
+      equipmentPrice: 890
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 10
+        _attributeName: "\u653B\u51FB\u901F\u5EA6"
+        _attributeType: 1
+        _attributeValue: 0.15
+      - _attributeId: 12
+        _attributeName: "\u66B4\u51FB\u7387"
+        _attributeType: 1
+        _attributeValue: 0.1
+      - _attributeId: 15
+        _attributeName: "\u79FB\u901F"
+        _attributeType: 1
+        _attributeValue: 0.05
+      equipmentSkill: []
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 3
+        equipmentName: "\u5315\u9996"
+        seaechType: 0
+        equipmentPrice: 290
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 10
+          _attributeName: "\u653B\u51FB\u901F\u5EA6"
+          _attributeType: 1
+          _attributeValue: 0.1
+        equipmentSkill: []
+        parientEquipentList: 150000001b0000003b0000003d000000
+      - equipmentId: 4
+        equipmentName: "\u640F\u51FB\u62F3\u5957"
+        seaechType: 0
+        equipmentPrice: 320
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 12
+          _attributeName: "\u66B4\u51FB\u7387"
+          _attributeType: 1
+          _attributeValue: 0.08
+        equipmentSkill: []
+        parientEquipentList: 1500000039000000
+      equipmentCompmenTList: []
+  - equipmentId: 61
+    equipmentName: "\u7EAF\u51C0\u82CD\u7A79"
+    seaechType: 0
+    equipmentPrice: 2230
+    equipmentIcor: {fileID: 0}
+    equipmentType: 2
+    equipmentAttribute:
+    - _attributeId: 10
+      _attributeName: "\u653B\u51FB\u901F\u5EA6"
+      _attributeType: 1
+      _attributeValue: 0.4
+    - _attributeId: 12
+      _attributeName: "\u66B4\u51FB\u7387"
+      _attributeType: 1
+      _attributeValue: 0.2
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList:
+    - equipmentId: 4
+      equipmentName: "\u640F\u51FB\u62F3\u5957"
+      seaechType: 0
+      equipmentPrice: 320
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 12
+        _attributeName: "\u66B4\u51FB\u7387"
+        _attributeType: 1
+        _attributeValue: 0.08
+      equipmentSkill: []
+      parientEquipentList: 1500000039000000
+    - equipmentId: 3
+      equipmentName: "\u5315\u9996"
+      seaechType: 0
+      equipmentPrice: 290
+      equipmentIcor: {fileID: 0}
+      equipmentType: 0
+      equipmentAttribute:
+      - _attributeId: 10
+        _attributeName: "\u653B\u51FB\u901F\u5EA6"
+        _attributeType: 1
+        _attributeValue: 0.1
+      equipmentSkill: []
+      parientEquipentList: 150000001b0000003b0000003d000000
+    equipmentCompmenTList:
+    - equipmentId: 27
+      equipmentName: "\u901F\u51FB\u4E4B\u67AA"
+      seaechType: 0
+      equipmentPrice: 890
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 10
+        _attributeName: "\u653B\u51FB\u901F\u5EA6"
+        _attributeType: 1
+        _attributeValue: 0.25
+      equipmentSkill:
+      - skillID: 10
+        skillType: 0
+        skillName: "\u7CBE\u51C6"
+        skillDescription: "\u666E\u901A\u653B\u51FB\u9644\u5E2620-34\u70B9\u7269\u7406\u4F24\u5BB3\uFF08\u968F\u7B49\u7EA7\u63D0\u5347\uFF09"
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 3
+        equipmentName: "\u5315\u9996"
+        seaechType: 0
+        equipmentPrice: 290
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 10
+          _attributeName: "\u653B\u51FB\u901F\u5EA6"
+          _attributeType: 1
+          _attributeValue: 0.1
+        equipmentSkill: []
+        parientEquipentList: 150000001b0000003b0000003d000000
+      - equipmentId: 3
+        equipmentName: "\u5315\u9996"
+        seaechType: 0
+        equipmentPrice: 290
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 10
+          _attributeName: "\u653B\u51FB\u901F\u5EA6"
+          _attributeType: 1
+          _attributeValue: 0.1
+        equipmentSkill: []
+        parientEquipentList: 150000001b0000003b0000003d000000
+      equipmentCompmenTList: []
+  - equipmentId: 62
+    equipmentName: "\u7834\u519B"
+    seaechType: 0
+    equipmentPrice: 2950
+    equipmentIcor: {fileID: 0}
+    equipmentType: 2
+    equipmentAttribute:
+    - _attributeId: 2
+      _attributeName: "\u7269\u7406\u653B\u51FB"
+      _attributeType: 0
+      _attributeValue: 200
+    equipmentSkill: []
+    parientEquipentList: 
+    equipmentLeafList: []
+    equipmentCompmenTList:
+    - equipmentId: 19
+      equipmentName: "\u98CE\u66B4\u5DE8\u5251"
+      seaechType: 0
+      equipmentPrice: 910
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 80
+      equipmentSkill: []
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 2
+        equipmentName: "\u94C1\u5251"
+        seaechType: 0
+        equipmentPrice: 250
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 2
+          _attributeName: "\u7269\u7406\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 20
+        equipmentSkill: []
+        parientEquipentList: 13000000140000001700000018000000190000001c000000
+      equipmentCompmenTList: []
+    - equipmentId: 19
+      equipmentName: "\u98CE\u66B4\u5DE8\u5251"
+      seaechType: 0
+      equipmentPrice: 910
+      equipmentIcor: {fileID: 0}
+      equipmentType: 1
+      equipmentAttribute:
+      - _attributeId: 2
+        _attributeName: "\u7269\u7406\u653B\u51FB"
+        _attributeType: 0
+        _attributeValue: 80
+      equipmentSkill: []
+      parientEquipentList: 
+      equipmentLeafList:
+      - equipmentId: 2
+        equipmentName: "\u94C1\u5251"
+        seaechType: 0
+        equipmentPrice: 250
+        equipmentIcor: {fileID: 0}
+        equipmentType: 0
+        equipmentAttribute:
+        - _attributeId: 2
+          _attributeName: "\u7269\u7406\u653B\u51FB"
+          _attributeType: 0
+          _attributeValue: 20
+        equipmentSkill: []
+        parientEquipentList: 13000000140000001700000018000000190000001c000000
+      equipmentCompmenTList: []

@@ -59,7 +59,7 @@ namespace InscriptionSystem
         /// </summary>
         public void InitInscription()
         {
-            InscriptionHolder ceh = AssetDatabase.LoadAssetAtPath<InscriptionHolder>("Assets/Assets/Inscription.asset");
+            InscriptionHolder ceh = AssetDatabase.LoadAssetAtPath<InscriptionHolder>("Assets/Resources/Inscription.asset");
             if (ceh == null)
             {
                 return;

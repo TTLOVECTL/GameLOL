@@ -6,7 +6,10 @@ namespace EquipmentSystem
 {
     public class EquipmentRecommend
     {
+
         private SortedDictionary<int, BaseEquipment> _recommendList = new SortedDictionary<int, BaseEquipment>();
+
+        private SortedDictionary<int, BaseEquipment> _bigEquipmentList = new SortedDictionary<int, BaseEquipment>();
 
         private SortedDictionary<int, BaseEquipment> _middleEquipmentList = new SortedDictionary<int, BaseEquipment>();
 
@@ -29,6 +32,12 @@ namespace EquipmentSystem
         public SortedDictionary<int, BaseEquipment> smallEquipmentList {
             get {
                 return _smallEquipmentList;
+            }
+        }
+
+        public SortedDictionary<int, BaseEquipment> bigEquipmentLit {
+            get {
+                return _bigEquipmentList;
             }
         }
 
@@ -62,23 +71,60 @@ namespace EquipmentSystem
                 List<BaseEquipment> baseList = item.Value.GetChildEquipmet();
                 foreach (BaseEquipment baseEq in baseList)
                 {
-                    if (baseEq.equipmentType == EqunipmentType.MIDDLE && (!_middleEquipmentList.ContainsKey(baseEq.equipmentId)))
-                        _middleEquipmentList.Add(baseEq.equipmentId, CopyTool.DeepCopy<BaseEquipment>(baseEq));
-                    else if (baseEq.equipmentType == EqunipmentType.SMALL && (!_smallEquipmentList.ContainsKey(baseEq.equipmentId)))
-                        _smallEquipmentList.Add(baseEq.equipmentId, CopyTool.DeepCopy<BaseEquipment>(baseEq));
+                    switch (baseEq.equipmentType) {
+                        case EqunipmentType.BIG:
+                            if (!_bigEquipmentList.ContainsKey(baseEq.equipmentId)) {
+                                _bigEquipmentList.Add(baseEq.equipmentId, baseEq);
+                            }
+                            break;
+                        case EqunipmentType.MIDDLE:
+                            if (!_middleEquipmentList.ContainsKey(baseEq.equipmentId))
+                            {
+                                _middleEquipmentList.Add(baseEq.equipmentId, baseEq);
+                            }
+                            break;
+                        case EqunipmentType.SMALL:
+                            if (!_middleEquipmentList.ContainsKey(baseEq.equipmentId))
+                            {
+                                _middleEquipmentList.Add(baseEq.equipmentId, baseEq);
+                            }
+                            break;
+                    }
                 }
             }
 
-            foreach (KeyValuePair<int, BaseEquipment> item in _middleEquipmentList)
+            foreach (KeyValuePair<int, BaseEquipment> item in _bigEquipmentList)
             {
                 List<BaseEquipment> baseList = item.Value.GetChildEquipmet();
                 foreach (BaseEquipment baseEq in baseList)
                 {
-                    if (baseEq.equipmentType == EqunipmentType.SMALL && (!_smallEquipmentList.ContainsKey(baseEq.equipmentId)))
-                        _smallEquipmentList.Add(baseEq.equipmentId, CopyTool.DeepCopy<BaseEquipment>(baseEq));
-                }
-            }
+                    if (baseEq.equipmentType == EqunipmentType.MIDDLE && (!_middleEquipmentList.ContainsKey(baseEq.equipmentId)))
+                    {
+                        _middleEquipmentList.Add(baseEq.equipmentId, baseEq);
+                        foreach (BaseEquipment childEp in baseEq.GetChildEquipmet())
+                        {
+                            if (childEp.equipmentType == EqunipmentType.MIDDLE && (!_middleEquipmentList.ContainsKey(childEp.equipmentId)))
+                            {
+                                _middleEquipmentList.Add(childEp.equipmentId, childEp);
+                            }
+                        }
 
+                    }
+                    else if (baseEq.equipmentType == EqunipmentType.SMALL && (!_smallEquipmentList.ContainsKey(baseEq.equipmentId)))
+                        _smallEquipmentList.Add(baseEq.equipmentId, baseEq);
+                }
+
+                foreach (KeyValuePair<int, BaseEquipment> item1 in _middleEquipmentList)
+                {
+                    List<BaseEquipment> baseList1 = item1.Value.GetChildEquipmet();
+                    foreach (BaseEquipment baseEq in baseList1)
+                    {
+                        if (baseEq.equipmentType == EqunipmentType.SMALL && (!_smallEquipmentList.ContainsKey(baseEq.equipmentId)))
+                            _smallEquipmentList.Add(baseEq.equipmentId,baseEq);
+                    }
+                }
+
+            }
         }
     }
 }

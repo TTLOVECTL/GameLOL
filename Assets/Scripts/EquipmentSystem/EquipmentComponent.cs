@@ -9,9 +9,19 @@ namespace EquipmentSystem {
 
         public List<BaseEquipment> equipmentList = new List<BaseEquipment>();
 
+        public List<EquipmentLeaf> equipmentLeafList = new List<EquipmentLeaf>();
+
+        public List<EquipmentComponent> equipmentCompmenTList = new List<EquipmentComponent>();
+
         public override void AddChildEquipment(BaseEquipment baseEquipment)
         {
-            equipmentList.Add(baseEquipment);
+            if (baseEquipment.equipmentType == EqunipmentType.SMALL)
+            {
+                equipmentLeafList.Add((EquipmentLeaf)baseEquipment);
+            }
+            else {
+                equipmentCompmenTList.Add((EquipmentComponent)baseEquipment);
+            }
         }
 
         public override List<BaseEquipment> GetChildEquipmet()
@@ -29,12 +39,12 @@ namespace EquipmentSystem {
 
         public override void SetInitiativeSkill()
         {
-            throw new NotImplementedException();
+            //Debug.Log(1);
         }
 
         public override void SetPassiveSkill()
         {
-            throw new NotImplementedException();
+            //Debug.Log(1);
         }
     }
 }

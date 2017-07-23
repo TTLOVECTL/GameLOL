@@ -40,19 +40,14 @@ namespace EquipmentSystem {
         public List<EquipmentAttribute> equipmentAttribute;
 
         /// <summary>
-        /// 被动技能描述
-        /// </summary>
-        public string PassiveSkill;
-
-        /// <summary>
-        /// 主动技能描述
-        /// </summary>
-        public string InitiativeSkill;
-
-        /// <summary>
         /// 装备的技能
         /// </summary>
         public List<EquipmentSkill> equipmentSkill;
+
+        /// <summary>
+        ///能有该装备合成的装备
+        /// </summary>
+        public List<int> parientEquipentList;
 
         public abstract void AddChildEquipment(BaseEquipment baseEquipment);
 

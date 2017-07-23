@@ -6,4 +6,5 @@ using InscriptionSystem;
 [System.Serializable]
 public class BookElementHolder : ScriptableObject {
     public List<Inscription> inscription;
+
 }
