@@ -9,7 +9,7 @@ public class Test : MonoBehaviour {
 
     private void readAsset()
     {
-        BookElementHolder ceh = AssetDatabase.LoadAssetAtPath<BookElementHolder>("Assets/TT.asset");
+        BookElementHolder ceh = AssetDatabase.LoadAssetAtPath<BookElementHolder>("Assets/QQ.asset");
         if (ceh == null) {
             Debug.Log("dasdsadsa");
             return;

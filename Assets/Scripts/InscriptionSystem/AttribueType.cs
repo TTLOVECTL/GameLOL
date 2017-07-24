@@ -1,4 +1,6 @@
-﻿namespace InscriptionSystem
+﻿using System;
+
+namespace InscriptionSystem
 {
     public class AttribueType
     {

@@ -125,7 +125,7 @@ namespace InscriptionSystem
         /// </summary>
         /// <param name="blueIns"></param>
         /// <param name="posID"></param>
-        public void SetRedInsciption(Inscription blueIns,int posID) {
+        public void SetBlueInsciption(Inscription blueIns,int posID) {
             if (_blueInscriotion == null) {
                 _blueInscriotion = new SortedDictionary<int, Inscription>();
             }
@@ -177,6 +177,7 @@ namespace InscriptionSystem
             if (_inscriptionAttribue == null) {
                 _inscriptionAttribue = new SortedDictionary<int, InscriptionAttribute>();
             }
+            _inscriptionAttribue.Clear();
             foreach (KeyValuePair<int, Inscription> incriptionItem in _greenInscription) {
                 foreach (InscriptionAttribute attributeItem in incriptionItem.Value.inscriptionAttribute) {
                     if (_inscriptionAttribue.ContainsKey(attributeItem.attributeId))
