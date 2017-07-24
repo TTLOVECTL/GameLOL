@@ -16,7 +16,7 @@ MonoBehaviour:
   - _inscriptionID: 1
     _inscriptionLevel: 5
     _inscriptionName: "\u601C\u60AF"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 5c2a21d9aa8694f489126eb1d1e68fad, type: 3}
     _inscriptionColor: 1
     _inscriptionAttribute:
     - _attributeId: 9
@@ -26,7 +26,7 @@ MonoBehaviour:
   - _inscriptionID: 2
     _inscriptionLevel: 5
     _inscriptionName: "\u68A6\u9B47"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 5c84844b6c7ecf044b3cc13e46909b19, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 1
@@ -40,7 +40,7 @@ MonoBehaviour:
   - _inscriptionID: 3
     _inscriptionLevel: 5
     _inscriptionName: "\u51F6\u5146"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: b1b2c0fb93dc13c409a287aba478598f, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 1
@@ -54,7 +54,7 @@ MonoBehaviour:
   - _inscriptionID: 4
     _inscriptionLevel: 5
     _inscriptionName: "\u656C\u754F"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 1245f46246b1a3940ba95e278f0d62bd, type: 3}
     _inscriptionColor: 1
     _inscriptionAttribute:
     - _attributeId: 4
@@ -68,7 +68,7 @@ MonoBehaviour:
   - _inscriptionID: 5
     _inscriptionLevel: 5
     _inscriptionName: "\u5FC3\u773C"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 0feb54f88cc5e814990cbdb099c959a4, type: 3}
     _inscriptionColor: 1
     _inscriptionAttribute:
     - _attributeId: 7
@@ -82,7 +82,7 @@ MonoBehaviour:
   - _inscriptionID: 6
     _inscriptionLevel: 5
     _inscriptionName: "\u732E\u796D"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 24449c83633edd64980de9eb68f07e3b, type: 3}
     _inscriptionColor: 1
     _inscriptionAttribute:
     - _attributeId: 1
@@ -96,7 +96,7 @@ MonoBehaviour:
   - _inscriptionID: 7
     _inscriptionLevel: 5
     _inscriptionName: "\u8F6E\u56DE"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 5ca8a4fbbf88bbe49aadeafb8ccd93ed, type: 3}
     _inscriptionColor: 2
     _inscriptionAttribute:
     - _attributeId: 1
@@ -110,7 +110,7 @@ MonoBehaviour:
   - _inscriptionID: 8
     _inscriptionLevel: 5
     _inscriptionName: "\u8D2A\u5A6A"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 6a378de23bb35e24397308c02180401b, type: 3}
     _inscriptionColor: 2
     _inscriptionAttribute:
     - _attributeId: 5
@@ -120,7 +120,7 @@ MonoBehaviour:
   - _inscriptionID: 9
     _inscriptionLevel: 5
     _inscriptionName: "\u4F20\u627F"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 48c6f723a07af9345b5fd59cb0debff2, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 2
@@ -130,7 +130,7 @@ MonoBehaviour:
   - _inscriptionID: 10
     _inscriptionLevel: 5
     _inscriptionName: "\u5F02\u53D8"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 1a3e7483557f6de42ac1b40ad92a8e62, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 2
@@ -144,7 +144,7 @@ MonoBehaviour:
   - _inscriptionID: 11
     _inscriptionLevel: 5
     _inscriptionName: "\u7EB7\u4E89"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 1cf5d05f9aef00f4982d2faebe7215de, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 2
@@ -158,7 +158,7 @@ MonoBehaviour:
   - _inscriptionID: 12
     _inscriptionLevel: 5
     _inscriptionName: "\u65E0\u53CC"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 471ff9e1ff1ea6d458129a189758b8f6, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 12
@@ -172,7 +172,7 @@ MonoBehaviour:
   - _inscriptionID: 13
     _inscriptionLevel: 5
     _inscriptionName: "\u5BBF\u547D"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 5d15b2ecee031be47841f5270b82f90b, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 10
@@ -190,7 +190,7 @@ MonoBehaviour:
   - _inscriptionID: 14
     _inscriptionLevel: 5
     _inscriptionName: "\u7978\u6E90"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 9a67ee97f1a632e4ab317128aef2dea3, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 12
@@ -200,7 +200,7 @@ MonoBehaviour:
   - _inscriptionID: 15
     _inscriptionLevel: 5
     _inscriptionName: "\u7EA2\u6708"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 28ceec42557379a4a871f38797adac53, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 10
@@ -214,7 +214,7 @@ MonoBehaviour:
   - _inscriptionID: 16
     _inscriptionLevel: 5
     _inscriptionName: "\u957F\u751F"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 5ce64ae19ab28014a99cb4d5b6327289, type: 3}
     _inscriptionColor: 2
     _inscriptionAttribute:
     - _attributeId: 11
@@ -224,7 +224,7 @@ MonoBehaviour:
   - _inscriptionID: 17
     _inscriptionLevel: 5
     _inscriptionName: "\u593A\u8403"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 40dec97155375154cad3fcc2a7798171, type: 3}
     _inscriptionColor: 2
     _inscriptionAttribute:
     - _attributeId: 6
@@ -234,7 +234,7 @@ MonoBehaviour:
   - _inscriptionID: 18
     _inscriptionLevel: 5
     _inscriptionName: "\u517D\u75D5"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: c74e6cb5ef63428488fc1522c674c018, type: 3}
     _inscriptionColor: 2
     _inscriptionAttribute:
     - _attributeId: 12
@@ -248,7 +248,7 @@ MonoBehaviour:
   - _inscriptionID: 19
     _inscriptionLevel: 5
     _inscriptionName: "\u51A5\u60F3"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 110da4eee76bd3c409435cf4598de701, type: 3}
     _inscriptionColor: 2
     _inscriptionAttribute:
     - _attributeId: 11
@@ -262,7 +262,7 @@ MonoBehaviour:
   - _inscriptionID: 20
     _inscriptionLevel: 5
     _inscriptionName: "\u7E41\u8363"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 503e2c0db21f24449bd6108d6e869bca, type: 3}
     _inscriptionColor: 2
     _inscriptionAttribute:
     - _attributeId: 6
@@ -276,7 +276,7 @@ MonoBehaviour:
   - _inscriptionID: 21
     _inscriptionLevel: 5
     _inscriptionName: "\u8C03\u548C"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 7792a0058a73eec4abc76389f73240ae, type: 3}
     _inscriptionColor: 2
     _inscriptionAttribute:
     - _attributeId: 11
@@ -294,7 +294,7 @@ MonoBehaviour:
   - _inscriptionID: 22
     _inscriptionLevel: 5
     _inscriptionName: "\u9690\u533F"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 599299cec2e9da744a24a5a1726c04a5, type: 3}
     _inscriptionColor: 2
     _inscriptionAttribute:
     - _attributeId: 2
@@ -322,7 +322,7 @@ MonoBehaviour:
   - _inscriptionID: 24
     _inscriptionLevel: 5
     _inscriptionName: "\u9738\u8005"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 2ced330cbee56464791ecaf6f9d636b5, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 4
@@ -332,7 +332,7 @@ MonoBehaviour:
   - _inscriptionID: 25
     _inscriptionLevel: 5
     _inscriptionName: "\u5747\u8861"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 9ca9a4302e113174e933240188c1dad4, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 4
@@ -346,7 +346,7 @@ MonoBehaviour:
   - _inscriptionID: 26
     _inscriptionLevel: 5
     _inscriptionName: "\u865A\u7A7A"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 480f3a5c3a43f91408f518b1f4825299, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 11
@@ -360,7 +360,7 @@ MonoBehaviour:
   - _inscriptionID: 27
     _inscriptionLevel: 5
     _inscriptionName: "\u7075\u5C71"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: a868ea137ffafb040836c02cc2f4880d, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 3
@@ -370,7 +370,7 @@ MonoBehaviour:
   - _inscriptionID: 28
     _inscriptionLevel: 5
     _inscriptionName: "\u9E70\u773C"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 0a52f71e3e7c68843a0432134a9327f6, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 2
@@ -384,7 +384,7 @@ MonoBehaviour:
   - _inscriptionID: 29
     _inscriptionLevel: 5
     _inscriptionName: "\u56DE\u58F0"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 5d5addcc4780c984cbffa2265e1678d9, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 4
@@ -398,7 +398,7 @@ MonoBehaviour:
   - _inscriptionID: 30
     _inscriptionLevel: 5
     _inscriptionName: "\u5723\u4EBA"
-    _inscriptionIcon: {fileID: 0}
+    _inscriptionIcon: {fileID: 21300000, guid: 24aefdb8b2412db489a9260ad6af585d, type: 3}
     _inscriptionColor: 0
     _inscriptionAttribute:
     - _attributeId: 1

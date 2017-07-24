@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.UI;
 
 namespace InscriptionSystem
 {
@@ -11,6 +12,7 @@ namespace InscriptionSystem
 
         public GameObject contentObj;
 
+        public Sprite[] spriteList;
         private int inscriptionLevel = 5;
 
         private AttribueType inscriptionType = AttribueType.ALL;
@@ -86,11 +88,12 @@ namespace InscriptionSystem
                         ga.GetComponent<RectTransform>().SetParent(contentObj.transform);
                         ga.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth - buttonwidth), buttonheight);
                         ga.GetComponent<RectTransform>().localPosition = new Vector2(j * (buttonwidth +1) + x, -i * (buttonheight + 1) + y);
+                        ga.GetComponent<InscriptionButton>().inscription = resultList[count - 1]._inscriptionID;
+                        ga.GetComponent<Image>().sprite = spriteList[resultList[count - 1]._inscriptionID];
                     }
                 }
             }
             
-            //ga.transform.SetParent(contentObj.transform);
            
 
 
