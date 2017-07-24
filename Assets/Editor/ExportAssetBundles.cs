@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEditor;
+using InscriptionSystem;
 
 public class ExportAssetBundles : MonoBehaviour
 {

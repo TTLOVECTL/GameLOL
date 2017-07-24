@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace HeroSystom
+
+namespace HeroSystem
 {
     /// <summary>
     /// 人物角色的攻击属性

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HeroSystom
+namespace HeroSystem
 {
     /// <summary>
     /// 英雄的基础属性

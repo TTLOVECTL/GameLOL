@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using InscriptionSystem;
 
 public class Test : MonoBehaviour {
     public List<Inscription> a;
