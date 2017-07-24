@@ -25,9 +25,13 @@ public class ExportAssetBundles : MonoBehaviour
         //string path = EditorUtility.SaveFilePanel("Save Resource", "", "New Resource", "asset");
 
         BookElementHolder holder = ScriptableObject.CreateInstance<BookElementHolder>();
+        //holder.attribute = ExcelReader.InitAttrtibute("Attribute.xlsx");
         holder.inscription = ExcelReader.IninInscription("Inscription.xlsx");
-            //InscriptionFactory.Instance.inscription;
-        Debug.Log(holder.inscription.Count);
+        
+        //InscriptionFactory.Instance.inscription;
+        //foreach (Inscription ip in holder.inscription) {
+        //    Debug.Log(ip.inscriptionAttribute.Count);
+        //}        
         string path = "Assets/QQ.asset";
         AssetDatabase.CreateAsset(holder, path);
     }

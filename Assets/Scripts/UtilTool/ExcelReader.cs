@@ -18,7 +18,8 @@ public class ExcelReader {
         return result.Tables[0].Rows;
     }
 
-    public static List<Inscription> IninInscription(String path) {
+    public static List<Inscription> IninInscription(string path) {
+        SortedDictionary<int, string> b = ExcelReader.InitAttrtibute("Attribute.xlsx");
         List<Inscription> _inscription = new List<Inscription>();
         path = Application.dataPath + "/" + path;
         DataRowCollection collect = ExcelReader.ReadExcel(path);
@@ -34,8 +35,8 @@ public class ExcelReader {
             for (int j = 5; collect[i][j].ToString() != ""; j = j + 2)
             {
                 InscriptionAttribute a = new InscriptionAttribute();
-
-                a.attributeName = collect[i][j].ToString();
+                a.attributeId = int.Parse(collect[i][j].ToString());
+                a.attributeName = b[a.attributeId];
                 a.attribueValue = float.Parse(collect[i][j + 1].ToString());
                 if (a.attribueValue < 1)
                 {
@@ -53,4 +54,15 @@ public class ExcelReader {
         return _inscription;
     }
 
+    public static SortedDictionary<int, string> InitAttrtibute(string path) {
+        SortedDictionary<int, string> a = new SortedDictionary<int, string>();
+        path = Application.dataPath + "/" + path;
+        DataRowCollection collect = ExcelReader.ReadExcel(path);
+        for (int i = 1; i < collect.Count; i++)
+        {
+            if (collect[i][1].ToString() == "") continue;
+            a.Add(int.Parse(collect[i][0].ToString()),collect[i][1].ToString());
+        }
+        return a;
+    } 
 }

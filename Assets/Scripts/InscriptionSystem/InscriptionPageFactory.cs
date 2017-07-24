@@ -75,7 +75,7 @@ namespace InscriptionSystem {
                             break;
                     }
                 }
-
+                _inscriptionPageList.Add(insPM._inscriptionPageId,iPage);
             }
         }
     }

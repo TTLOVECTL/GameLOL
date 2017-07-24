@@ -5,6 +5,5 @@ using InscriptionSystem;
 
 [System.Serializable]
 public class BookElementHolder : ScriptableObject {
-    public int a = 1;
     public List<Inscription> inscription;
 }

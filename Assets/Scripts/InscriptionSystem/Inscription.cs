@@ -10,17 +10,17 @@ namespace InscriptionSystem
     public class Inscription
     {
 
-        private int _inscriptionID;
+        public int _inscriptionID;
 
-        private int _inscriptionLevel;
+        public int _inscriptionLevel;
 
-        private string _inscriptionName;
+        public string _inscriptionName;
 
         private Sprite _inscriptionIcon;
 
         private InscriptionColor _inscriptionColor;
 
-        private List<InscriptionAttribute> _inscriptionAttribute;
+        public  List<InscriptionAttribute> _inscriptionAttribute;
 
         public int inscriptionID
         {
@@ -88,6 +88,10 @@ namespace InscriptionSystem
         {
             get
             {
+                if (_inscriptionAttribute == null)
+                {
+                    _inscriptionAttribute = new List<InscriptionAttribute>();
+                }
                 return _inscriptionAttribute;
             }
         }

@@ -5,18 +5,19 @@ using UnityEngine;
 
 namespace InscriptionSystem
 {
+    [System.Serializable]
     /// <summary>
     /// 符文属性属性值
     /// </summary>
     public class InscriptionAttribute
     {
-        private int _attributeId;
+        private  int _attributeId;
 
-        private string _attributeName;
+        private   string _attributeName;
 
         private AttributeValue _valueType;
 
-        private float _attributeValue;
+        public  float _attributeValue;
 
         /// <summary>
         /// 属性名称

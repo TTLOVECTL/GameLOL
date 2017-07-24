@@ -185,7 +185,8 @@ namespace InscriptionSystem
                         _inscriptionAttribue[attributeItem.attributeId].attribueValue += attributeItem.attribueValue;
                     }
                     else {
-                        _inscriptionAttribue.Add(attributeItem.attributeId,attributeItem);
+                        InscriptionAttribute a = ChangeAttribute(attributeItem);
+                        _inscriptionAttribue.Add(attributeItem.attributeId,a);
                     }
                 }
             }
@@ -200,7 +201,8 @@ namespace InscriptionSystem
                     }
                     else
                     {
-                        _inscriptionAttribue.Add(attributeItem.attributeId, attributeItem);
+                        InscriptionAttribute a = ChangeAttribute(attributeItem);
+                        _inscriptionAttribue.Add(attributeItem.attributeId, a);
                     }
                 }
             }
@@ -215,7 +217,8 @@ namespace InscriptionSystem
                     }
                     else
                     {
-                        _inscriptionAttribue.Add(attributeItem.attributeId, attributeItem);
+                        InscriptionAttribute a = ChangeAttribute(attributeItem);
+                        _inscriptionAttribue.Add(attributeItem.attributeId, a);
                     }
                 }
             }
@@ -227,14 +230,21 @@ namespace InscriptionSystem
         /// </summary>
         /// <param name="inscription"></param>
         private void AddAttribueUpdate(Inscription inscr) {
+            if (_inscriptionAttribue == null)
+            {
+                _inscriptionAttribue = new SortedDictionary<int, InscriptionAttribute>();
+            }
             foreach (InscriptionAttribute attributeItem in inscr.inscriptionAttribute) {
+                //Debug.Log("id:"+attributeItem.attributeId);
+                //Debug.Log("value:"+attributeItem.attribueValue);
                 if (_inscriptionAttribue.ContainsKey(attributeItem.attributeId))
                 {
                     _inscriptionAttribue[attributeItem.attributeId].attribueValue += attributeItem.attribueValue;
                 }
                 else
                 {
-                    _inscriptionAttribue.Add(attributeItem.attributeId, attributeItem);
+                    InscriptionAttribute a = ChangeAttribute(attributeItem);
+                    _inscriptionAttribue.Add(attributeItem.attributeId, a);
                 }
             }
         }
@@ -244,6 +254,10 @@ namespace InscriptionSystem
         /// </summary>
         /// <param name="inscr"></param>
         private void RemoveAttributeUpdata(Inscription inscr) {
+            if (_inscriptionAttribue == null)
+            {
+                _inscriptionAttribue = new SortedDictionary<int, InscriptionAttribute>();
+            }
             foreach (InscriptionAttribute attributeItem in inscr.inscriptionAttribute)
             {
                 if (_inscriptionAttribue.ContainsKey(attributeItem.attributeId))
@@ -258,6 +272,15 @@ namespace InscriptionSystem
                     Debug.Log("There has many error!");
                 }
             }
+        }
+
+        private InscriptionAttribute ChangeAttribute(InscriptionAttribute a) {
+            InscriptionAttribute b= new InscriptionAttribute();
+            b.attributeId = a.attributeId;
+            b.attributeName = a.attributeName;
+            b.attribueValue = a.attribueValue;
+            b.valueType = a.valueType;
+            return b;
         }
     }
 }

@@ -17,7 +17,7 @@ public class Test : MonoBehaviour {
         Debug.Log(ceh.inscription.Count);
         foreach (Inscription gd in ceh.inscription)
         {
-            Debug.Log(gd.inscriptionName);
+            //Debug.Log(gd.inscriptionName);
         }
     }
 
