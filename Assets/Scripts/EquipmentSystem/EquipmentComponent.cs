@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace EquipmentSystem {
 
+    [System.Serializable]
     public class EquipmentComponent : BaseEquipment{
 
-        private List<BaseEquipment> equipmentList = new List<BaseEquipment>();
+        public List<BaseEquipment> equipmentList = new List<BaseEquipment>();
 
         public override void AddChildEquipment(BaseEquipment baseEquipment)
         {

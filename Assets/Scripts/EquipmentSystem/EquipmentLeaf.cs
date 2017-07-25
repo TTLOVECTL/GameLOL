@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace EquipmentSystem
 {
+    [System.Serializable]
     public class EquipmentLeaf : BaseEquipment
     {
         public override void AddChildEquipment(BaseEquipment baseEquipment)

@@ -5,6 +5,7 @@ using InscriptionSystem;
 
 namespace EquipmentSystem
 {
+    [System.Serializable]
     /// <summary>
     /// 装备属性值
     /// </summary>

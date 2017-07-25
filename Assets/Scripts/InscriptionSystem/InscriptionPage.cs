@@ -9,6 +9,7 @@ namespace InscriptionSystem
     /// </summary>
     public class InscriptionPage 
     {
+
         private int _pageId;
 
         /// <summary>

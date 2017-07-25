@@ -5,8 +5,6 @@ using InscriptionSystem;
 using UnityEditor;
 
 public class Test2 : MonoBehaviour {
-
-	// Use this for initialization
 	void Start () {
         readAsset();
         Init();
@@ -18,13 +16,12 @@ public class Test2 : MonoBehaviour {
         BookElementHolder ceh = AssetDatabase.LoadAssetAtPath<BookElementHolder>("Assets/QQ.asset");
         if (ceh == null)
         {
-            Debug.Log("dasdsadsa");
             return;
         }
-        Debug.Log(ceh.inscription.Count);
+       // Debug.Log(ceh.inscription.Count);
         foreach (Inscription gd in ceh.inscription)
         { 
-             Debug.Log(gd.inscriptionName);
+             //Debug.Log(gd.inscriptionName);
             foreach(InscriptionAttribute a in gd.inscriptionAttribute) {
                 //Debug.Log("id:"+a.attributeId);
                 //Debug.Log("value:"+a.attribueValue);
@@ -71,7 +68,7 @@ public class Test2 : MonoBehaviour {
             Debug.Log(2313);
         }
         a.CalculatedAttribute();
-        Debug.Log(a.inscriptionAttribute.Count);
+        //Debug.Log(a.inscriptionAttribute.Count);
         foreach (KeyValuePair<int, InscriptionAttribute> item in a.inscriptionAttribute) {
             Debug.Log(item.Value.attributeName+"："+item.Value.attribueValue.ToString());
         }

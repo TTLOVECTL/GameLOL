@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 namespace EquipmentSystem {
-    /// <summary>
-    /// 
-    /// </summary>
+   
+    [System.Serializable]
     public abstract class BaseEquipment {
         /// <summary>
         /// 装备id
@@ -27,6 +26,11 @@ namespace EquipmentSystem {
         public Sprite equipmentIcor;
 
         /// <summary>
+        /// 装备类型
+        /// </summary>
+        public EqunipmentType equipmentType;
+
+        /// <summary>
         /// 装备属性
         /// </summary>
         public List<EquipmentAttribute> equipmentAttribute;
@@ -40,6 +44,11 @@ namespace EquipmentSystem {
         /// 主动技能描述
         /// </summary>
         public string InitiativeSkill;
+
+        /// <summary>
+        /// 装备的技能
+        /// </summary>
+        public List<EquipmentSkill> equipmentSkill;
 
         public abstract void AddChildEquipment(BaseEquipment baseEquipment);
 
