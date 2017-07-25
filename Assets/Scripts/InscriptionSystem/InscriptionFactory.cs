@@ -59,43 +59,14 @@ namespace InscriptionSystem
         /// </summary>
         public void InitInscription()
         {
-            BookElementHolder ceh = AssetDatabase.LoadAssetAtPath<BookElementHolder>("Assets/QQ.asset");
+            InscriptionHolder ceh = AssetDatabase.LoadAssetAtPath<InscriptionHolder>("Assets/Assets/Inscription.asset");
             if (ceh == null)
             {
                 return;
             }
             _inscription = ceh.inscription;
-            //string path = Application.dataPath + "/Inscription.xlsx";
-            //DataRowCollection collect = ExcelReader.ReadExcel(path);
-            //for (int i = 1; i < collect.Count; i++)
-            //{
-            //    if (collect[i][1].ToString() == "") continue;
-            //    Inscription inscription = new Inscription();
-            //    inscription.inscriptionID = int.Parse(collect[i][0].ToString());
-            //    inscription.inscriptionName = collect[i][1].ToString();
-            //    inscription.inscriptionLevel = int.Parse(collect[i][2].ToString());
-            //    inscription.inscriptionColor = (InscriptionColor)int.Parse(collect[i][3].ToString());
-            //    //inscription.inscriptionIcon = int.Parse(collect[i][4].ToString());
-            //    for (int j = 5; collect[i][j].ToString() != ""; j = j + 2)
-            //    {
-            //        InscriptionAttribute a = new InscriptionAttribute();
-
-            //        a.attributeName = collect[i][j].ToString();
-            //        a.attribueValue = float.Parse(collect[i][j + 1].ToString());
-            //        if (a.attribueValue < 1)
-            //        {
-            //            a.valueType = AttributeValue.PERCENTAGE;
-            //        }
-            //        else
-            //        {
-            //            a.valueType = AttributeValue.NUMBER;
-            //        }
-            //        inscription.AddAttribute(a);
-
-            //    }
-            //    _inscription.Add(inscription);
-            //}
-        }
+            
+        }///此处是重点
 
         /// <summary>
         /// 根据名字获取指定的符文

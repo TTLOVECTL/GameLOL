@@ -22,17 +22,12 @@ public class ExportAssetBundles : MonoBehaviour
     [MenuItem("Assetbundles/Create Assetbundles %Q")]
     public static void ExcuteBuild()
     {
-        //string path = EditorUtility.SaveFilePanel("Save Resource", "", "New Resource", "asset");
 
-        BookElementHolder holder = ScriptableObject.CreateInstance<BookElementHolder>();
-        //holder.attribute = ExcelReader.InitAttrtibute("Attribute.xlsx");
-        holder.inscription = ExcelReader.IninInscription("Inscription.xlsx");
-        //.x
-        //InscriptionFactory.Instance.inscription;
-        //foreach (Inscription ip in holder.inscription) {
-        //    Debug.Log(ip.inscriptionAttribute.Count);
-        //}        
-        string path = "Assets/QQ.asset";
+        //BookElementHolder holder = ScriptableObject.CreateInstance<BookElementHolder>();
+        InscriptionHolder holder = ScriptableObject.CreateInstance<InscriptionHolder>();
+        holder.inscription = ExcelReader.IninInscription("Inscription.xlsx");        
+        string path = "Assets/Assets/Inscription.asset";
+        //string path = "Assets/QQ.asset";
         AssetDatabase.CreateAsset(holder, path);
     }
 }

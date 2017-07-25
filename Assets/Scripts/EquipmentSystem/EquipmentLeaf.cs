@@ -13,6 +13,11 @@ namespace EquipmentSystem
             throw new NotImplementedException();
         }
 
+        public override List<BaseEquipment> GetChildEquipmet()
+        {
+            throw new NotImplementedException();
+        }
+
         public override void RemoveChildEquipment(BaseEquipment baseEquipment)
         {
             throw new NotImplementedException();

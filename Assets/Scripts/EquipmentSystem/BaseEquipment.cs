@@ -54,6 +54,8 @@ namespace EquipmentSystem {
 
         public abstract void RemoveChildEquipment(BaseEquipment baseEquipment);
 
+        public abstract List<BaseEquipment> GetChildEquipmet();
+
         public abstract void SetPassiveSkill();
 
         public abstract void SetInitiativeSkill();

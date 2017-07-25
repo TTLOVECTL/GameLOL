@@ -14,6 +14,11 @@ namespace EquipmentSystem {
             equipmentList.Add(baseEquipment);
         }
 
+        public override List<BaseEquipment> GetChildEquipmet()
+        {
+            return equipmentList;
+        }
+
         public override void RemoveChildEquipment(BaseEquipment baseEquipment)
         {
             if (equipmentList.Contains(baseEquipment))
