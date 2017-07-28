@@ -6,27 +6,64 @@ using UnityEngine.UI;
 
 namespace InscriptionSystem
 {
+    /// <summary>
+    /// 创建符文显示的UI
+    /// </summary>
     public class CreateInscriptionUI : MonoBehaviour
     {
+        /// <summary>
+        /// 实例化物体
+        /// </summary>
         public GameObject instance;
 
+       /// <summary>
+       /// 实例化物体的父对象
+       /// </summary>
         public GameObject contentObj;
 
+        /// <summary>
+        /// 符文sprites列表
+        /// </summary>
         public Sprite[] spriteList;
+
+        /// <summary>
+        /// 当前符文等级
+        /// </summary>
         private int inscriptionLevel = 5;
 
+        /// <summary>
+        /// 当前符文类型
+        /// </summary>
         private AttribueType inscriptionType = AttribueType.ALL;
 
+        /// <summary>
+        /// 对应当前符文类型和等级的所有符文
+        /// </summary>
         private List<Inscription> _inscriptionList;
 
+        /// <summary>
+        /// 父物体的Transform组件
+        /// </summary>
         private RectTransform contentTransform;
 
+        /// <summary>
+        /// 实例化物体的宽度
+        /// </summary>
         private float buttonwidth;
 
+        /// <summary>
+        /// 父物体的宽度
+        /// </summary>
         private float rectWidth;
 
+        /// <summary>
+        /// 父物体的高度
+        /// </summary>
         private float rectHeight;
 
+        /// <summary>
+        /// 实例化物体的高度
+        /// </summary>
         private float buttonheight;
 
         void Start()
@@ -47,21 +84,27 @@ namespace InscriptionSystem
             ChooseDeal();
         }
 
-        void Update()
-        {
-
-        }
-
+        /// <summary>
+        ///按钮响应事件：设置选择的符文等级
+        /// </summary>
+        /// <param name="level"></param>
         public void OnChooseLevelButton(int level) {
             inscriptionLevel = level;
             ChooseDeal();
         }
 
+        /// <summary>
+        /// 按钮响应事件：设置选择的符文类型
+        /// </summary>
+        /// <param name="type"></param>
         public void OnChooseTypeButtoon(AttribueType type) {
             inscriptionType = type;
             ChooseDeal();
         }
 
+        /// <summary>
+        /// 根据选择的等级和类型筛选出合适的符文
+        /// </summary>
         private void ChooseDeal() {
             List<Inscription> resultList = GetInScription();
             int number = resultList.Count / 3;
@@ -99,6 +142,10 @@ namespace InscriptionSystem
 
         }
 
+        /// <summary>
+        /// 实例化所有的符文
+        /// </summary>
+        /// <returns></returns>
         private List<Inscription> GetInScription() {
             List<Inscription> list = new List<Inscription>();
             foreach (Inscription insc in _inscriptionList) {
@@ -109,6 +156,11 @@ namespace InscriptionSystem
             return list;
         }
 
+        /// <summary>
+        /// 是否是要查找的符文
+        /// </summary>
+        /// <param name="insca"></param>
+        /// <returns></returns>
         private bool IsLookInscription(Inscription insca) {
             switch (inscriptionType) {
                 case AttribueType.ALL:

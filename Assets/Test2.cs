@@ -5,10 +5,11 @@ using InscriptionSystem;
 using UnityEditor;
 
 public class Test2 : MonoBehaviour {
-	void Start () {
+	void Awake () {
         //readAsset();
         Init();
-        InitFactory();
+        InscriptionConst._instriptionBag.Add(7);
+        InscriptionConst._instriptionBag.Add(17);
 	}
 
     private void readAsset()
@@ -40,7 +41,7 @@ public class Test2 : MonoBehaviour {
             InscriptionModel im = new InscriptionModel();
             im._inscriptionColor = InscriptionColor.GREEN;
             im._inscriptionID = 2;
-            im._inscriptionPosId = i;
+            im._inscriptionPosId = i+1;
             ip._inscriptionModelList.Add(im);
         }
 
@@ -49,7 +50,7 @@ public class Test2 : MonoBehaviour {
             InscriptionModel im = new InscriptionModel();
             im._inscriptionColor = InscriptionColor.RED;
             im._inscriptionID = 1;
-            im._inscriptionPosId = i;
+            im._inscriptionPosId = i+1;
             ip._inscriptionModelList.Add(im);
         }
         for (int i = 0; i < 10; i++)
@@ -57,7 +58,7 @@ public class Test2 : MonoBehaviour {
             InscriptionModel im = new InscriptionModel();
             im._inscriptionColor = InscriptionColor.BLUE;
             im._inscriptionID = 8;
-            im._inscriptionPosId = i;
+            im._inscriptionPosId = i+1;
             ip._inscriptionModelList.Add(im);
         }
         InscriptionConst._instcriptionPageModel.Add(ip);
