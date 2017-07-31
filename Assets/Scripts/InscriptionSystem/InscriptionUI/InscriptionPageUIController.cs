@@ -8,7 +8,20 @@ namespace InscriptionSystem.UI
 {
     public class InscriptionPageUIController : MonoBehaviour
     {
-        
+        private static InscriptionPageUIController instance = null;
+
+        private void Awake()
+        {
+            instance = this;
+        }
+
+        public static InscriptionPageUIController Instance {
+            get {
+                return instance;
+            }
+        }
+
+
         private InscriptionSlotButton[] inscriptionButtonList;
 
         /// <summary>
@@ -19,7 +32,7 @@ namespace InscriptionSystem.UI
         /// <summary>
         /// 当前符文页
         /// </summary>
-        private InscriptionPage inscriptionPage;
+        public InscriptionPage inscriptionPage;
 
         private int PageNumber
         {

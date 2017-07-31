@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using InscriptionSystem;
+using UnityEngine.UI;
 namespace InscriptionSystem.UI
 {
     public class InscriptionSettingPanel : MonoBehaviour
@@ -43,6 +44,7 @@ namespace InscriptionSystem.UI
             buttonwidth = rectWidth - 10;
             buttonheight = buttonwidth / 2;
         }
+
         public void OnReceiveMessage() {
             currentButton = InscriptionSlotButton.currentButton;
             InitChooseFromBag();
@@ -50,7 +52,7 @@ namespace InscriptionSystem.UI
 
         private void InitChooseFromBag() {
             foreach (int a in InscriptionConst._instriptionBag) {
-               Inscription inscription=InscriptionFactory.Instance.GetInscriptionById(a);
+                Inscription inscription=InscriptionFactory.Instance.GetInscriptionById(a);
                 if (inscription.inscriptionColor == currentButton.GetComponent<InscriptionSlotButton>().slotColor) {
                     inscriptionList.Add(inscription);
                 }
@@ -67,9 +69,12 @@ namespace InscriptionSystem.UI
                     ga.GetComponent<RectTransform>().SetParent(contentObj.transform);
                     ga.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth-buttonwidth), buttonheight);
 
-                     ga.GetComponent<RectTransform>().localPosition = new Vector2(buttonwidth/2+5, -count * (buttonheight + 10) - (buttonheight/2+5));
-                     count++;
-                    ///have some thing to do
+                    ga.GetComponent<RectTransform>().localPosition = new Vector2(buttonwidth/2+5, -count * (buttonheight + 10) - (buttonheight/2+5));
+
+                    ga.GetComponent<SettingInscriptionButton>().inscriptionId = a.inscriptionID;
+
+                    ga.GetComponent<Image>().sprite = tempSprite[a.inscriptionID];
+                    count++;
                 }
             }
         }

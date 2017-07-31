@@ -48,9 +48,34 @@ namespace InscriptionSystem.UI {
         /// 按钮响应事件：移除卡槽中的符文
         /// </summary>
         public void OnRemoveInscripteFromSlot() {
-            InscriptionSlotButton.currentButton.GetComponent<InscriptionSlotButton>().inscriptionId = 0;
+            InscriptionSlotButton insbu = InscriptionSlotButton.currentButton.GetComponent<InscriptionSlotButton>();
+            
             InscriptionSlotButton.currentButton.GetComponent<Image>().enabled = false;
-            InscriptionSlotButton.currentButton.GetComponent<InscriptionSlotButton>().isInscription = false;
+            insbu.isInscription = false;
+            switch (insbu.slotColor)
+            {
+                case InscriptionColor.BLUE:
+                    InscriptionPageUIController.Instance.inscriptionPage.blueInscription.Remove(insbu.inscriptionId);
+                    break;
+                case InscriptionColor.GREEN:
+                    InscriptionPageUIController.Instance.inscriptionPage.greenInscription.Remove(insbu.inscriptionId);
+                    break;
+                case InscriptionColor.RED:
+                    InscriptionPageUIController.Instance.inscriptionPage.redInscription.Remove(insbu.inscriptionId);
+                    break;
+            }
+
+            InscriptionConst._instriptionBag.Add(insbu.inscriptionId);
+            insbu.inscriptionId = 0;
+
+            ///===============================================
+            //当移除符文是需要将移除后的数据提交给服务器
+            //this.gameObject.SetActive(false);
+            //InscriptionAttribueUIController.Instance.inscriptionPagePanel.SetActive(true);
+            //InscriptionAttribueUIController.Instance.inscriptionPagePanel.SendMessage("OnReciveFromInscriptionPage", InscriptionPageUIController.Instance.inscriptionPage);
+            this.gameObject.SetActive(false);
+            InscriptionAttribueUIController.Instance.inscriptionSettingPanel.SetActive(true);
+            InscriptionAttribueUIController.Instance.inscriptionSettingPanel.SendMessage("OnReceiveMessage");
         }
 
         /// <summary>
