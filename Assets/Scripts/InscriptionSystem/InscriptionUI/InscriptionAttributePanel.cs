@@ -20,12 +20,16 @@ namespace InscriptionSystem.UI {
         /// </summary>
         public Text attributeText;
 
+        public Text inscriptionName;
+
         /// <summary>
         /// SendMessage接受体：接受来自InscriptionAttribueUIController类发来的信息
         /// </summary>
         /// <param name="insc"></param>
         public void OnReceiveMessage(Inscription insc) {
             inscriptionsprite.sprite = insc._inscriptionIcon;
+            inscriptionName.text += (insc.inscriptionLevel+"级符文:"+insc.inscriptionName);
+            attributeText.text = "";
             foreach (InscriptionAttribute a in insc._inscriptionAttribute) {
                 string text = a.attributeName;
                 if (a.valueType == AttributeValue.NUMBER)

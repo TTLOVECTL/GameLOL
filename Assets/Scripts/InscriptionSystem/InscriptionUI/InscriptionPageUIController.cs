@@ -11,8 +11,14 @@ namespace InscriptionSystem.UI
         
         private InscriptionSlotButton[] inscriptionButtonList;
 
+        /// <summary>
+        /// 符文页Id
+        /// </summary>
         private int _pageNumber = 0;
 
+        /// <summary>
+        /// 当前符文页
+        /// </summary>
         private InscriptionPage inscriptionPage;
 
         private int PageNumber
@@ -25,6 +31,8 @@ namespace InscriptionSystem.UI
                     _pageNumber = value;
                     ClearInscription();
                     InitInscriptionSlot();
+                    SendMessageToInscriptionPagePanel();
+                   // InscriptionAttribueUIController.Instance.inscriptionPagePanel.SendMessage("OnReciveFromInscriptionPage",);
                 }
             }
         }
@@ -32,9 +40,13 @@ namespace InscriptionSystem.UI
         void Start()
         {
             inscriptionButtonList = transform.GetComponentsInChildren<InscriptionSlotButton>();
+            //SendMessageToInscriptionPagePanel();
             PageNumber = 1;
         }
 
+        /// <summary>
+        /// 将对应的符文放入指定的卡插槽中
+        /// </summary>
         private void InitInscriptionSlot()
         {
             inscriptionPage = InscriptionPageFactory.Instance.GetInscriptionPageById(_pageNumber);
@@ -73,6 +85,9 @@ namespace InscriptionSystem.UI
             }
         }
 
+        /// <summary>
+        /// 清除符文页中的符文
+        /// </summary>
         private void ClearInscription()
         {
             for (int i = 0; i < inscriptionButtonList.Length; i++)
@@ -83,8 +98,19 @@ namespace InscriptionSystem.UI
             }
         }
 
+        /// <summary>
+        /// 按钮响应事件：控制切换符文页
+        /// </summary>
+        /// <param name="pageNumber"></param>
         public void OnPageChange(int pageNumber) {
             PageNumber = pageNumber;
-        } 
+        }
+
+        /// <summary>
+        /// SendMessage事件发送体，当前符文页信息发生给InscriptionPagePanel
+        /// </summary>
+        private  void SendMessageToInscriptionPagePanel() {
+            InscriptionAttribueUIController.Instance.inscriptionPagePanel.SendMessage("OnReciveFromInscriptionPage", inscriptionPage);
+        }
     }
 }

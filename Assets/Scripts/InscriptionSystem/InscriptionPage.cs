@@ -283,5 +283,25 @@ namespace InscriptionSystem
             b.valueType = a.valueType;
             return b;
         }
+
+        /// <summary>
+        /// 计算符文页的符文总等级
+        /// </summary>
+        /// <returns></returns>
+        public int CalculatedInscriptionLevel() {
+            int level = 0;
+            foreach (KeyValuePair<int, Inscription> reditem in redInscription) {
+                level += reditem.Value.inscriptionLevel;
+            }
+            foreach (KeyValuePair<int, Inscription> greenitem in greenInscription)
+            {
+                level += greenitem.Value.inscriptionLevel;
+            }
+            foreach (KeyValuePair<int, Inscription> blueitem in blueInscription)
+            {
+                level += blueitem.Value.inscriptionLevel;
+            }
+            return level;
+        }
     }
 }
