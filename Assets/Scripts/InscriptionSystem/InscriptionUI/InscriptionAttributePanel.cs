@@ -28,7 +28,7 @@ namespace InscriptionSystem.UI {
         /// <param name="insc"></param>
         public void OnReceiveMessage(Inscription insc) {
             inscriptionsprite.sprite = insc._inscriptionIcon;
-            inscriptionName.text += (insc.inscriptionLevel+"级符文:"+insc.inscriptionName);
+            inscriptionName.text = (insc.inscriptionLevel+"级符文:"+insc.inscriptionName);
             attributeText.text = "";
             foreach (InscriptionAttribute a in insc._inscriptionAttribute) {
                 string text = a.attributeName;
@@ -55,13 +55,13 @@ namespace InscriptionSystem.UI {
             switch (insbu.slotColor)
             {
                 case InscriptionColor.BLUE:
-                    InscriptionPageUIController.Instance.inscriptionPage.blueInscription.Remove(insbu.inscriptionId);
+                    InscriptionPageUIController.Instance.inscriptionPage.blueInscription.Remove(insbu.slotId);
                     break;
                 case InscriptionColor.GREEN:
-                    InscriptionPageUIController.Instance.inscriptionPage.greenInscription.Remove(insbu.inscriptionId);
+                    InscriptionPageUIController.Instance.inscriptionPage.greenInscription.Remove(insbu.slotId);
                     break;
                 case InscriptionColor.RED:
-                    InscriptionPageUIController.Instance.inscriptionPage.redInscription.Remove(insbu.inscriptionId);
+                    InscriptionPageUIController.Instance.inscriptionPage.redInscription.Remove(insbu.slotId);
                     break;
             }
 
@@ -86,6 +86,7 @@ namespace InscriptionSystem.UI {
             InscriptionAttribueUIController.Instance.inscriptionSettingPanel.SetActive(true);
             ///SendMessage接受体：发送给InscriptionSettingPanel
             InscriptionAttribueUIController.Instance.inscriptionSettingPanel.SendMessage("OnReceiveMessage");
+
         }
     }
 }

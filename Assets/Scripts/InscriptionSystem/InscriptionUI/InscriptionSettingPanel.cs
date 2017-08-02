@@ -45,15 +45,23 @@ namespace InscriptionSystem.UI
             buttonheight = buttonwidth / 2;
         }
 
+
         public void OnReceiveMessage() {
-            currentButton = InscriptionSlotButton.currentButton;
+            currentButton = InscriptionSlotButton.currentButton;                
             InitChooseFromBag();
         }
 
         private void InitChooseFromBag() {
-            foreach (int a in InscriptionConst._instriptionBag) {
-                Inscription inscription=InscriptionFactory.Instance.GetInscriptionById(a);
-                if (inscription.inscriptionColor == currentButton.GetComponent<InscriptionSlotButton>().slotColor) {
+            for (int i = 0; i < contentObj.transform.childCount; i++)
+            {
+                DestroyImmediate(contentObj.transform.GetChild(i).gameObject);
+            }
+            inscriptionList.Clear();
+            foreach (int a in InscriptionConst._instriptionBag)
+            {
+                Inscription inscription = InscriptionFactory.Instance.GetInscriptionById(a);
+                if (inscription.inscriptionColor == currentButton.GetComponent<InscriptionSlotButton>().slotColor)
+                {
                     inscriptionList.Add(inscription);
                 }
             }
@@ -65,8 +73,10 @@ namespace InscriptionSystem.UI
                 contentObj.GetComponent<RectTransform>().sizeDelta = new Vector2(0,he);
                 int count = 0;
                 foreach(Inscription a in inscriptionList) {
-                    GameObject ga = Instantiate(initscerObj);
+                    GameObject ga = Instantiate(initscerObj) as GameObject;
+
                     ga.GetComponent<RectTransform>().SetParent(contentObj.transform);
+
                     ga.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth-buttonwidth), buttonheight);
 
                     ga.GetComponent<RectTransform>().localPosition = new Vector2(buttonwidth/2+5, -count * (buttonheight + 10) - (buttonheight/2+5));

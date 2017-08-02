@@ -39,7 +39,8 @@ namespace InscriptionSystem.UI
             foreach (KeyValuePair<int, InscriptionAttribute> item in attributeList) {
                 if (item.Value.valueType == AttributeValue.NUMBER)
                 {
-                    attributeText.text += (item.Value.attributeName + ":" + item.Value.attribueValue.ToString());
+                    string valuestring = (System.Math.Round(item.Value.attribueValue, 1).ToString());
+                    attributeText.text += (item.Value.attributeName + ":" + valuestring);
                 }
                 else {
                     string valuestring = (System.Math.Round(item.Value.attribueValue * 100,1)).ToString() + "%";
@@ -48,5 +49,7 @@ namespace InscriptionSystem.UI
                 attributeText.text += "\n";
             }
         }
+
+        
     }
 }
