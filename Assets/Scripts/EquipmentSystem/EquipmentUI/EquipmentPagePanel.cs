@@ -58,6 +58,7 @@ namespace EquipmentSystem.UI {
             InitEquipmentPage();
         }
 
+
         private void InitEquipmentPage() {
             int number = GetBigHeight();
             float he = number * buttonheight + (number + 1) * buttonheight / 2;

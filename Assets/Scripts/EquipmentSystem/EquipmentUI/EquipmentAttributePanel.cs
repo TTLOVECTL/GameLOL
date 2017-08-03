@@ -15,6 +15,7 @@ namespace EquipmentSystem.UI
         public void OnReciveMessgaeEquipmentButton() {
             attributeText.text = "";
             EquipmentButton eqb = EquipmentButton.currentEquipmentButton.GetComponent<EquipmentButton>();
+            
             switch (eqb.equipmentType) {
                 case EqunipmentType.SMALL:
                     EquipmentLeaf eleaf = EquipmentFactory.Instance.GetLeafEquipmentById(eqb.equipemntId);
@@ -32,6 +33,21 @@ namespace EquipmentSystem.UI
                                     break;
                             }
                             attributeText.text += valuestring;
+                            attributeText.text += "\n";
+                        }
+                        attributeText.text += "\n";
+                        if (eleaf.equipmentSkill.Count > 0) {
+                            foreach (EquipmentSkill item in eleaf.equipmentSkill) {
+                                switch (item.skillType) {
+                                    case SkillType.PASSIVE:
+                                        attributeText.text += ("唯一被动-" + item.skillName + ":" + item.skillDescription);
+                                        break;
+                                    case SkillType.INITIATIVE:
+                                        attributeText.text += ("唯一主动-" + item.skillName + ":" + item.skillDescription);
+                                        break;
+                                }
+                                attributeText.text += "\n";
+                            }
                         }
                     }
                     break;
@@ -54,6 +70,24 @@ namespace EquipmentSystem.UI
                                     break;
                             }
                             attributeText.text += valuestring;
+                            attributeText.text += "\n";
+                        }
+                        attributeText.text += "\n";
+                        if (ecomp.equipmentSkill.Count > 0)
+                        {
+                            foreach (EquipmentSkill item in ecomp.equipmentSkill)
+                            {
+                                switch (item.skillType)
+                                {
+                                    case SkillType.PASSIVE:
+                                        attributeText.text += ("唯一被动-" + item.skillName + ":" + item.skillDescription);
+                                        break;
+                                    case SkillType.INITIATIVE:
+                                        attributeText.text += ("唯一主动-" + item.skillName + ":" + item.skillDescription);
+                                        break;
+                                }
+                                attributeText.text += "\n";
+                            }
                         }
                     }
                     
@@ -77,6 +111,24 @@ namespace EquipmentSystem.UI
                                     break;
                             }
                             attributeText.text += valuestring;
+                            attributeText.text += "\n";
+                        }
+                        attributeText.text += "\n";
+                        if (bigecomp.equipmentSkill.Count > 0)
+                        {
+                            foreach (EquipmentSkill item in bigecomp.equipmentSkill)
+                            {
+                                switch (item.skillType)
+                                {
+                                    case SkillType.PASSIVE:
+                                        attributeText.text += ("唯一被动-" + item.skillName + ":" + item.skillDescription);
+                                        break;
+                                    case SkillType.INITIATIVE:
+                                        attributeText.text += ("唯一主动-" + item.skillName + ":" + item.skillDescription);
+                                        break;
+                                }
+                                attributeText.text += "\n";
+                            }
                         }
                     }
 
