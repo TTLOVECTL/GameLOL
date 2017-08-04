@@ -27,7 +27,8 @@ namespace EquipmentSystem.UI
 
         public List<EquipmentComponent> bigEquipmentList = null;
 
-        public void OnInitEquitmentList(SearchType searchType) {
+        public void OnInitEquitmentList(int searchId) {
+            SearchType searchType = (SearchType)searchId;
             smallEquipmentList = EquipmentFactory.Instance.GetSmallEquipmentBySearchType(searchType);
             bigEquipmentList = EquipmentFactory.Instance.GetBigEquipmentBySerchType(searchType);
             middleEquipmentList = EquipmentFactory.Instance.GetMiddleEquipmentBySearchType(searchType);
@@ -36,7 +37,7 @@ namespace EquipmentSystem.UI
 
         private void Start()
         {
-            OnInitEquitmentList(SearchType.ATTACK);
+            OnInitEquitmentList((int)SearchType.ATTACK);
         }
     }
 }

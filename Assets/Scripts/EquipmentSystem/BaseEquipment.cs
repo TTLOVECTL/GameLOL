@@ -58,5 +58,6 @@ namespace EquipmentSystem {
         public abstract void SetPassiveSkill();
 
         public abstract void SetInitiativeSkill();
+        
     }
 }

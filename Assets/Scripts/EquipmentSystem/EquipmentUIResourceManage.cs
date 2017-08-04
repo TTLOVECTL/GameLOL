@@ -40,4 +40,14 @@ public class EquipmentUIResourceManage : MonoBehaviour {
     /// 装备面板实例化文字物体
     /// </summary>
     public GameObject EquipmentInstantiateTextObj;
+
+    /// <summary>
+    /// 装备之间相连的线实例物体
+    /// </summary>
+    public GameObject DrawLineInstacneObj;
+
+    /// <summary>
+    /// 装备的合成路径面板
+    /// </summary>
+    public GameObject SyntheticPathPanel;
 }

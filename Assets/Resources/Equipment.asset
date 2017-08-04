@@ -17,7 +17,7 @@ MonoBehaviour:
     equipmentName: "\u5438\u8840\u4E4B\u9570"
     seaechType: 0
     equipmentPrice: 410
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: cc71e855723215e4192b6537ca28e0ea, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 2
@@ -34,7 +34,7 @@ MonoBehaviour:
     equipmentName: "\u94C1\u5251"
     seaechType: 0
     equipmentPrice: 250
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: 5c80591659087e443baff6391b619962, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 2
@@ -47,7 +47,7 @@ MonoBehaviour:
     equipmentName: "\u5315\u9996"
     seaechType: 0
     equipmentPrice: 290
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: 911b1fea45887a44895ab3bc0a45883f, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 10
@@ -60,7 +60,7 @@ MonoBehaviour:
     equipmentName: "\u640F\u51FB\u62F3\u5957"
     seaechType: 0
     equipmentPrice: 320
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: d527e616c6cd7554ebefd19df08e4e22, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 12
@@ -73,7 +73,7 @@ MonoBehaviour:
     equipmentName: "\u5492\u7B26\u5178\u7C4D"
     seaechType: 1
     equipmentPrice: 300
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: f27107236407e734199dd80215386271, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 1
@@ -86,7 +86,7 @@ MonoBehaviour:
     equipmentName: "\u84DD\u5B9D\u77F3"
     seaechType: 1
     equipmentPrice: 220
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: 27c67f1128b4bff4d88a704776242fd1, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 16
@@ -99,7 +99,7 @@ MonoBehaviour:
     equipmentName: "\u70BC\u91D1\u62A4\u80A4"
     seaechType: 1
     equipmentPrice: 120
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: ff75bfe356766da488abfc38ce203338, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 17
@@ -112,7 +112,7 @@ MonoBehaviour:
     equipmentName: "\u5723\u8005\u6CD5\u5178"
     seaechType: 1
     equipmentPrice: 500
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: 72d52ef20f8b54b44a4c1f1d26251bce, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 1
@@ -129,7 +129,7 @@ MonoBehaviour:
     equipmentName: "\u72E9\u730E\u5BBD\u5203"
     seaechType: 4
     equipmentPrice: 250
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: ecdf1bfffb2e1fb4eaba1e11dd00073a, type: 3}
     equipmentType: 0
     equipmentAttribute: []
     equipmentSkill:
@@ -142,7 +142,7 @@ MonoBehaviour:
     equipmentName: "\u795E\u901F\u4E4B\u9774"
     seaechType: 3
     equipmentPrice: 250
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: a79ed95f9a6699241b43f7b2ef8eae1b, type: 3}
     equipmentType: 0
     equipmentAttribute: []
     equipmentSkill:
@@ -155,7 +155,7 @@ MonoBehaviour:
     equipmentName: "\u7EA2\u739B\u7459"
     seaechType: 2
     equipmentPrice: 300
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: c0675415064c1bb468ab8bc217c34732, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 11
@@ -168,7 +168,7 @@ MonoBehaviour:
     equipmentName: "\u5E03\u7532"
     seaechType: 2
     equipmentPrice: 220
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: fdacf2fcf907ba44bb2bdb75a931db49, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 4
@@ -181,7 +181,7 @@ MonoBehaviour:
     equipmentName: "\u6297\u9B54\u62AB\u98CE"
     seaechType: 2
     equipmentPrice: 220
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: b0bd672846a0ae0429f5a6eeb09d2020, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 3
@@ -194,7 +194,7 @@ MonoBehaviour:
     equipmentName: "\u63D0\u795E\u6C34\u6676"
     seaechType: 2
     equipmentPrice: 140
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: 3338bbe261888a54ea7c64cf96388e55, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 14
@@ -207,7 +207,7 @@ MonoBehaviour:
     equipmentName: "\u96F7\u9E23\u5200"
     seaechType: 0
     equipmentPrice: 450
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: 095a5a600c78f12468a23e309c63860e, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 2
@@ -220,7 +220,7 @@ MonoBehaviour:
     equipmentName: "\u5145\u80FD\u62F3\u5957"
     seaechType: 0
     equipmentPrice: 550
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: f89f84d479dd5e848a24178461cb2104, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 12
@@ -233,7 +233,7 @@ MonoBehaviour:
     equipmentName: "\u5143\u7D20\u6756"
     seaechType: 1
     equipmentPrice: 540
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: 7c6c5bbfd0dd88b46a0593d9f1aba279, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 1
@@ -246,7 +246,7 @@ MonoBehaviour:
     equipmentName: "\u5B66\u8BC6\u5B9D\u77F3"
     seaechType: 5
     equipmentPrice: 300
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: 4b0e763a09a1ca64c93699b23e410b55, type: 3}
     equipmentType: 0
     equipmentAttribute:
     - _attributeId: 15
@@ -264,7 +264,7 @@ MonoBehaviour:
     equipmentName: "\u98CE\u66B4\u5DE8\u5251"
     seaechType: 0
     equipmentPrice: 910
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: fe4b9cf34c67dbb459750b96338923f9, type: 3}
     equipmentType: 1
     equipmentAttribute:
     - _attributeId: 2
@@ -292,7 +292,7 @@ MonoBehaviour:
     equipmentName: "\u65E5\u5195"
     seaechType: 0
     equipmentPrice: 790
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: af95dfd6ad228e244bb62ab39435f0a7, type: 3}
     equipmentType: 1
     equipmentAttribute:
     - _attributeId: 2
@@ -341,7 +341,7 @@ MonoBehaviour:
     equipmentName: "\u72C2\u66B4\u53CC\u5203"
     seaechType: 0
     equipmentPrice: 890
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: 947c4f5df4db0794da5a24094af9956a, type: 3}
     equipmentType: 1
     equipmentAttribute:
     - _attributeId: 10
@@ -390,7 +390,7 @@ MonoBehaviour:
     equipmentName: "\u9668\u661F"
     seaechType: 0
     equipmentPrice: 1080
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: 1903d731440cd9943b943f85a1ddedfb, type: 3}
     equipmentType: 1
     equipmentAttribute:
     - _attributeId: 2
@@ -439,7 +439,7 @@ MonoBehaviour:
     equipmentName: "\u7834\u9B54\u5200"
     seaechType: 0
     equipmentPrice: 2000
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: 3a0522a1d0383c14bbce60bc2b30658a, type: 3}
     equipmentType: 1
     equipmentAttribute:
     - _attributeId: 2
@@ -512,7 +512,7 @@ MonoBehaviour:
     equipmentName: "\u540D\u5200\xB7\u53F8\u547D"
     seaechType: 0
     equipmentPrice: 1760
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: d06e9873b47388749ba901903069a5de, type: 3}
     equipmentType: 1
     equipmentAttribute:
     - _attributeId: 2
@@ -561,7 +561,7 @@ MonoBehaviour:
     equipmentName: "\u7834\u7532\u5F13"
     seaechType: 0
     equipmentPrice: 2100
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: 038b418b0bd406a4faa252ea9e9b781f, type: 3}
     equipmentType: 1
     equipmentAttribute:
     - _attributeId: 2
@@ -646,7 +646,7 @@ MonoBehaviour:
     equipmentName: "\u51B0\u971C\u957F\u77DB"
     seaechType: 0
     equipmentPrice: 1980
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: e270eb505593aaa4c8b16e4b1ef275a9, type: 3}
     equipmentType: 1
     equipmentAttribute:
     - _attributeId: 2
@@ -744,7 +744,7 @@ MonoBehaviour:
     equipmentName: "\u901F\u51FB\u4E4B\u67AA"
     seaechType: 0
     equipmentPrice: 890
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: 61e8e535459cc904ea1bf72a5dc2332b, type: 3}
     equipmentType: 1
     equipmentAttribute:
     - _attributeId: 10
@@ -789,7 +789,7 @@ MonoBehaviour:
     equipmentName: "\u5236\u88C1\u4E4B\u5203"
     seaechType: 0
     equipmentPrice: 1800
-    equipmentIcor: {fileID: 0}
+    equipmentIcor: {fileID: 21300000, guid: 860d90f64e726c44494e7809fd153e70, type: 3}
     equipmentType: 1
     equipmentAttribute:
     - _attributeId: 2
@@ -936,7 +936,7 @@ MonoBehaviour:
     equipmentCompmenTList: []
   - equipmentId: 31
     equipmentName: "\u5149\u8F89\u4E4B\u5251"
-    seaechType: 0
+    seaechType: 1
     equipmentPrice: 730
     equipmentIcor: {fileID: 0}
     equipmentType: 1
