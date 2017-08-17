@@ -12,6 +12,9 @@ namespace HeroSystem.BaseHeroSystem
         {
         }
 
+        /// <summary>
+        /// 脚本激活时调用
+        /// </summary>
         private void OnEnable()
         {
             EasyJoystick.On_JoystickMove += On_JoystickMove;
@@ -19,6 +22,9 @@ namespace HeroSystem.BaseHeroSystem
             EasyButton.On_ButtonUp += On_ButtonUp;
         }
 
+        /// <summary>
+        /// 脚本销毁时调用
+        /// </summary>
         private void OnDestroy()
         {
             EasyJoystick.On_JoystickMove -= On_JoystickMove;
@@ -26,6 +32,9 @@ namespace HeroSystem.BaseHeroSystem
             EasyButton.On_ButtonUp -= On_ButtonUp;
         }
 
+        /// <summary>
+        /// 脚本被隐藏时调用
+        /// </summary>
         private void OnDisable()
         {
             EasyJoystick.On_JoystickMove -= On_JoystickMove;
@@ -33,6 +42,10 @@ namespace HeroSystem.BaseHeroSystem
             EasyButton.On_ButtonUp -= On_ButtonUp;
         }
 
+        /// <summary>
+        /// 事件绑定函数
+        /// </summary>
+        /// <param name="move"></param>
         void On_JoystickMove(MovingJoystick move)
         {
             baseHeroController.OnRun();
