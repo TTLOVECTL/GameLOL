@@ -5,7 +5,7 @@ namespace HeroSystem.BaseHeroSystem
 {
     public class HeroTouchController : MonoBehaviour
     {
-
+        public GameObject playerObject;
         public BaseHeroController baseHeroController;
 
         private void Start()
@@ -50,8 +50,8 @@ namespace HeroSystem.BaseHeroSystem
         {
             baseHeroController.OnRun();
             float angle = move.Axis2Angle(true);
-            transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
-            transform.Translate(Vector3.forward * move.joystickValue.magnitude * Time.deltaTime);
+            playerObject.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
+            playerObject.transform.Translate(Vector3.forward * move.joystickValue.magnitude * Time.deltaTime);
 
         }
 
@@ -88,7 +88,7 @@ namespace HeroSystem.BaseHeroSystem
             }
             else if (buttonName == "回血")
             {
-
+                //移动控制
             }
         }
     }

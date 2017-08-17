@@ -18,8 +18,8 @@ namespace HeroSystem.BaseHeroSystem
         void Start()
         {
             animator = GetComponent<Animator>();
-            GetComponent<HeroTouchController>().baseHeroController = this;
-
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<HeroTouchController>().baseHeroController = this;
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<HeroTouchController>().playerObject = gameObject;
         }
 
         void Update()
