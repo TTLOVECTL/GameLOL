@@ -6,6 +6,8 @@ using UnityEngine.UI;
 namespace EquipmentSystem.UI {
     public class EquipmentPagePanel : MonoBehaviour {
 
+        private bool flag = true;
+
         /// <summary>
         /// 实例化物体的宽度
         /// </summary>
@@ -29,21 +31,21 @@ namespace EquipmentSystem.UI {
         /// <summary>
         /// 存储小件装备
         /// </summary>
-        private List<EquipmentLeaf> _samllEquipmentList;
+        private List<EquipmentLeaf> _samllEquipmentList=null;
 
         private SortedDictionary<int, GameObject> _smallGameObjectList=new SortedDictionary<int, GameObject>();
         
         /// <summary>
         /// 存储中件装备
         /// </summary>
-        private List<EquipmentComponent> _middleEquipmentLis;
+        private List<EquipmentComponent> _middleEquipmentLis=null;
 
         private SortedDictionary<int, GameObject> _middleGameObjectList = new SortedDictionary<int, GameObject>();
 
         /// <summary>
         /// 存储大件装备
         /// </summary>
-        private List<EquipmentComponent> _bigEquipmentList;
+        private List<EquipmentComponent> _bigEquipmentList=null;
 
         private SortedDictionary<int, GameObject> _bigGameObjectList = new SortedDictionary<int, GameObject>();
 
@@ -59,10 +61,10 @@ namespace EquipmentSystem.UI {
         /// SendMessage事件响应函数的接受体，来自LeftChoose的ChooseEquipmentSetting类
         /// </summary>
         public void OnSerchEquipment() {
+            ClearAllObject();
             _samllEquipmentList = ChooseEquipmentSetting.Instance.smallEquipmentList;
             _middleEquipmentLis = ChooseEquipmentSetting.Instance.middleEquipmentList;
-            _bigEquipmentList = ChooseEquipmentSetting.Instance.bigEquipmentList;
-            //ClearAllObject();
+            _bigEquipmentList = ChooseEquipmentSetting.Instance.bigEquipmentList;           
             InitEquipmentPage();
         }
 
@@ -73,7 +75,15 @@ namespace EquipmentSystem.UI {
                 he = rectHeight;
             }
             EquipmentUIResourceManage.Instance.EquipmentPageContent.GetComponent<RectTransform>().sizeDelta = new Vector2(0,he);
-            
+            float otherwideth;
+            if (flag)
+            {
+                otherwideth = 0;
+            }
+            else {
+                otherwideth = rectWidth / 2;
+            }
+
             int count = 0;
             foreach (EquipmentLeaf lefeitem in _samllEquipmentList) {
                 
@@ -95,20 +105,20 @@ namespace EquipmentSystem.UI {
 
                 ga.GetComponent<RectTransform>().SetParent(EquipmentUIResourceManage.Instance.EquipmentPageContent.transform);
                 ga.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth-buttonwidth),buttonheight);
-                ga.GetComponent<RectTransform>().localPosition = new Vector2(-2*buttonwidth,-count*(buttonheight*3/2)-buttonheight);
+                ga.GetComponent<RectTransform>().localPosition = new Vector2(-2*buttonwidth+ otherwideth, -count*(buttonheight*3/2)-buttonheight);
 
                 nameObj.GetComponent<RectTransform>().SetParent(EquipmentUIResourceManage.Instance.EquipmentPageContent.transform);
                 nameObj.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth - buttonwidth / 2), buttonheight / 2);
-                nameObj.GetComponent<RectTransform>().localPosition = new Vector2(-5 * buttonwidth / 4, -count * (buttonheight * 3 / 2) - 3 * buttonheight / 4);
+                nameObj.GetComponent<RectTransform>().localPosition = new Vector2(-5 * buttonwidth / 4 + otherwideth, -count * (buttonheight * 3 / 2) - 3 * buttonheight / 4);
 
                 priceObj.GetComponent<RectTransform>().SetParent(EquipmentUIResourceManage.Instance.EquipmentPageContent.transform);
                 priceObj.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth - buttonwidth / 2), buttonheight / 2);
-                priceObj.GetComponent<RectTransform>().localPosition = new Vector2(-5 * buttonwidth / 4, -count * (buttonheight * 3 / 2) - 5 * buttonheight / 4);
+                priceObj.GetComponent<RectTransform>().localPosition = new Vector2(-5 * buttonwidth / 4 + otherwideth, -count * (buttonheight * 3 / 2) - 5 * buttonheight / 4);
 
                 _smallGameObjectList.Add(lefeitem.equipmentId,ga);
-
                 count++;
             }
+
             count = 0;
             foreach (EquipmentComponent lefeitem in _middleEquipmentLis)
             {
@@ -130,15 +140,15 @@ namespace EquipmentSystem.UI {
 
                 ga.GetComponent<RectTransform>().SetParent(EquipmentUIResourceManage.Instance.EquipmentPageContent.transform);
                 ga.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth - buttonwidth), buttonheight);
-                ga.GetComponent<RectTransform>().localPosition = new Vector2(0, -count * (buttonheight * 3 / 2) - buttonheight);
+                ga.GetComponent<RectTransform>().localPosition = new Vector2(0 + otherwideth, -count * (buttonheight * 3 / 2) - buttonheight);
 
                 nameObj.GetComponent<RectTransform>().SetParent(EquipmentUIResourceManage.Instance.EquipmentPageContent.transform);
                 nameObj.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth - buttonwidth / 2), buttonheight / 2);
-                nameObj.GetComponent<RectTransform>().localPosition = new Vector2(3 * buttonwidth / 4, -count * (buttonheight * 3 / 2) - 3 * buttonheight / 4);
+                nameObj.GetComponent<RectTransform>().localPosition = new Vector2(3 * buttonwidth / 4 + otherwideth, -count * (buttonheight * 3 / 2) - 3 * buttonheight / 4);
 
                 priceObj.GetComponent<RectTransform>().SetParent(EquipmentUIResourceManage.Instance.EquipmentPageContent.transform);
                 priceObj.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth - buttonwidth / 2), buttonheight / 2);
-                priceObj .GetComponent<RectTransform>().localPosition = new Vector2(3 * buttonwidth / 4, -count * (buttonheight * 3 / 2) - 5 * buttonheight / 4);
+                priceObj .GetComponent<RectTransform>().localPosition = new Vector2(3 * buttonwidth / 4 + otherwideth, -count * (buttonheight * 3 / 2) - 5 * buttonheight / 4);
 
                 _middleGameObjectList.Add(lefeitem.equipmentId,ga);
                 count++;
@@ -166,19 +176,21 @@ namespace EquipmentSystem.UI {
 
                 ga.GetComponent<RectTransform>().SetParent(EquipmentUIResourceManage.Instance.EquipmentPageContent.transform);
                 ga.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth - buttonwidth), buttonheight);
-                ga.GetComponent<RectTransform>().localPosition = new Vector2(2 * buttonwidth, -count * (buttonheight * 3 / 2) - buttonheight);
+                ga.GetComponent<RectTransform>().localPosition = new Vector2(2 * buttonwidth + otherwideth, -count * (buttonheight * 3 / 2) - buttonheight);
 
                 nameObj.GetComponent<RectTransform>().SetParent(EquipmentUIResourceManage.Instance.EquipmentPageContent.transform);
                 nameObj.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth - buttonwidth/2), buttonheight/2);
-                nameObj.GetComponent<RectTransform>().localPosition = new Vector2(11 * buttonwidth / 4, -count * (buttonheight * 3 / 2) - 3 * buttonheight / 4);
+                nameObj.GetComponent<RectTransform>().localPosition = new Vector2(11 * buttonwidth / 4 + otherwideth, -count * (buttonheight * 3 / 2) - 3 * buttonheight / 4);
 
                 priceObj.GetComponent<RectTransform>().SetParent(EquipmentUIResourceManage.Instance.EquipmentPageContent.transform);
                 priceObj.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth - buttonwidth/2), buttonheight/2);
-                priceObj .GetComponent<RectTransform>().localPosition = new Vector2(11 * buttonwidth / 4, -count * (buttonheight * 3 / 2) - 5 * buttonheight / 4);
+                priceObj .GetComponent<RectTransform>().localPosition = new Vector2(11 * buttonwidth / 4 + otherwideth, -count * (buttonheight * 3 / 2) - 5 * buttonheight / 4);
 
                 _bigGameObjectList.Add(lefeitem.equipmentId,ga);
                 count++;
             }
+
+            flag = false;
         }
 
         /// <summary>
@@ -327,11 +339,30 @@ namespace EquipmentSystem.UI {
             {
                 foreach (Transform item in EquipmentUIResourceManage.Instance.EquipmentPageContent.GetComponentsInChildren<Transform>())
                 {
-                     
+                     if(item.gameObject.tag=="Equiment"|| item.gameObject.tag =="Line")
                      Destroy(item.gameObject);
                     
                 }
             }
+
+            if (_samllEquipmentList != null)
+            {
+                _samllEquipmentList.Clear();
+                
+            }
+            if (_middleEquipmentLis != null)
+            {
+                _middleEquipmentLis.Clear();
+            }
+            if (_bigEquipmentList != null)
+            {
+                _bigEquipmentList.Clear();
+            }
+            _bigGameObjectList.Clear();
+            _middleGameObjectList.Clear();
+            _smallGameObjectList.Clear();
+            
+            
         }
     }
 }

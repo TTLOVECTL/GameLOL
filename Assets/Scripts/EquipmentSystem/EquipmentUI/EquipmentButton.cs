@@ -31,6 +31,7 @@ namespace EquipmentSystem.UI
             currentEquipmentButton = this.gameObject;
             EquipmentUIResourceManage.Instance.EquipmentAttributePabel.SendMessage("OnReciveMessgaeEquipmentButton");
             EquipmentUIResourceManage.Instance.EquipmentPagePanel.SendMessage("OnDrawConnection");
+
         }
     }
 }

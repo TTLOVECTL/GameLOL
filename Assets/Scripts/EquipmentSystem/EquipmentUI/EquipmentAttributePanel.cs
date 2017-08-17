@@ -135,5 +135,11 @@ namespace EquipmentSystem.UI
                     break;
             }
         }
+
+        public void EntrySyntheticPathPanel() {
+            EquipmentUIResourceManage.Instance.SyntheticPathPanel.SetActive(true);
+            BaseEquipment ba = EquipmentFactory.Instance.GetEquipmemtByID(EquipmentButton.currentEquipmentButton.GetComponent<EquipmentButton>().equipemntId);
+            EquipmentUIResourceManage.Instance.SyntheticPathPanel.SendMessage("ReciveMessageUp",ba);
+        }
     }
 }

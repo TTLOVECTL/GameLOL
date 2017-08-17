@@ -141,5 +141,18 @@ namespace EquipmentSystem
             }
             return null;
         }
+
+        public BaseEquipment GetEquipmemtByID(int equipmentID) {
+            if (GetLeafEquipmentById(equipmentID) != null) {
+                return GetLeafEquipmentById(equipmentID);
+            }
+            if (GetMiddleEquipmentById(equipmentID) != null) {
+                return GetMiddleEquipmentById(equipmentID);
+            }
+            if (GetBigEquipmentById(equipmentID) != null) {
+                return GetBigEquipmentById(equipmentID);
+            }
+            return null;
+        }
     }
 }
