@@ -10,99 +10,98 @@ namespace HeroSystem
     /// </summary>
     public class AttackAttribute
     {
+
+        private float _moveSpeed;
         /// <summary>
         /// 移动速度
         /// </summary>
-        private int _moveSpeed;
-
-        public int moveSpeed
+        public float moveSpeed
         {
             get { return _moveSpeed; }
             set { this._moveSpeed = value; }
         }
 
+
+        private float _physicalPenetration;
         /// <summary>
         /// 物理穿透
         /// </summary>
-        private int _physicalPenetration;
-
-        public int physicalPenetration
+        public float physicalPenetration
         {
             get { return _physicalPenetration; }
             set { this._physicalPenetration = value; }
         }
 
+        private float _magicPenetration;
         /// <summary>
         /// 法术穿透
         /// </summary>
-        private int _magicPenetration;
-
-        public int magicPenetration
+        public float magicPenetration
         {
             get { return _magicPenetration; }
             set { this._magicPenetration = value; }
 
         }
+
+        private float _attackSpeed;
         /// <summary>
         /// 攻击速度
         /// </summary>
-        private float _attackSpeed;
-
         public float cttackSpeed
         {
             get { return _attackSpeed; }
             set { this._attackSpeed = value; }
         }
 
+
+        private float _criticalChance;
         /// <summary>
         ///暴击几率
         /// </summary>
-        private float _criticalChance;
-
         public float criticalChance
         {
             get { return _criticalChance; }
             set { this._criticalChance = value; }
         }
 
+
+        private float _criticalEffect;
         /// <summary>
         /// 暴击效果
         /// </summary>
-        private float _criticalEffect;
-
         public float criticalEffect
         {
             get { return _criticalEffect; }
             set { this._criticalEffect = value; }
         }
 
-        /// <summary>
+        
+        private float _physicalHemophagia;
+         /// <summary>
         /// 物理吸血
         /// </summary>
-        private float _physicalHemophagia;
-
         public float chysicalHemophagia
         {
             set { this._physicalHemophagia = value; }
             get { return _physicalHemophagia; }
         }
 
+        
+        private float _magicHemophagia;
         /// <summary>
         /// 法术吸血
         /// </summary>
-        private float _magicHemophagia;
-
         public float magicHemophagia
         {
             get { return _magicHemophagia; }
             set { this._magicHemophagia = value; }
         }
 
+       
+        private float _coolReduce;
         /// <summary>
         /// 冷却缩减
         /// </summary>
-        private float _coolReduce;
-
         public float coolReduce
         {
             get { return _coolReduce; }
@@ -110,11 +109,11 @@ namespace HeroSystem
             set { this._coolReduce = value; }
         }
 
-        /// <summary>
-        /// 攻击访问
-        /// </summary>
+        
         private string _attrackScale;
-
+        /// <summary>
+        /// 攻击范围
+        /// </summary>
         public string attrackScale
         {
             get { return _attrackScale; }

@@ -9,34 +9,32 @@ namespace HeroSystem
     public class DefenseAttribute
     {
 
+        private float _tenacity;
         /// <summary>
         /// 韧性
         /// </summary>
-        private float _tenacity;
-
         public float tenacity
         {
             get { return _tenacity; }
             set { _tenacity = value; }
         }
 
+
+        private float _recoveBlood;
         /// <summary>
         /// 每5秒回血
         /// </summary>
-        private int _recoveBlood;
-
-        public int recoveBlood
+        public float recoveBlood
         {
             get { return _recoveBlood; }
             set { _recoveBlood = value; }
         }
 
+        private float _recoveMagic;
         /// <summary>
         /// 每5秒回蓝
         /// </summary>
-        private int _recoveMagic;
-
-        public int recoveMagic
+        public float recoveMagic
         {
             get { return _recoveMagic; }
             set { _recoveMagic = value; }

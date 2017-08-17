@@ -1,0 +1,251 @@
+fileFormatVersion: 2
+guid: abc1da852aabf46438033c68dc516f45
+timeCreated: 1502779959
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: B_cloth
+    100004: B_cloth_b
+    100006: BUFFBONE_CSTM_WEAPON_1
+    100008: BUFFBONE_CSTM_WEAPON_2
+    100010: BUFFBONE_CSTM_WEAPON_4
+    100012: BUFFBONE_CSTM_WEAPON_5
+    100014: BUFFBONE_CSTM_WEAPON_6
+    100016: BUFFBONE_GLB_WEAPON_1
+    100018: C_BUFFBONE_GLB_CHEST_LOC
+    100020: C_BUFFBONE_GLB_HEAD_LOC
+    100022: chest
+    100024: cloth
+    100026: cloth_b
+    100028: cloth_c
+    100030: F_cloth
+    100032: F_cloth_b
+    100034: hair
+    100036: hair_b
+    100038: hair_c
+    100040: hair_d
+    100042: hair_e
+    100044: head
+    100046: L_BUFFBONE_GLB_FOOT_LOC
+    100048: L_BUFFBONE_GLB_HAND_LOC
+    100050: L_calf
+    100052: L_finger
+    100054: L_finger_b
+    100056: L_finger_c
+    100058: L_finger_d
+    100060: L_foot
+    100062: L_forearm
+    100064: L_hand
+    100066: L_PARENTING_HAND_LOC
+    100068: L_shoulder
+    100070: L_thigh
+    100072: L_thumb
+    100074: L_thumb_b
+    100076: L_tip
+    100078: L_toe
+    100080: L_uparm
+    100082: Model
+    100084: neck
+    100086: R_BUFFBONE_GLB_FOOT_LOC
+    100088: R_BUFFBONE_GLB_HAND_LOC
+    100090: R_calf
+    100092: R_finger
+    100094: R_finger_b
+    100096: R_finger_c
+    100098: R_finger_d
+    100100: R_foot
+    100102: R_forearm
+    100104: R_hand
+    100106: R_PARENTING_HAND_LOC
+    100108: R_shoulder
+    100110: R_shoulder_b
+    100112: R_thigh
+    100114: R_thumb
+    100116: R_thumb_b
+    100118: R_tip
+    100120: R_toe
+    100122: R_uparm
+    100124: ROOT
+    100126: tenia
+    100128: tenia_b
+    100130: waist
+    100132: weapon
+    100134: weapon_b
+    400000: //RootNode
+    400002: B_cloth
+    400004: B_cloth_b
+    400006: BUFFBONE_CSTM_WEAPON_1
+    400008: BUFFBONE_CSTM_WEAPON_2
+    400010: BUFFBONE_CSTM_WEAPON_4
+    400012: BUFFBONE_CSTM_WEAPON_5
+    400014: BUFFBONE_CSTM_WEAPON_6
+    400016: BUFFBONE_GLB_WEAPON_1
+    400018: C_BUFFBONE_GLB_CHEST_LOC
+    400020: C_BUFFBONE_GLB_HEAD_LOC
+    400022: chest
+    400024: cloth
+    400026: cloth_b
+    400028: cloth_c
+    400030: F_cloth
+    400032: F_cloth_b
+    400034: hair
+    400036: hair_b
+    400038: hair_c
+    400040: hair_d
+    400042: hair_e
+    400044: head
+    400046: L_BUFFBONE_GLB_FOOT_LOC
+    400048: L_BUFFBONE_GLB_HAND_LOC
+    400050: L_calf
+    400052: L_finger
+    400054: L_finger_b
+    400056: L_finger_c
+    400058: L_finger_d
+    400060: L_foot
+    400062: L_forearm
+    400064: L_hand
+    400066: L_PARENTING_HAND_LOC
+    400068: L_shoulder
+    400070: L_thigh
+    400072: L_thumb
+    400074: L_thumb_b
+    400076: L_tip
+    400078: L_toe
+    400080: L_uparm
+    400082: Model
+    400084: neck
+    400086: R_BUFFBONE_GLB_FOOT_LOC
+    400088: R_BUFFBONE_GLB_HAND_LOC
+    400090: R_calf
+    400092: R_finger
+    400094: R_finger_b
+    400096: R_finger_c
+    400098: R_finger_d
+    400100: R_foot
+    400102: R_forearm
+    400104: R_hand
+    400106: R_PARENTING_HAND_LOC
+    400108: R_shoulder
+    400110: R_shoulder_b
+    400112: R_thigh
+    400114: R_thumb
+    400116: R_thumb_b
+    400118: R_tip
+    400120: R_toe
+    400122: R_uparm
+    400124: ROOT
+    400126: tenia
+    400128: tenia_b
+    400130: waist
+    400132: weapon
+    400134: weapon_b
+    4300000: Model
+    7400000: Take 001
+    7400002: akali_run
+    9500000: //RootNode
+    13700000: Model
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: akali_run
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

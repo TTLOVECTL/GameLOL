@@ -13,9 +13,9 @@ namespace HeroSystem
         /// <summary>
         /// 初始最大生命值
         /// </summary>
-        private int _baseLife;
+        private float _baseLife;
 
-        public int baseLife
+        public float baseLife
         {
             get { return _baseLife; }
             set { this._baseLife = value; }
@@ -24,9 +24,9 @@ namespace HeroSystem
         /// <summary>
         /// 初始最大法力值
         /// </summary>
-        private int _baseMagic;
+        private float _baseMagic;
 
-        public int baseMagic
+        public float baseMagic
         {
             get { return _baseMagic; }
             set { _baseMagic = value; }
@@ -35,9 +35,9 @@ namespace HeroSystem
         /// <summary>
         /// 物理攻击
         /// </summary>
-        private int _physicalAttack;
+        private float _physicalAttack;
 
-        public int physicalAttack
+        public float physicalAttack
         {
             get { return _physicalAttack; }
             set { _physicalAttack = value; }
@@ -46,9 +46,9 @@ namespace HeroSystem
         /// <summary>
         /// 法术攻击
         /// </summary>
-        private int _magicAttack;
+        private float _magicAttack;
 
-        public int magicAttack
+        public float magicAttack
         {
             get { return _magicAttack; }
             set { _magicAttack = value; }
@@ -57,9 +57,9 @@ namespace HeroSystem
         /// <summary>
         /// 法术防御
         /// </summary>
-        private int _magicDefense;
+        private float _magicDefense;
 
-        public int magicDefense
+        public float magicDefense
         {
             get { return _magicDefense; }
             set { _magicDefense = value; }
@@ -68,9 +68,9 @@ namespace HeroSystem
         /// <summary>
         /// 物理防御
         /// </summary>
-        private int _physicalDefense;
+        private float _physicalDefense;
 
-        public int physicalDefense
+        public float physicalDefense
         {
             get { return _physicalDefense; }
             set { _physicalDefense = value; }

@@ -2,11 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BatterySystem.BatteryHeroSystem;
 namespace AuxiliarySkillSystom
 {
     public class AuxiliarySkillEnd : AuxiliarySkillBase
     {
         private  GameObject _operiterObject;
+        private float scale = 1f;
 
         public AuxiliarySkillEnd(GameObject ga) {
             _operiterObject = ga;
@@ -18,7 +20,11 @@ namespace AuxiliarySkillSystom
 
         public override void OperationSkillRelease()
         {
-            throw new NotImplementedException();
+            foreach (GameObject item in BatteryConst.enemyList) {
+                if (Vector3.Distance(_operiterObject.transform.position, item.transform.position) < scale) {
+                   // item.
+                }
+            }
         }
     }
 }

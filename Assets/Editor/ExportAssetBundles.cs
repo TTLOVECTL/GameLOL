@@ -23,24 +23,24 @@ public class ExportAssetBundles : MonoBehaviour
     [MenuItem("Assetbundles/Create Assetbundles %Q")]
     public static void ExcuteBuild()
     {
-
-        //InscriptionHolder holder = ScriptableObject.CreateInstance<InscriptionHolder>();
-        //holder.inscription = ExcelReader.IninInscription("Inscription.xlsx");        
-        //string path = "Assets/Assets/Inscription.asset";
-        EquipmentHolder holder = ScriptableObject.CreateInstance<EquipmentHolder>();
-        //holder.equipemntList = ExcelReader.InitEquiment("Equipment.xlsx");
-        holder.equipmentLeaf = new System.Collections.Generic.List<EquipmentLeaf>();
-        holder.equipmentComponent = new System.Collections.Generic.List<EquipmentComponent>();
-        foreach (BaseEquipment ba in ExcelReader.InitEquiment("Equipment.xlsx")) {
-            if (ba.equipmentType == EqunipmentType.SMALL)
-            {
-                holder.equipmentLeaf.Add((EquipmentLeaf)ba);
-            }
-            else {
-                holder.equipmentComponent.Add((EquipmentComponent)ba);
-            }
-        }
-        string path = "Assets/Assets/Equipment.asset";
-        AssetDatabase.CreateAsset(holder, path);
+        
+        ////InscriptionHolder holder = ScriptableObject.CreateInstance<InscriptionHolder>();
+        ////holder.inscription = ExcelReader.IninInscription("Inscription.xlsx");        
+        ////string path = "Assets/Assets/Inscription.asset";
+        //EquipmentHolder holder = ScriptableObject.CreateInstance<EquipmentHolder>();
+        ////holder.equipemntList = ExcelReader.InitEquiment("Equipment.xlsx");
+        //holder.equipmentLeaf = new System.Collections.Generic.List<EquipmentLeaf>();
+        //holder.equipmentComponent = new System.Collections.Generic.List<EquipmentComponent>();
+        //foreach (BaseEquipment ba in ExcelReader.InitEquiment("Equipment.xlsx")) {
+        //    if (ba.equipmentType == EqunipmentType.SMALL)
+        //    {
+        //        holder.equipmentLeaf.Add((EquipmentLeaf)ba);
+        //    }
+        //    else {
+        //        holder.equipmentComponent.Add((EquipmentComponent)ba);
+        //    }
+        //}
+        //string path = "Assets/Assets/Equipment.asset";
+        //AssetDatabase.CreateAsset(holder, path);
     }
 }
