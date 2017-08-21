@@ -43,7 +43,7 @@ namespace HeroSystem.BaseHeroSystem
         }
 
         /// <summary>
-        /// 事件绑定函数
+        /// 事件绑定函数，触摸滑轮移动时调用
         /// </summary>
         /// <param name="move"></param>
         void On_JoystickMove(MovingJoystick move)
@@ -55,11 +55,20 @@ namespace HeroSystem.BaseHeroSystem
 
         }
 
+
+        /// <summary>
+        /// 事件绑定函数，触摸滑轮移动结束时调用
+        /// </summary>
+        /// <param name="move"></param>
         void On_JoystickMoveEnd(MovingJoystick move)
         {
             baseHeroController.OnIdle();
         }
 
+        /// <summary>
+        /// 事件绑定函数，触摸按钮按下时调用
+        /// </summary>
+        /// <param name="move"></param>
         void On_ButtonUp(string buttonName)
         {
             if (buttonName == "技能1")
