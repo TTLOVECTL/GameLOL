@@ -121,7 +121,7 @@ namespace InscriptionSystem
             int count = 0;
             for (int i = 0; i < number; i++)
             {
-                float x = -(buttonwidth +1);
+                float x = (buttonwidth +1)/2;
                 for (int j = 0; j < 3; j++)
                 {
                     count++;
