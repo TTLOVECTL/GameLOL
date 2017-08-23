@@ -49,6 +49,9 @@ namespace InscriptionSystem
                 {
                     _instance = new InscriptionFactory();
                 }
+                if (_instance._inscription == null) {
+                    
+                }
                 return _instance;
             }
         }

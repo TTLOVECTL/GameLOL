@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AttributeSystem>
+  <attibute id="1">法术攻击</attibute>
+  <attibute id="2">物理攻击</attibute>
+  <attibute id="3">法术防御</attibute>
+  <attibute id="4">物理防御</attibute>
+  <attibute id="5">法术吸血</attibute>
+  <attibute id="6">物理吸血</attibute>
+  <attibute id="7">法术穿透</attibute>
+  <attibute id="8">物理穿透</attibute>
+  <attibute id="9">冷却缩减</attibute>
+  <attibute id="10">攻击速度</attibute>
+  <attibute id="11">最大生命</attibute>
+  <attibute id="12">暴击率</attibute>
+  <attibute id="13">暴击效果</attibute>
+  <attibute id="14">每5秒回血</attibute>
+  <attibute id="15">移速</attibute>
+  <attibute id="16">最大法力</attibute>
+  <attibute id="17">每5秒回蓝</attibute>
+</AttributeSystem>
