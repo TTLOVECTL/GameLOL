@@ -93,7 +93,6 @@ namespace InscriptionSystem.UI
                     inscriptionButtonList[i].isInscription = true;
                     inscriptionButtonList[i].GetComponent<Image>().enabled = true;
                     inscriptionButtonList[i].GetComponent<Image>().sprite = inscrptionCh.inscriptionIcon;
-
                 }
             }
         }

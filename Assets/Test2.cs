@@ -12,25 +12,6 @@ public class Test2 : MonoBehaviour {
         InscriptionConst._instriptionBag.Add(17);
 	}
 
-    private void readAsset()
-    {
-        BookElementHolder ceh = AssetDatabase.LoadAssetAtPath<BookElementHolder>("Assets/QQ.asset");
-        //InscriptionHolder ceh = AssetDatabase.LoadAssetAtPath<InscriptionHolder>("Assets/Assets/Inscription.asset");
-        if (ceh == null)
-        {
-            return;
-        }
-        Debug.Log(ceh.inscription.Count);
-        foreach (Inscription gd in ceh.inscription)
-        { 
-            Debug.Log(gd.inscriptionName);
-            foreach(InscriptionAttribute a in gd.inscriptionAttribute) {
-                //Debug.Log("id:"+a.attributeId);
-                //Debug.Log("value:"+a.attribueValue);
-            }
-        }
-    }
-
     private void Init()
     {
         InscriptionPageMode ip = new InscriptionPageMode();

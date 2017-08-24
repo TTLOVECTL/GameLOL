@@ -17,7 +17,7 @@ namespace InscriptionSystem {
         /// <summary>
         /// 存储一系列的符文页
         /// </summary>
-        private   SortedDictionary<int, InscriptionPage> _inscriptionPageList = new SortedDictionary<int, InscriptionPage>();
+        private SortedDictionary<int, InscriptionPage> _inscriptionPageList = new SortedDictionary<int, InscriptionPage>();
 
         /// <summary>
         /// 私有构造函数
@@ -75,7 +75,10 @@ namespace InscriptionSystem {
                             break;
                     }
                 }
-                _inscriptionPageList.Add(insPM._inscriptionPageId,iPage);
+                if (!_inscriptionPageList.ContainsKey(insPM._inscriptionPageId))
+                {
+                    _inscriptionPageList.Add(insPM._inscriptionPageId, iPage);
+                }
             }
         }
     }

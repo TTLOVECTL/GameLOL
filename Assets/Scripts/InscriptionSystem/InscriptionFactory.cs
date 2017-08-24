@@ -50,7 +50,7 @@ namespace InscriptionSystem
                     _instance = new InscriptionFactory();
                 }
                 if (_instance._inscription == null) {
-                    
+                    //_instance.InitInscription();
                 }
                 return _instance;
             }
@@ -67,6 +67,7 @@ namespace InscriptionSystem
                 return;
             }
             _inscription = ceh.inscription;
+            //_inscription = XmlDataRead.inscriptionList;
             
         }///此处是重点
 
@@ -119,9 +120,14 @@ namespace InscriptionSystem
         /// <returns></returns>
         public Inscription GetInscriptionById(int id) {
             Inscription ins = new Inscription();
-            foreach (Inscription inscription in _inscription) {
-                if (inscription.inscriptionID == id) {
-                    ins = inscription;
+            if (_inscription != null)
+            {
+                foreach (Inscription inscription in _inscription)
+                {
+                    if (inscription.inscriptionID == id)
+                    {
+                        ins = inscription;
+                    }
                 }
             }
             return ins;

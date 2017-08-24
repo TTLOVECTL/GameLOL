@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 9520989613c94524a9aff3864df7e9f0
+  - enabled: 1
+    path: Assets/Scenes/InscriptionScene.unity
+    guid: 03e8ae38618a3234991b9ed492d48e71
