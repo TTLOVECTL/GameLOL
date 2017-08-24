@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 using UnityEngine.UI;
 
 namespace InscriptionSystem
@@ -68,19 +67,12 @@ namespace InscriptionSystem
 
         void Start()
         {
-            InscriptionHolder ceh = AssetDatabase.LoadAssetAtPath<InscriptionHolder>("Assets/Resources/Inscription.asset");
-            if (ceh == null)
-            {
-                return;
-            }
-            _inscriptionList = ceh.inscription;
+            _inscriptionList = XmlDataRead.inscriptionList;
             contentTransform = contentObj.GetComponent<RectTransform>();
-
             rectWidth = GetComponent<RectTransform>().rect.width;
             rectHeight = GetComponent<RectTransform>().rect.height;
             buttonwidth = (rectWidth- 4) / 3;
             buttonheight = buttonwidth / 2;
-
             ChooseDeal();
         }
 
@@ -97,10 +89,11 @@ namespace InscriptionSystem
         /// 按钮响应事件：设置选择的符文类型
         /// </summary>
         /// <param name="type"></param>
-        public void OnChooseTypeButtoon(AttribueType type) {
-            inscriptionType = type;
+        public void OnChooseTypeButtoon(int type) {
+            inscriptionType = (AttribueType)type;
             ChooseDeal();
         }
+ 
 
         /// <summary>
         /// 根据选择的等级和类型筛选出合适的符文
@@ -131,7 +124,9 @@ namespace InscriptionSystem
                         ga.GetComponent<RectTransform>().SetParent(contentObj.transform);
                         ga.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth - buttonwidth), buttonheight);
                         ga.GetComponent<RectTransform>().localPosition = new Vector2(j * (buttonwidth +1) + x, -i * (buttonheight + 1) + y);
-                        ga.GetComponent<InscriptionButton>().inscription = resultList[count - 1]._inscriptionID;
+                        InscriptionButton inscriptionButton = ga.GetComponent<InscriptionButton>();
+                        inscriptionButton.inscription = resultList[count - 1]._inscriptionID;
+
                         ga.GetComponent<Image>().sprite = spriteList[resultList[count - 1]._inscriptionID];
                     }
                 }
@@ -185,30 +180,5 @@ namespace InscriptionSystem
             return false;
         }
 
-        private void SetAnchorsToCorner(RectTransform t) {
-            RectTransform pt = t.parent as RectTransform;
-            if (t == null || pt == null)
-                return;
-            t.anchorMin = new Vector2(t.anchorMin.x + t.offsetMin.x / pt.rect.width, t.anchorMin.y + t.offsetMin.y / pt.rect.height);
-            t.anchorMax = new Vector2(t.anchorMax.x + t.offsetMax.x / pt.rect.width, t.anchorMax.y + t.offsetMax.y / pt.rect.height);
-            t.offsetMin = t.offsetMax = new Vector2(0, 0);
-        }
-
-        private void SetAnschorToUp(RectTransform t)
-        {
-            RectTransform pt = t.parent as RectTransform;
-            float length = t.rect.height;
-            Debug.Log(length);
-            if (t == null || pt == null)
-                return;
-
-            t.anchorMin = new Vector2(t.anchorMin.x + t.offsetMin.x / pt.rect.width, t.anchorMin.y + t.offsetMin.y / pt.rect.height);
-            t.anchorMax = new Vector2(t.anchorMax.x + t.offsetMax.x / pt.rect.width, t.anchorMax.y + t.offsetMax.y / pt.rect.height);
-
-            t.offsetMin = t.offsetMax = new Vector2(0, 0);
-            //t.anchorMin = new Vector2(t.anchorMin.x, t.anchorMax.y);
-            //t.offsetMax = new Vector2(0, 0);
-            //t.offsetMin = new Vector2(0, -length);
-        }
     }
 }

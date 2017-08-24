@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 3167333725
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: inscription.assetbundle
+      Dependencies: {}

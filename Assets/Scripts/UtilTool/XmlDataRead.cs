@@ -8,22 +8,22 @@ using System.Collections;
 using System.Collections.Generic;
 using InscriptionSystem;
 using UnityEngine.UI;
-public class XmlDataRead : MonoBehaviour {
-
-
+public class XmlDataRead : MonoBehaviour
+{
     public static List<Inscription> inscriptionList = null;
-    public static SortedDictionary<int,string> attributeList = null;
+    public static SortedDictionary<int, string> attributeList = null;
 
     private void Start()
     {
         StartCoroutine(LoadInscription(GetPlatformPath("", "Inscription.xml")));
     }
 
-    IEnumerator LoadInscription(string path) {
+    IEnumerator LoadInscription(string path)
+    {
 
         if (attributeList == null)
         {
-        
+
             SortedDictionary<int, string> listAttribute = new SortedDictionary<int, string>();
             WWW wwwAttribute = new WWW(GetPlatformPath("", "Attribute.xml"));
             try
@@ -44,12 +44,16 @@ public class XmlDataRead : MonoBehaviour {
                         attributeList = listAttribute;
                 }
             }
-            finally {
+            finally
+            {
                 wwwAttribute.Dispose();
             }
         }
 
         List<Inscription> list = new List<Inscription>();
+
+        WWW bundle = new WWW(GetPlatformPath("", "inscription.assetbundle"));
+        yield return bundle;
 
         WWW www = new WWW(path);
 
@@ -58,7 +62,7 @@ public class XmlDataRead : MonoBehaviour {
             yield return www;
 
             XmlDocument xmlDoc = new XmlDocument();
-            String text= System.Text.RegularExpressions.Regex.Replace(www.text, "^[^<]", "");
+            String text = System.Text.RegularExpressions.Regex.Replace(www.text, "^[^<]", "");
             xmlDoc.LoadXml(text);
             XmlNodeList nodeList = xmlDoc.SelectSingleNode("InscriptionSystem").ChildNodes;
 
@@ -68,13 +72,13 @@ public class XmlDataRead : MonoBehaviour {
                 XmlNodeList xnl0 = xe.ChildNodes;
                 foreach (XmlNode node in xnl0)
                 {
-                    if (node.InnerText == "") {
+                    if (node.InnerText == "")
+                    {
                         continue;
                     }
                     if (node.Name == "id")
                     {
-                        //sDebug.Log(int.Parse(node.InnerText));
-                        inscription._inscriptionID =int.Parse(node.InnerText);
+                        inscription._inscriptionID = int.Parse(node.InnerText);
                     }
                     else if (node.Name == "name")
                     {
@@ -90,9 +94,9 @@ public class XmlDataRead : MonoBehaviour {
                     }
                     else if (node.Name == "icon")
                     {
-
+                        inscription._inscriptionIcon = Sprite.Create(bundle.assetBundle.LoadAsset(inscription.inscriptionName) as Texture2D, new Rect(0, 0, 128, 128), Vector2.zero);
                     }
-                    else if (node.Name == "attributeList")
+                    else if (node.Name == "attibuteList")
                     {
                         List<InscriptionAttribute> ab = new List<InscriptionAttribute>();
                         XmlNodeList xnl1 = node.ChildNodes;
@@ -100,18 +104,22 @@ public class XmlDataRead : MonoBehaviour {
                         {
                             InscriptionAttribute a = new InscriptionAttribute();
                             a.attributeId = int.Parse(node1.GetAttribute("id"));
+
                             a.attributeName = attributeList[a.attributeId];
                             float b = float.Parse(node1.InnerText.ToString());
+
                             if (b < 0.1)
                             {
                                 a.valueType = AttributeValue.PERCENTAGE;
                             }
                             else
                             {
-                                a._attributeValue = b;
+                                a.valueType = AttributeValue.NUMBER;
                             }
+                            a._attributeValue = b;
                             ab.Add(a);
                         }
+                        inscription._inscriptionAttribute = ab;
                     }
                 }
 
@@ -122,7 +130,8 @@ public class XmlDataRead : MonoBehaviour {
         }
     }
 
-    private static string GetPlatformPath(string flodername, string filename) {
+    private static string GetPlatformPath(string flodername, string filename)
+    {
         string filePath =
 #if UNITY_ANDROID && !UNITY_EDITOR
         "jar:file://" + Application.dataPath + "!/assets/" + flodername + "/";  

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using UnityEditor;
 
 namespace InscriptionSystem
 {
@@ -50,7 +49,7 @@ namespace InscriptionSystem
                     _instance = new InscriptionFactory();
                 }
                 if (_instance._inscription == null) {
-                    //_instance.InitInscription();
+                    _instance.InitInscription();
                 }
                 return _instance;
             }
@@ -61,13 +60,13 @@ namespace InscriptionSystem
         /// </summary>
         public void InitInscription()
         {
-            InscriptionHolder ceh = AssetDatabase.LoadAssetAtPath<InscriptionHolder>("Assets/Resources/Inscription.asset");
-            if (ceh == null)
-            {
-                return;
-            }
-            _inscription = ceh.inscription;
-            //_inscription = XmlDataRead.inscriptionList;
+            //InscriptionHolder ceh = AssetDatabase.LoadAssetAtPath<InscriptionHolder>("Assets/Resources/Inscription.asset");
+            //if (ceh == null)
+            //{
+            //    return;
+            //}
+            //_inscription = ceh.inscription;
+            _inscription = XmlDataRead.inscriptionList;
             
         }///此处是重点
 
