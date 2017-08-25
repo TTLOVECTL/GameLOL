@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Line
   - Equiment
+  - Inscription
   layers:
   - Default
   - TransparentFX

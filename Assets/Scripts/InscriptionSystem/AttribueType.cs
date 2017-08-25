@@ -4,13 +4,49 @@ namespace InscriptionSystem
 {
     public enum AttribueType
     {
-        ATTACK,            //攻击
-        PENETRATION,       //穿透
-        Tool,                //功能
-        DEFENSE,            //防御
-        VAMPIRE,             //吸血
-        SPEED,              //攻速
-        BAOJI,                //暴击
-        ALL                  //全部
+        /// <summary>
+        /// 全部
+        /// </summary>
+        ALL,  
+        
+        /// <summary>
+        /// 攻击
+        /// </summary>
+        ATTACK,
+
+        /// <summary>
+        /// 生命
+        /// </summary>
+        LIFE,
+
+        /// <summary>
+        /// 防御   
+        /// </summary>
+        DEFENSE,    
+        
+        /// <summary>
+        /// 功能
+        /// </summary>
+        Tool,                
+       
+        /// <summary>
+        /// 吸血 
+        /// </summary>
+        VAMPIRE, 
+       
+        /// <summary>
+        /// 攻速
+        /// </summary>
+        SPEED,   
+        
+        /// <summary>
+        /// 暴击
+        /// </summary>
+        BAOJI,  
+        
+        /// <summary>
+        /// 穿透
+        /// </summary>
+        PENETRATION,       
     }
 }

@@ -100,6 +100,13 @@ namespace InscriptionSystem
         /// </summary>
         private void ChooseDeal() {
             List<Inscription> resultList = GetInScription();
+            Transform[] transformList = contentObj.GetComponentsInChildren<Transform>();
+            foreach (Transform ta in transformList) {
+                if (ta.tag == "Inscription")
+                {
+                    Destroy(ta.gameObject);
+                }
+            }
             int number = resultList.Count / 3;
             if (resultList.Count % 3 > 0)
             {
@@ -123,11 +130,25 @@ namespace InscriptionSystem
                         GameObject ga = Instantiate(instance);
                         ga.GetComponent<RectTransform>().SetParent(contentObj.transform);
                         ga.GetComponent<RectTransform>().sizeDelta = new Vector2(-(rectWidth - buttonwidth), buttonheight);
-                        ga.GetComponent<RectTransform>().localPosition = new Vector2(j * (buttonwidth +1) + x, -i * (buttonheight + 1) + y);
+                        ga.GetComponent<RectTransform>().localPosition = new Vector2(j * (buttonwidth + 1) + x, -i * (buttonheight + 1) + y);
                         InscriptionButton inscriptionButton = ga.GetComponent<InscriptionButton>();
-                        inscriptionButton.inscription = resultList[count - 1]._inscriptionID;
-
-                        ga.GetComponent<Image>().sprite = spriteList[resultList[count - 1]._inscriptionID];
+                        Inscription inscription = resultList[count - 1];
+                        inscriptionButton.inscription = inscription._inscriptionID;
+                        inscriptionButton.inscriptionName.text = inscription.inscriptionLevel.ToString()+"级铭文："+inscription.inscriptionName;
+                        inscriptionButton.inscriptionSprite.sprite = inscription._inscriptionIcon;
+                        inscriptionButton.otherJieShao.text = "未获得";
+                        int temp = 0;
+                        foreach (InscriptionAttribute item in inscription.inscriptionAttribute) {
+                            string value = "";
+                            if (item.valueType == AttributeValue.NUMBER)
+                            {
+                                value = item.attribueValue.ToString();
+                            }
+                            else {
+                                value = System.Math.Round(item._attributeValue * 100, 1).ToString() + "%";
+                            }
+                            inscriptionButton.inscriptionAttribute[temp].text = item.attributeName + ":" + value;
+                        }
                     }
                 }
             }
@@ -161,19 +182,75 @@ namespace InscriptionSystem
                 case AttribueType.ALL:
                     return true;
                 case AttribueType.ATTACK:
-                    
+                    foreach(InscriptionAttribute item in insca.inscriptionAttribute) {
+                        if (item.attributeId == 1 || item.attributeId == 2) {
+                            return true;
+                        }
+                    }
                     break;
                 case AttribueType.DEFENSE:
+                    foreach (InscriptionAttribute item in insca.inscriptionAttribute)
+                    {
+                        if (item.attributeId == 3 || item.attributeId == 4)
+                        {
+                            return true;
+                        }
+                    }
                     break;
                 case AttribueType.BAOJI:
+                    foreach (InscriptionAttribute item in insca.inscriptionAttribute)
+                    {
+                        if (item.attributeId == 12 || item.attributeId == 13)
+                        {
+                            return true;
+                        }
+                    }
                     break;
                 case AttribueType.PENETRATION:
+                    foreach (InscriptionAttribute item in insca.inscriptionAttribute)
+                    {
+                        if (item.attributeId == 7 || item.attributeId == 8)
+                        {
+                            return true;
+                        }
+                    }
                     break;
                 case AttribueType.SPEED:
+                    foreach (InscriptionAttribute item in insca.inscriptionAttribute)
+                    {
+                        if (item.attributeId == 10 )
+                        {
+                            return true;
+                        }
+                    }
                     break;
                 case AttribueType.Tool:
+                    foreach (InscriptionAttribute item in insca.inscriptionAttribute)
+                    {
+                        if (item.attributeId == 9  || item.attributeId == 14 
+                            || item.attributeId == 15 || item.attributeId == 16 || item.attributeId == 17)
+                        {
+                            return true;
+                        }
+                    }
                     break;
                 case AttribueType.VAMPIRE:
+                    foreach (InscriptionAttribute item in insca.inscriptionAttribute)
+                    {
+                        if (item.attributeId == 5 || item.attributeId == 6)
+                        {
+                            return true;
+                        }
+                    }
+                    break;
+                case AttribueType.LIFE:
+                    foreach (InscriptionAttribute item in insca.inscriptionAttribute)
+                    {
+                        if (item.attributeId == 11)
+                        {
+                            return true;
+                        }
+                    }
                     break;
             }
 
