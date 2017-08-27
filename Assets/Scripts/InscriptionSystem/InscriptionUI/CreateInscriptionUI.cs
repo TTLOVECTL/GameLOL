@@ -2,14 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using InscriptionSystem;
 
-namespace InscriptionSystem
+namespace InscriptionSystem.UI
 {
     /// <summary>
     /// 创建符文显示的UI
     /// </summary>
     public class CreateInscriptionUI : MonoBehaviour
     {
+        public Sprite blueTypeImage;
+
+        public Sprite yellowTyprImage;
+
+        public List<Image> typeButtonImage;
+
+
+        public List<Image> levelButtonImage;
+
         /// <summary>
         /// 实例化物体
         /// </summary>
@@ -19,11 +29,6 @@ namespace InscriptionSystem
        /// 实例化物体的父对象
        /// </summary>
         public GameObject contentObj;
-
-        /// <summary>
-        /// 符文sprites列表
-        /// </summary>
-        public Sprite[] spriteList;
 
         /// <summary>
         /// 当前符文等级
@@ -73,6 +78,7 @@ namespace InscriptionSystem
             rectHeight = GetComponent<RectTransform>().rect.height;
             buttonwidth = (rectWidth- 4) / 3;
             buttonheight = buttonwidth / 2;
+            typeButtonImage[0].sprite = yellowTyprImage;
             ChooseDeal();
         }
 
@@ -90,6 +96,9 @@ namespace InscriptionSystem
         /// </summary>
         /// <param name="type"></param>
         public void OnChooseTypeButtoon(int type) {
+            int a = (int)inscriptionType;
+            typeButtonImage[a].sprite = blueTypeImage;
+            typeButtonImage[type].sprite = yellowTyprImage;
             inscriptionType = (AttribueType)type;
             ChooseDeal();
         }
@@ -134,6 +143,7 @@ namespace InscriptionSystem
                         InscriptionButton inscriptionButton = ga.GetComponent<InscriptionButton>();
                         Inscription inscription = resultList[count - 1];
                         inscriptionButton.inscription = inscription._inscriptionID;
+                        inscriptionButton.level = inscription._inscriptionLevel;
                         inscriptionButton.inscriptionName.text = inscription.inscriptionLevel.ToString()+"级铭文："+inscription.inscriptionName;
                         inscriptionButton.inscriptionSprite.sprite = inscription._inscriptionIcon;
                         inscriptionButton.otherJieShao.text = "未获得";
@@ -147,7 +157,8 @@ namespace InscriptionSystem
                             else {
                                 value = System.Math.Round(item._attributeValue * 100, 1).ToString() + "%";
                             }
-                            inscriptionButton.inscriptionAttribute[temp].text = item.attributeName + ":" + value;
+                            inscriptionButton.inscriptionAttribute[temp].text = item.attributeName + ":+" + value;
+                            temp++;
                         }
                     }
                 }

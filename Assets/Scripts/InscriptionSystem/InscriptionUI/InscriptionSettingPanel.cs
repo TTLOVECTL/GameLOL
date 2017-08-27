@@ -57,6 +57,7 @@ namespace InscriptionSystem.UI
                 DestroyImmediate(contentObj.transform.GetChild(i).gameObject);
             }
             inscriptionList.Clear();
+
             foreach (int a in InscriptionConst._instriptionBag)
             {
                 Inscription inscription = InscriptionFactory.Instance.GetInscriptionById(a);
@@ -81,9 +82,20 @@ namespace InscriptionSystem.UI
 
                     ga.GetComponent<RectTransform>().localPosition = new Vector2(buttonwidth/2+5, -count * (buttonheight + 10) - (buttonheight/2+5));
 
-                    ga.GetComponent<SettingInscriptionButton>().inscriptionId = a.inscriptionID;
-
-                    ga.GetComponent<Image>().sprite = tempSprite[a.inscriptionID];
+                    SettingInscriptionButton settingInscriptionButton = ga.GetComponent<SettingInscriptionButton>();
+                    settingInscriptionButton.inscriptionId = a.inscriptionID;
+                    settingInscriptionButton.iocnSprite.sprite = a.inscriptionIcon;
+                    settingInscriptionButton.inscriptionName.text =a.inscriptionLevel+"级符文："+ a.inscriptionName;
+                    for (int i = 0; i < a.inscriptionAttribute.Count; i++) {
+                        string value = "";
+                        if (a.inscriptionAttribute[i].valueType == AttributeValue.PERCENTAGE) {
+                            value = System.Math.Round(a.inscriptionAttribute[i]._attributeValue * 100, 1).ToString() + "%";
+                        }
+                        else {
+                            value = a.inscriptionAttribute[i]._attributeValue.ToString();
+                        }
+                        settingInscriptionButton.inscriptionAttribute[i].text = a.inscriptionAttribute[i].attributeName + ":+" + value;
+                    }
                     count++;
                 }
             }

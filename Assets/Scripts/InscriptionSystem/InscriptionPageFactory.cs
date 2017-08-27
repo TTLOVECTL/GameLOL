@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DataSystem;
 namespace InscriptionSystem {
 
     /// <summary>
@@ -57,7 +57,8 @@ namespace InscriptionSystem {
         /// 初始化符文工厂
         /// </summary>
         private void InitInscriptionPage() {
-            foreach (InscriptionPageMode insPM in InscriptionConst._instcriptionPageModel) {
+            foreach(KeyValuePair<int, InscriptionPageMode> item in PlayerInscriptionPageMessage.InscriptionPageList ) {
+                InscriptionPageMode insPM = item.Value;
                 InscriptionPage iPage = new InscriptionPage();
                 iPage.pageId = insPM._inscriptionPageId;
                 iPage.pageName = insPM._inscriptionPageName;

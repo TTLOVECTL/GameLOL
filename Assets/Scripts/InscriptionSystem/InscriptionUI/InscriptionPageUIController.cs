@@ -10,6 +10,8 @@ namespace InscriptionSystem.UI
     {
         private static InscriptionPageUIController instance = null;
 
+        public Sprite nullSprite;
+
         private void Awake()
         {
             instance = this;
@@ -45,7 +47,7 @@ namespace InscriptionSystem.UI
                     ClearInscription();
                     InitInscriptionSlot();
                     SendMessageToInscriptionPagePanel();
-                   // InscriptionAttribueUIController.Instance.inscriptionPagePanel.SendMessage("OnReciveFromInscriptionPage",);
+                    // InscriptionAttribueUIController.Instance.inscriptionPagePanel.SendMessage("OnReciveFromInscriptionPage",);
                 }
             }
         }
@@ -91,7 +93,7 @@ namespace InscriptionSystem.UI
                 {
                     inscriptionButtonList[i].inscriptionId = inscrptionCh.inscriptionID;
                     inscriptionButtonList[i].isInscription = true;
-                    inscriptionButtonList[i].GetComponent<Image>().enabled = true;
+                    //inscriptionButtonList[i].GetComponent<Image>().enabled = true;
                     inscriptionButtonList[i].GetComponent<Image>().sprite = inscrptionCh.inscriptionIcon;
                 }
             }
@@ -106,7 +108,7 @@ namespace InscriptionSystem.UI
             {
                 inscriptionButtonList[i].inscriptionId = 0;
                 inscriptionButtonList[i].isInscription = false;
-                inscriptionButtonList[i].GetComponent<Image>().enabled = false;
+                inscriptionButtonList[i].GetComponent<Image>().sprite = nullSprite;
             }
         }
 

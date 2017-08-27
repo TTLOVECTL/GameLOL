@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using InscriptionSystem.UI;
 namespace InscriptionSystem {
     /// <summary>
     /// 符文系统中的全局变量存储

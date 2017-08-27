@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using InscriptionSystem;
 using UnityEditor;
-
+using DataSystem;
 public class Test2 : MonoBehaviour {
 	void Awake () {
-        //readAsset();
         Init();
         InscriptionConst._instriptionBag.Add(7);
         InscriptionConst._instriptionBag.Add(17);
@@ -42,7 +41,8 @@ public class Test2 : MonoBehaviour {
             im._inscriptionPosId = i+1;
             ip._inscriptionModelList.Add(im);
         }
-        InscriptionConst._instcriptionPageModel.Add(ip);
+        PlayerInscriptionPageMessage.InscriptionPageList.Add(1,ip);
+        
     }
 
     private void InitFactory() {

@@ -10,6 +10,7 @@ namespace InscriptionSystem.UI {
     /// </summary>
     public class InscriptionAttributePanel : MonoBehaviour {
 
+        public Sprite nullSprite;
         /// <summary>
         /// 符文显示图标设置
         /// </summary>
@@ -50,7 +51,7 @@ namespace InscriptionSystem.UI {
         public void OnRemoveInscripteFromSlot() {
             InscriptionSlotButton insbu = InscriptionSlotButton.currentButton.GetComponent<InscriptionSlotButton>();
             
-            InscriptionSlotButton.currentButton.GetComponent<Image>().enabled = false;
+            InscriptionSlotButton.currentButton.GetComponent<Image>().sprite = nullSprite;
             insbu.isInscription = false;
             switch (insbu.slotColor)
             {

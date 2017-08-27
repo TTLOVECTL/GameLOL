@@ -1,15 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using InscriptionSystem;
 namespace InscriptionSystem.UI
 {
     public class SwitchUI : MonoBehaviour
     {
+        private static SwitchUI instcne=null;
+
+        private void Awake()
+        {
+            if (instcne == null) {
+                instcne = this;
+            }
+        }
+
+        public static SwitchUI Instcne {
+            get {
+                return instcne;
+            }
+        }
+
+        public Sprite blueSprite;
+
+        public Sprite yellowSprite;
 
         public GameObject InscriptionPageObject;
 
         public GameObject InscriptionBuyObject;
-        // Use this for initialization
+
+        public Image pageImage;
+
+        public Image buyImage;
+
+        public GameObject inscriptinBuy;
+
         void Start()
         {
             OnInscriptionPageChoose();
@@ -24,13 +50,17 @@ namespace InscriptionSystem.UI
         public void OnInscriptionPageChoose()
         {
             InscriptionBuyObject.SetActive(false);
+            pageImage.sprite = yellowSprite;
             InscriptionPageObject.SetActive(true);
+            buyImage.sprite = blueSprite;
         }
 
         public void OnInscriptionBuyChoose()
         {
             InscriptionBuyObject.SetActive(true);
+            pageImage.sprite = blueSprite;
             InscriptionPageObject.SetActive(false);
+            buyImage.sprite = yellowSprite;
         }
 
     }

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f65c20191b0dc2a41b71b9c96027621e
-timeCreated: 1503406830
+timeCreated: 1503715898
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,6 +15,9 @@ TextureImporter:
     21300016: BianKuang
     21300018: JiaHao
     21300020: SpriteAtlasTexture_1024x512_fmt4_0
+    21300022: SpriteAtlasTexture_1024x512_fmt4_1
+    21300024: SpriteAtlasTexture_1024x512_fmt4_2
+    21300026: SpriteAtlasTexture_1024x512_fmt4_3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -250,8 +253,50 @@ TextureImporter:
         width: 50
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 1, y: 0, z: 3, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteAtlasTexture_1024x512_fmt4_1
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 278
+        width: 97
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteAtlasTexture_1024x512_fmt4_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 286
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteAtlasTexture_1024x512_fmt4_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 261
+        width: 145
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0

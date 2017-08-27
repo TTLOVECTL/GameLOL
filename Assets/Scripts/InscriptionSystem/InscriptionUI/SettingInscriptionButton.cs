@@ -11,6 +11,14 @@ namespace InscriptionSystem.UI
 
         public int inscriptionId;
 
+        public Image iocnSprite;
+
+        public Text inscriptionNumber;
+
+        public Text inscriptionName;
+
+        public List<Text> inscriptionAttribute;
+
         public void OnClickAddInscription()
         {
 
