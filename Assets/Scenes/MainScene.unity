@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 211000673}
   - component: {fileID: 211000675}
   - component: {fileID: 211000674}
+  - component: {fileID: 211000676}
   m_Layer: 5
   m_Name: TopTitle
   m_TagString: Untagged
@@ -400,6 +401,22 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 211000672}
+--- !u!114 &211000676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 211000672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe5c3a92a699166489b03b35b012a6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldText: {fileID: 631791487}
+  diamondsText: {fileID: 1738529527}
+  volumeText: {fileID: 337185167}
+  playerNameText: {fileID: 1694608640}
+  playerLevelText: {fileID: 1172475030}
 --- !u!1 &218530940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,7 +1116,6 @@ GameObject:
   - component: {fileID: 546696021}
   - component: {fileID: 546696020}
   - component: {fileID: 546696019}
-  - component: {fileID: 546696024}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1177,17 +1193,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &546696024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 546696018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12187e141a39afe4683c2df383600098, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &616947147
 GameObject:
   m_ObjectHideFlags: 0

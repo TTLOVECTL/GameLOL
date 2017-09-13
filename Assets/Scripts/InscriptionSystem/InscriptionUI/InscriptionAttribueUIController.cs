@@ -84,5 +84,22 @@ namespace InscriptionSystem.UI
             inscriptionPagePanel.SetActive(true);
             inscriptionAttributePanel.SetActive(false);
         }
+
+        /// <summary>
+        /// 关闭符文背包面板
+        /// </summary>
+        public void OnCloseInscriptionSettingPanel() {
+            inscriptionSettingPanel.SetActive(false);
+            inscriptionPagePanel.SetActive(true);
+
+        }
+
+        /// <summary>
+        /// 关闭符文属性面板
+        /// </summary>
+        public void OnCloseInscriptionAttributePanel() {
+            inscriptionAttributePanel.SetActive(false);
+            inscriptionPagePanel.SetActive(true);
+        }
     }
 }
