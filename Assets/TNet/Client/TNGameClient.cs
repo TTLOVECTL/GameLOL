@@ -9,7 +9,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Net;
 using System.Collections.Generic;
-
+using GameLoginSystem;
 #if UNITY_EDITOR
 using UnityEngine;
 #endif
@@ -897,490 +897,495 @@ public class GameClient : TNEvents
 		}
 	}
 
-	/// <summary>
-	/// Process a single incoming packet. Returns whether we should keep processing packets or not.
-	/// </summary>
+        /// <summary>
+        /// Process a single incoming packet. Returns whether we should keep processing packets or not.
+        /// </summary>
 
-	bool ProcessPacket (Buffer buffer, IPEndPoint ip)
-	{
-		mPacketSource = ip;
-		BinaryReader reader = buffer.BeginReading();
-		if (buffer.size == 0) return true;
+        bool ProcessPacket(Buffer buffer, IPEndPoint ip)
+        {
+            mPacketSource = ip;
+            BinaryReader reader = buffer.BeginReading();
+            if (buffer.size == 0) return true;
 
-		int packetID = reader.ReadByte();
-		Packet response = (Packet)packetID;
+            int packetID = reader.ReadByte();
+            Packet response = (Packet)packetID;
 
 #if DEBUG_PACKETS && !STANDALONE
 		if (response != Packet.ResponsePing && response != Packet.Broadcast)
 			UnityEngine.Debug.Log("Client: " + response + " (" + buffer.size + " bytes) " + ((ip == null) ? "(TCP)" : "(UDP)"));
 #endif
-		// Verification step must be passed first
-		if (response == Packet.ResponseID || mTcp.stage == TcpProtocol.Stage.Verifying)
-		{
-			if (mTcp.VerifyResponseID(response, reader))
-			{
-				mTimeDifference = reader.ReadInt64() - (System.DateTime.UtcNow.Ticks / 10000);
+            // Verification step must be passed first
+            if (response == Packet.ResponseID || mTcp.stage == TcpProtocol.Stage.Verifying)
+            {
+                if (mTcp.VerifyResponseID(response, reader))
+                {
+                    mTimeDifference = reader.ReadInt64() - (System.DateTime.UtcNow.Ticks / 10000);
 
 #if !UNITY_WEBPLAYER
-				if (mUdp.isActive)
-				{
-					// If we have a UDP listener active, tell the server
-					BeginSend(Packet.RequestSetUDP).Write((ushort)mUdp.listeningPort);
-					EndSend();
-				}
+                    if (mUdp.isActive)
+                    {
+                        // If we have a UDP listener active, tell the server
+                        BeginSend(Packet.RequestSetUDP).Write((ushort)mUdp.listeningPort);
+                        EndSend();
+                    }
 #endif
-				mCanPing = true;
-				if (onConnect != null) onConnect(true, null);
-			}
-			return true;
-		}
+                    mCanPing = true;
+                    if (onConnect != null) onConnect(true, null);
+                }
+                return true;
+            }
 
-		OnPacket callback;
+            OnPacket callback;
 
-		if (packetHandlers.TryGetValue((byte)response, out callback) && callback != null)
-		{
-			callback(response, reader, ip);
-			return true;
-		}
+            if (packetHandlers.TryGetValue((byte)response, out callback) && callback != null)
+            {
+                callback(response, reader, ip);
+                return true;
+            }
 
-		switch (response)
-		{
-			case Packet.Empty: break;
-			case Packet.ForwardToAll:
-			case Packet.ForwardToOthers:
-			case Packet.ForwardToAllSaved:
-			case Packet.ForwardToOthersSaved:
-			case Packet.ForwardToHost:
-			case Packet.BroadcastAdmin:
-			case Packet.Broadcast:
-			{
-				packetSourceID = reader.ReadInt32();
-				int channelID = reader.ReadInt32();
-				if (onForwardedPacket != null) onForwardedPacket(channelID, reader);
-				break;
-			}
-			case Packet.ForwardToPlayer:
-			{
-				packetSourceID = reader.ReadInt32();
-				reader.ReadInt32(); // Skip the target player ID
-				int channelID = reader.ReadInt32();
-				if (onForwardedPacket != null) onForwardedPacket(channelID, reader);
-				break;
-			}
-			case Packet.ForwardByName:
-			{
-				packetSourceID = reader.ReadInt32();
-				reader.ReadString(); // Skip the player name
-				int channelID = reader.ReadInt32();
-				if (onForwardedPacket != null) onForwardedPacket(channelID, reader);
-				break;
-			}
-			case Packet.ResponseSetPlayerData:
-			{
-				int pid = reader.ReadInt32();
-				Player target = GetPlayer(pid);
+            switch (response)
+            {
+                case Packet.Empty: break;
+                case Packet.ForwardToAll:
+                case Packet.ForwardToOthers:
+                case Packet.ForwardToAllSaved:
+                case Packet.ForwardToOthersSaved:
+                case Packet.ForwardToHost:
+                case Packet.BroadcastAdmin:
+                case Packet.Broadcast:
+                    {
+                        packetSourceID = reader.ReadInt32();
+                        int channelID = reader.ReadInt32();
+                        if (onForwardedPacket != null) onForwardedPacket(channelID, reader);
+                        break;
+                    }
+                case Packet.ForwardToPlayer:
+                    {
+                        packetSourceID = reader.ReadInt32();
+                        reader.ReadInt32(); // Skip the target player ID
+                        int channelID = reader.ReadInt32();
+                        if (onForwardedPacket != null) onForwardedPacket(channelID, reader);
+                        break;
+                    }
+                case Packet.ForwardByName:
+                    {
+                        packetSourceID = reader.ReadInt32();
+                        reader.ReadString(); // Skip the player name
+                        int channelID = reader.ReadInt32();
+                        if (onForwardedPacket != null) onForwardedPacket(channelID, reader);
+                        break;
+                    }
+                case Packet.ResponseSetPlayerData:
+                    {
+                        int pid = reader.ReadInt32();
+                        Player target = GetPlayer(pid);
 
-				if (target != null)
-				{
-					string path = reader.ReadString();
-					DataNode node = target.Set(path, reader.ReadObject());
-					if (onSetPlayerData != null) onSetPlayerData(target, path, node);
-				}
-				else UnityEngine.Debug.LogError("Not found: " + pid);
-				break;
-			}
-			case Packet.ResponsePing:
-			{
-				int ping = (int)(mMyTime - mPingTime);
+                        if (target != null)
+                        {
+                            string path = reader.ReadString();
+                            DataNode node = target.Set(path, reader.ReadObject());
+                            if (onSetPlayerData != null) onSetPlayerData(target, path, node);
+                        }
+                        else UnityEngine.Debug.LogError("Not found: " + pid);
+                        break;
+                    }
+                case Packet.ResponsePing:
+                    {
+                        int ping = (int)(mMyTime - mPingTime);
 
-				if (ip != null)
-				{
-					if (onPing != null && ip != null) onPing(ip, ping);
-				}
-				else
-				{
-					mCanPing = true;
-					mPing = ping;
-				}
-				break;
-			}
-			case Packet.ResponseSetUDP:
-			{
+                        if (ip != null)
+                        {
+                            if (onPing != null && ip != null) onPing(ip, ping);
+                        }
+                        else
+                        {
+                            mCanPing = true;
+                            mPing = ping;
+                        }
+                        break;
+                    }
+                case Packet.ResponseSetUDP:
+                    {
 #if !UNITY_WEBPLAYER
-				// The server has a new port for UDP traffic
-				ushort port = reader.ReadUInt16();
+                        // The server has a new port for UDP traffic
+                        ushort port = reader.ReadUInt16();
 
-				if (port != 0 && mTcp.tcpEndPoint != null)
-				{
-					IPAddress ipa = new IPAddress(mTcp.tcpEndPoint.Address.GetAddressBytes());
-					mServerUdpEndPoint = new IPEndPoint(ipa, port);
+                        if (port != 0 && mTcp.tcpEndPoint != null)
+                        {
+                            IPAddress ipa = new IPAddress(mTcp.tcpEndPoint.Address.GetAddressBytes());
+                            mServerUdpEndPoint = new IPEndPoint(ipa, port);
 
-					// Send the first UDP packet to the server
-					if (mUdp.isActive)
-					{
-						mBuffer = Buffer.Create();
-						mBuffer.BeginPacket(Packet.RequestActivateUDP).Write(playerID);
-						mBuffer.EndPacket();
-						mUdp.Send(mBuffer, mServerUdpEndPoint);
-						mBuffer.Recycle();
-						mBuffer = null;
-					}
-				}
-				else mServerUdpEndPoint = null;
+                            // Send the first UDP packet to the server
+                            if (mUdp.isActive)
+                            {
+                                mBuffer = Buffer.Create();
+                                mBuffer.BeginPacket(Packet.RequestActivateUDP).Write(playerID);
+                                mBuffer.EndPacket();
+                                mUdp.Send(mBuffer, mServerUdpEndPoint);
+                                mBuffer.Recycle();
+                                mBuffer = null;
+                            }
+                        }
+                        else mServerUdpEndPoint = null;
 #endif
-				break;
-			}
-			case Packet.ResponseJoiningChannel:
-			{
-				int channelID = reader.ReadInt32();
-				int count = reader.ReadInt16();
-				Channel ch = GetChannel(channelID, true);
+                        break;
+                    }
+                case Packet.ResponseJoiningChannel:
+                    {
+                        int channelID = reader.ReadInt32();
+                        int count = reader.ReadInt16();
+                        Channel ch = GetChannel(channelID, true);
 
-				for (int i = 0; i < count; ++i)
-				{
-					int pid = reader.ReadInt32();
-					Player p = GetPlayer(pid, true);
+                        for (int i = 0; i < count; ++i)
+                        {
+                            int pid = reader.ReadInt32();
+                            Player p = GetPlayer(pid, true);
 
-					if (reader.ReadBoolean())
-					{
-						p.name = reader.ReadString();
-						p.dataNode = reader.ReadDataNode();
-					}
-					ch.players.Add(p);
-				}
-				break;
-			}
-			case Packet.ResponseLoadLevel:
-			{
-				// Purposely return after loading a level, ensuring that all future callbacks happen after loading
-				int channelID = reader.ReadInt32();
-				string scene = reader.ReadString();
-				if (onLoadLevel != null) onLoadLevel(channelID, scene);
-				return false;
-			}
-			case Packet.ResponsePlayerJoined:
-			{
-				int channelID = reader.ReadInt32();
+                            if (reader.ReadBoolean())
+                            {
+                                p.name = reader.ReadString();
+                                p.dataNode = reader.ReadDataNode();
+                            }
+                            ch.players.Add(p);
+                        }
+                        break;
+                    }
+                case Packet.ResponseLoadLevel:
+                    {
+                        // Purposely return after loading a level, ensuring that all future callbacks happen after loading
+                        int channelID = reader.ReadInt32();
+                        string scene = reader.ReadString();
+                        if (onLoadLevel != null) onLoadLevel(channelID, scene);
+                        return false;
+                    }
+                case Packet.ResponsePlayerJoined:
+                    {
+                        int channelID = reader.ReadInt32();
 
-				Channel ch = GetChannel(channelID);
+                        Channel ch = GetChannel(channelID);
 
-				if (ch != null)
-				{
-					Player p = GetPlayer(reader.ReadInt32(), true);
+                        if (ch != null)
+                        {
+                            Player p = GetPlayer(reader.ReadInt32(), true);
 
-					if (reader.ReadBoolean())
-					{
-						p.name = reader.ReadString();
-						p.dataNode = reader.ReadDataNode();
-					}
+                            if (reader.ReadBoolean())
+                            {
+                                p.name = reader.ReadString();
+                                p.dataNode = reader.ReadDataNode();
+                            }
 
-					ch.players.Add(p);
-					if (onPlayerJoin != null) onPlayerJoin(channelID, p);
-				}
-				break;
-			}
-			case Packet.ResponsePlayerLeft:
-			{
-				int channelID = reader.ReadInt32();
-				int playerID = reader.ReadInt32();
+                            ch.players.Add(p);
+                            if (onPlayerJoin != null) onPlayerJoin(channelID, p);
+                        }
+                        break;
+                    }
+                case Packet.ResponsePlayerLeft:
+                    {
+                        int channelID = reader.ReadInt32();
+                        int playerID = reader.ReadInt32();
 
-				Channel ch = GetChannel(channelID);
+                        Channel ch = GetChannel(channelID);
 
-				if (ch != null)
-				{
-					Player p = ch.GetPlayer(playerID);
-					ch.players.Remove(p);
-					RebuildPlayerDictionary();
-					if (onPlayerLeave != null) onPlayerLeave(channelID, p);
-				}
-				break;
-			}
-			case Packet.ResponseSetHost:
-			{
-				int channelID = reader.ReadInt32();
-				int hostID = reader.ReadInt32();
+                        if (ch != null)
+                        {
+                            Player p = ch.GetPlayer(playerID);
+                            ch.players.Remove(p);
+                            RebuildPlayerDictionary();
+                            if (onPlayerLeave != null) onPlayerLeave(channelID, p);
+                        }
+                        break;
+                    }
+                case Packet.ResponseSetHost:
+                    {
+                        int channelID = reader.ReadInt32();
+                        int hostID = reader.ReadInt32();
 
-				for (int i = 0; i < mChannels.size; ++i)
-				{
-					Channel ch = mChannels[i];
+                        for (int i = 0; i < mChannels.size; ++i)
+                        {
+                            Channel ch = mChannels[i];
 
-					if (ch.id == channelID)
-					{
-						ch.host = GetPlayer(hostID);
-						if (onHostChanged != null) onHostChanged(ch);
-						break;
-					}
-				}
-				break;
-			}
-			case Packet.ResponseSetChannelData:
-			{
-				int channelID = reader.ReadInt32();
-				Channel ch = GetChannel(channelID);
+                            if (ch.id == channelID)
+                            {
+                                ch.host = GetPlayer(hostID);
+                                if (onHostChanged != null) onHostChanged(ch);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                case Packet.ResponseSetChannelData:
+                    {
+                        int channelID = reader.ReadInt32();
+                        Channel ch = GetChannel(channelID);
 
-				if (ch != null)
-				{
-					string path = reader.ReadString();
-					DataNode node = ch.Set(path, reader.ReadObject());
-					if (onSetChannelData != null) onSetChannelData(ch, path, node);
-				}
-				break;
-			}
-			case Packet.ResponseJoinChannel:
-			{
-				int channelID = reader.ReadInt32();
-				bool success = reader.ReadBoolean();
-				string msg = success ? null : reader.ReadString();
+                        if (ch != null)
+                        {
+                            string path = reader.ReadString();
+                            DataNode node = ch.Set(path, reader.ReadObject());
+                            if (onSetChannelData != null) onSetChannelData(ch, path, node);
+                        }
+                        break;
+                    }
+                case Packet.ResponseJoinChannel:
+                    {
+                        int channelID = reader.ReadInt32();
+                        bool success = reader.ReadBoolean();
+                        string msg = success ? null : reader.ReadString();
 
-				// mJoining can contain -2 and -1 when joining random channels
-				if (!mJoining.Remove(channelID))
-				{
-					for (int i = 0; i < mJoining.size; ++i)
-					{
-						int id = mJoining[i];
+                        // mJoining can contain -2 and -1 when joining random channels
+                        if (!mJoining.Remove(channelID))
+                        {
+                            for (int i = 0; i < mJoining.size; ++i)
+                            {
+                                int id = mJoining[i];
 
-						if (id < 0)
-						{
-							mJoining.RemoveAt(i);
-							break;
-						}
-					}
-				}
+                                if (id < 0)
+                                {
+                                    mJoining.RemoveAt(i);
+                                    break;
+                                }
+                            }
+                        }
 #if UNITY_EDITOR
-				if (!success) UnityEngine.Debug.LogError("ResponseJoinChannel: " + success + ", " + msg);
+                        if (!success) UnityEngine.Debug.LogError("ResponseJoinChannel: " + success + ", " + msg);
 #endif
-				if (onJoinChannel != null) onJoinChannel(channelID, success, msg);
-				break;
-			}
-			case Packet.ResponseLeaveChannel:
-			{
-				int channelID = reader.ReadInt32();
+                        if (onJoinChannel != null) onJoinChannel(channelID, success, msg);
+                        break;
+                    }
+                case Packet.ResponseLeaveChannel:
+                    {
+                        int channelID = reader.ReadInt32();
 
-				for (int i = 0; i < mChannels.size; ++i)
-				{
-					Channel ch = mChannels[i];
+                        for (int i = 0; i < mChannels.size; ++i)
+                        {
+                            Channel ch = mChannels[i];
 
-					if (ch.id == channelID)
-					{
-						mChannels.RemoveAt(i);
-						break;
-					}
-				}
+                            if (ch.id == channelID)
+                            {
+                                mChannels.RemoveAt(i);
+                                break;
+                            }
+                        }
 
-				RebuildPlayerDictionary();
-				if (onLeaveChannel != null) onLeaveChannel(channelID);
+                        RebuildPlayerDictionary();
+                        if (onLeaveChannel != null) onLeaveChannel(channelID);
 
-				// Purposely exit after receiving a "left channel" notification so that other packets get handled in the next frame.
-				return false;
-			}
-			case Packet.ResponseRenamePlayer:
-			{
-				Player p = GetPlayer(reader.ReadInt32());
-				string oldName = p.name;
-				if (p != null) p.name = reader.ReadString();
-				if (onRenamePlayer != null) onRenamePlayer(p, oldName);
-				break;
-			}
-			case Packet.ResponseCreateObject:
-			{
-				if (onCreate != null)
-				{
-					int playerID = reader.ReadInt32();
-					int channelID = reader.ReadInt32();
-					uint objID = reader.ReadUInt32();
-					onCreate(channelID, playerID, objID, reader);
-				}
-				break;
-			}
-			case Packet.ResponseDestroyObject:
-			{
-				if (onDestroy != null)
-				{
-					int channelID = reader.ReadInt32();
-					int count = reader.ReadUInt16();
+                        // Purposely exit after receiving a "left channel" notification so that other packets get handled in the next frame.
+                        return false;
+                    }
+                case Packet.ResponseRenamePlayer:
+                    {
+                        Player p = GetPlayer(reader.ReadInt32());
+                        string oldName = p.name;
+                        if (p != null) p.name = reader.ReadString();
+                        if (onRenamePlayer != null) onRenamePlayer(p, oldName);
+                        break;
+                    }
+                case Packet.ResponseCreateObject:
+                    {
+                        if (onCreate != null)
+                        {
+                            int playerID = reader.ReadInt32();
+                            int channelID = reader.ReadInt32();
+                            uint objID = reader.ReadUInt32();
+                            onCreate(channelID, playerID, objID, reader);
+                        }
+                        break;
+                    }
+                case Packet.ResponseDestroyObject:
+                    {
+                        if (onDestroy != null)
+                        {
+                            int channelID = reader.ReadInt32();
+                            int count = reader.ReadUInt16();
 
-					for (int i = 0; i < count; ++i)
-					{
-						uint val = reader.ReadUInt32();
-						onDestroy(channelID, val);
-					}
-				}
-				break;
-			}
-			case Packet.ResponseTransferObject:
-			{
-				if (onTransfer != null)
-				{
-					int from = reader.ReadInt32();
-					int to = reader.ReadInt32();
-					uint id0 = reader.ReadUInt32();
-					uint id1 = reader.ReadUInt32();
-					onTransfer(from, to, id0, id1);
-				}
-				break;
-			}
-			case Packet.Error:
-			{
-				string err = reader.ReadString();
-				if (onError != null) onError(err);
-				if (mTcp.stage != TcpProtocol.Stage.Connected && onConnect != null) onConnect(false, err);
-				break;
-			}
-			case Packet.Disconnect:
-			{
-				if (onLeaveChannel != null)
-				{
-					while (mChannels.size > 0)
-					{
-						int index = mChannels.size - 1;
-						Channel ch = mChannels[index];
-						mChannels.RemoveAt(index);
-						onLeaveChannel(ch.id);
-					}
-				}
+                            for (int i = 0; i < count; ++i)
+                            {
+                                uint val = reader.ReadUInt32();
+                                onDestroy(channelID, val);
+                            }
+                        }
+                        break;
+                    }
+                case Packet.ResponseTransferObject:
+                    {
+                        if (onTransfer != null)
+                        {
+                            int from = reader.ReadInt32();
+                            int to = reader.ReadInt32();
+                            uint id0 = reader.ReadUInt32();
+                            uint id1 = reader.ReadUInt32();
+                            onTransfer(from, to, id0, id1);
+                        }
+                        break;
+                    }
+                case Packet.Error:
+                    {
+                        string err = reader.ReadString();
+                        if (onError != null) onError(err);
+                        if (mTcp.stage != TcpProtocol.Stage.Connected && onConnect != null) onConnect(false, err);
+                        break;
+                    }
+                case Packet.Disconnect:
+                    {
+                        if (onLeaveChannel != null)
+                        {
+                            while (mChannels.size > 0)
+                            {
+                                int index = mChannels.size - 1;
+                                Channel ch = mChannels[index];
+                                mChannels.RemoveAt(index);
+                                onLeaveChannel(ch.id);
+                            }
+                        }
 
-				mChannels.Clear();
-				mGetChannelsCallbacks.Clear();
-				mDictionary.Clear();
-				mTcp.Close(false);
-				mLoadFiles.Clear();
-				mGetFiles.Clear();
-				mJoining.Clear();
-				mIsAdmin = false;
+                        mChannels.Clear();
+                        mGetChannelsCallbacks.Clear();
+                        mDictionary.Clear();
+                        mTcp.Close(false);
+                        mLoadFiles.Clear();
+                        mGetFiles.Clear();
+                        mJoining.Clear();
+                        mIsAdmin = false;
 
-				if (mLocalServer != null)
-				{
-					mLocalServer.localClient = null;
-					mLocalServer = null;
-				}
+                        if (mLocalServer != null)
+                        {
+                            mLocalServer.localClient = null;
+                            mLocalServer = null;
+                        }
 
-				if (onDisconnect != null) onDisconnect();
-				mConfig = new DataNode("Version", Player.version);
-				break;
-			}
-			case Packet.ResponseGetFileList:
-			{
-				string filename = reader.ReadString();
-				int size = reader.ReadInt32();
-				string[] files = null;
+                        if (onDisconnect != null) onDisconnect();
+                        mConfig = new DataNode("Version", Player.version);
+                        break;
+                    }
+                case Packet.ResponseGetFileList:
+                    {
+                        string filename = reader.ReadString();
+                        int size = reader.ReadInt32();
+                        string[] files = null;
 
-				if (size > 0)
-				{
-					files = new string[size];
-					for (int i = 0; i < size; ++i)
-						files[i] = reader.ReadString();
-				}
+                        if (size > 0)
+                        {
+                            files = new string[size];
+                            for (int i = 0; i < size; ++i)
+                                files[i] = reader.ReadString();
+                        }
 
-				OnGetFiles cb = null;
-				if (mGetFiles.TryGetValue(filename, out cb))
-					mGetFiles.Remove(filename);
+                        OnGetFiles cb = null;
+                        if (mGetFiles.TryGetValue(filename, out cb))
+                            mGetFiles.Remove(filename);
 
-				if (cb != null)
-				{
-					try
-					{
-						cb(filename, files);
-					}
+                        if (cb != null)
+                        {
+                            try
+                            {
+                                cb(filename, files);
+                            }
 #if UNITY_EDITOR
-					catch (System.Exception ex)
-					{
-						Debug.LogError(ex.Message + ex.StackTrace);
-					}
+                            catch (System.Exception ex)
+                            {
+                                Debug.LogError(ex.Message + ex.StackTrace);
+                            }
 #else
 					catch (System.Exception) {}
 #endif
-				}
-				break;
-			}
-			case Packet.ResponseLoadFile:
-			{
-				string filename = reader.ReadString();
-				int size = reader.ReadInt32();
-				byte[] data = reader.ReadBytes(size);
-				OnLoadFile cb = null;
+                        }
+                        break;
+                    }
+                case Packet.ResponseLoadFile:
+                    {
+                        string filename = reader.ReadString();
+                        int size = reader.ReadInt32();
+                        byte[] data = reader.ReadBytes(size);
+                        OnLoadFile cb = null;
 
-				if (mLoadFiles.TryGetValue(filename, out cb))
-					mLoadFiles.Remove(filename);
+                        if (mLoadFiles.TryGetValue(filename, out cb))
+                            mLoadFiles.Remove(filename);
 
-				if (cb != null)
-				{
-					try
-					{
-						cb(filename, data);
-					}
+                        if (cb != null)
+                        {
+                            try
+                            {
+                                cb(filename, data);
+                            }
 #if UNITY_EDITOR
-					catch (System.Exception ex)
-					{
-						Debug.LogError(ex.Message + ex.StackTrace);
-					}
+                            catch (System.Exception ex)
+                            {
+                                Debug.LogError(ex.Message + ex.StackTrace);
+                            }
 #else
 					catch (System.Exception) {}
 #endif
-				}
-				break;
-			}
-			case Packet.ResponseVerifyAdmin:
-			{
-				int pid = reader.ReadInt32();
-				Player p = GetPlayer(pid);
-				if (p == player) mIsAdmin = true;
-				if (onSetAdmin != null) onSetAdmin(p);
-				break;
-			}
-			case Packet.ResponseSetServerData:
-			{
-				string path = reader.ReadString();
-				object obj = reader.ReadObject();
+                        }
+                        break;
+                    }
+                case Packet.ResponseVerifyAdmin:
+                    {
+                        int pid = reader.ReadInt32();
+                        Player p = GetPlayer(pid);
+                        if (p == player) mIsAdmin = true;
+                        if (onSetAdmin != null) onSetAdmin(p);
+                        break;
+                    }
+                case Packet.ResponseSetServerData:
+                    {
+                        string path = reader.ReadString();
+                        object obj = reader.ReadObject();
 
-				if (obj != null)
-				{
-					DataNode node = mConfig.SetHierarchy(path, obj);
-					if (onSetServerData != null) onSetServerData(path, node);
-				}
-				else
-				{
-					DataNode node = mConfig.RemoveHierarchy(path);
-					if (onSetServerData != null) onSetServerData(path, node);
-				}
-				break;
-			}
-			case Packet.ResponseChannelList:
-			{
-				if (mGetChannelsCallbacks.Count != 0)
-				{
-					OnGetChannels cb = mGetChannelsCallbacks.Dequeue();
-					List<Channel.Info> channels = new List<Channel.Info>();
-					int count = reader.ReadInt32();
+                        if (obj != null)
+                        {
+                            DataNode node = mConfig.SetHierarchy(path, obj);
+                            if (onSetServerData != null) onSetServerData(path, node);
+                        }
+                        else
+                        {
+                            DataNode node = mConfig.RemoveHierarchy(path);
+                            if (onSetServerData != null) onSetServerData(path, node);
+                        }
+                        break;
+                    }
+                case Packet.ResponseChannelList:
+                    {
+                        if (mGetChannelsCallbacks.Count != 0)
+                        {
+                            OnGetChannels cb = mGetChannelsCallbacks.Dequeue();
+                            List<Channel.Info> channels = new List<Channel.Info>();
+                            int count = reader.ReadInt32();
 
-					for (int i = 0; i < count; ++i)
-					{
-						Channel.Info info = new Channel.Info();
-						info.id = reader.ReadInt32();
-						info.players = reader.ReadUInt16();
-						info.limit = reader.ReadUInt16();
-						info.hasPassword = reader.ReadBoolean();
-						info.isPersistent = reader.ReadBoolean();
-						info.level = reader.ReadString();
-						info.data = reader.ReadDataNode();
-						channels.Add(info);
-					}
+                            for (int i = 0; i < count; ++i)
+                            {
+                                Channel.Info info = new Channel.Info();
+                                info.id = reader.ReadInt32();
+                                info.players = reader.ReadUInt16();
+                                info.limit = reader.ReadUInt16();
+                                info.hasPassword = reader.ReadBoolean();
+                                info.isPersistent = reader.ReadBoolean();
+                                info.level = reader.ReadString();
+                                info.data = reader.ReadDataNode();
+                                channels.Add(info);
+                            }
 
-					if (cb != null) cb(channels);
-				}
-				break;
-			}
-			case Packet.ResponseLockChannel:
-			{
-				int channelID = reader.ReadInt32();
-				bool isLocked = reader.ReadBoolean();
-				Channel ch = GetChannel(channelID);
-				if (ch != null) ch.isLocked = isLocked;
-				if (onLockChannel != null) onLockChannel(channelID, isLocked);
-				break;
-			}
-		}
-		return true;
-	}
+                            if (cb != null) cb(channels);
+                        }
+                        break;
+                    }
+                case Packet.ResponseLockChannel:
+                    {
+                        int channelID = reader.ReadInt32();
+                        bool isLocked = reader.ReadBoolean();
+                        Channel ch = GetChannel(channelID);
+                        if (ch != null) ch.isLocked = isLocked;
+                        if (onLockChannel != null) onLockChannel(channelID, isLocked);
+                        break;
+                    }
+                case Packet.SelfClientPacket:
+                    {
+                        SocketMessage.Receive(reader);
+                        break;
+                    }
+            }
+            return true;
+        }
 
 	/// <summary>
 	/// Rebuild the player dictionary from the list of players in all of the channels we're currently in.
