@@ -36,7 +36,7 @@ namespace InscriptionSystem.UI
         /// </summary>
         public InscriptionPage inscriptionPage;
 
-        private int PageNumber
+        public int PageNumber
         {
             get { return _pageNumber; }
             set
@@ -47,7 +47,6 @@ namespace InscriptionSystem.UI
                     ClearInscription();
                     InitInscriptionSlot();
                     SendMessageToInscriptionPagePanel();
-                    // InscriptionAttribueUIController.Instance.inscriptionPagePanel.SendMessage("OnReciveFromInscriptionPage",);
                 }
             }
         }
@@ -55,7 +54,6 @@ namespace InscriptionSystem.UI
         void Start()
         {
             inscriptionButtonList = transform.GetComponentsInChildren<InscriptionSlotButton>();
-            //SendMessageToInscriptionPagePanel();
             PageNumber = 1;
         }
 
@@ -93,7 +91,6 @@ namespace InscriptionSystem.UI
                 {
                     inscriptionButtonList[i].inscriptionId = inscrptionCh.inscriptionID;
                     inscriptionButtonList[i].isInscription = true;
-                    //inscriptionButtonList[i].GetComponent<Image>().enabled = true;
                     inscriptionButtonList[i].GetComponent<Image>().sprite = inscrptionCh.inscriptionIcon;
                 }
             }

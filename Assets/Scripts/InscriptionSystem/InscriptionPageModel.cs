@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace InscriptionSystem.UI {
+namespace InscriptionSystem.UI.Old {
     /// <summary>
     /// 符文传输模型
     /// </summary>

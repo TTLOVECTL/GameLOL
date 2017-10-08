@@ -7,8 +7,8 @@ using DataSystem;
 public class Test2 : MonoBehaviour {
 	void Awake () {
         Init();
-        InscriptionConst._instriptionBag.Add(7);
-        InscriptionConst._instriptionBag.Add(17);
+       // InscriptionConst._instriptionBag.Add(7);
+        //InscriptionConst._instriptionBag.Add(17);
 	}
 
     private void Init()

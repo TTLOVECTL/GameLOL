@@ -38,6 +38,12 @@ namespace InscriptionSystem {
             }
         }
 
+        public void AddNewInscripttion(int inscriptionPageId, InscriptionPage inscriptionPage)
+        {
+            if (_inscriptionPageList.ContainsKey(inscriptionPageId)) 
+                return;
+            _inscriptionPageList.Add(inscriptionPageId, inscriptionPage);
+        }
         /// <summary>
         /// 通过Id获取指定的符文页
         /// </summary>
@@ -93,7 +99,7 @@ namespace InscriptionSystem {
         {
             List<RestInscription> inscriptionList = new List<RestInscription>();
             foreach (KeyValuePair<int, InscriptionMessage> item in PlayerInscriptionMessage.InscriptionList) {
-                Debug.Log(InscriptionFactory.Instance.GetInscriptionById(item.Value.inscriptionId).inscriptionName+":"+item.Value.inscriptionNumber);
+                //Debug.Log(InscriptionFactory.Instance.GetInscriptionById(item.Value.inscriptionId).inscriptionName+":"+item.Value.inscriptionNumber);
                 if (InscriptionFactory.Instance.GetInscriptionById(item.Value.inscriptionId).inscriptionColor == color) {
                     int max = 0;
                     switch (color) {
@@ -125,7 +131,6 @@ namespace InscriptionSystem {
                             break;
                     }
                     if (item.Value.inscriptionNumber - max > 0) {
-                       // Debug.Log(max);
                         RestInscription restInscription = new RestInscription();
                         restInscription.inscriptionId = item.Value.inscriptionId;
                         restInscription.inscriptionNumber = item.Value.inscriptionNumber - max;

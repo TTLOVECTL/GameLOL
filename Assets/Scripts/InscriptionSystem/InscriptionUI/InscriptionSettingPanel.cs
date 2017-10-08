@@ -58,7 +58,7 @@ namespace InscriptionSystem.UI
                 if (childsTransform[i].gameObject.tag == "SettingInscriptionButton")
                     Destroy(childsTransform[i].gameObject);
             }
-            List<RestInscription> restList = InscriptionPageFactory.Instance.GetRestInscriptionList(currentButton.GetComponent<InscriptionSlotButton>().slotColor, 1);
+            List<RestInscription> restList = InscriptionPageFactory.Instance.GetRestInscriptionList(currentButton.GetComponent<InscriptionSlotButton>().slotColor, InscriptionPageUIController.Instance.PageNumber);
             if (restList.Count != 0) {
                 float he = restList.Count * (buttonheight+5)+5;
                 if (he < rectHeight) {

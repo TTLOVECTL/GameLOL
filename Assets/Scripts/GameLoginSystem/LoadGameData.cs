@@ -78,7 +78,6 @@ namespace GameLoginSystem
                         }
                         PlayerInscriptionMessage.InscriptionList.Add(inscriptionMessage.inscriptionId, inscriptionMessage);
                     }
-
                     XmlNodeList inscriptionPageNodeList = xmlDoc.SelectSingleNode("PlayerMessage/InscriptionPageMessage").ChildNodes;
                     foreach (XmlElement xe in inscriptionPageNodeList)
                     {

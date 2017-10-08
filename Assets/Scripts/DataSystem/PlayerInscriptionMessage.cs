@@ -18,7 +18,7 @@ namespace DataSystem {
         }
 
         /// <summary>
-        /// 获得新的符文
+        /// 获得新的符文,添加至背包中。
         /// </summary>
         /// <param name="inscriptionid"></param>
         public static void AddInscritonToBag(int inscriptionid) {
@@ -36,7 +36,7 @@ namespace DataSystem {
         }
 
         /// <summary>
-        /// 移除符文
+        /// 从背包中移除符文
         /// </summary>
         /// <param name="inscriptionid"></param>
         public static void RemoveInscriptionFromBag(int inscriptionid) {
@@ -68,6 +68,11 @@ namespace DataSystem {
             }
             return inscriptionMessageList;
         }
+
+        public static void RemoveInscriptionFromInscriptionPage() {
+
+        }
+
     }
 
     public class InscriptionMessage {

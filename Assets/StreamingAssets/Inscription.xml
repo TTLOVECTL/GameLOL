@@ -295,7 +295,7 @@
     <id>28</id>
     <name>鹰眼</name>
     <level>5</level>
-    <color>0</color>
+    <color>1</color>
     <icon>28</icon>
     <attibuteList>
       <attibute id="2">1.1</attibute>

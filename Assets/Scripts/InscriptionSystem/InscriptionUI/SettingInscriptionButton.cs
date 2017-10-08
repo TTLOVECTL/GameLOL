@@ -38,17 +38,9 @@ namespace InscriptionSystem.UI
                         break;
                 }
 
-                InscriptionConst._instriptionBag.Add(insbu.inscriptionId);
             }
 
             Inscription a = InscriptionFactory.Instance.GetInscriptionById(inscriptionId);
-
-            ///移除背包里已被添加符文
-            for (int i = 0; i < InscriptionConst._instriptionBag.Count; i++) {
-                if (InscriptionConst._instriptionBag[i] == inscriptionId) {
-                    InscriptionConst._instriptionBag.RemoveAt(i);
-                }
-            }
             
             insbu.GetComponent<Image>().enabled = true;
 

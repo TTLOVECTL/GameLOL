@@ -65,8 +65,6 @@ namespace InscriptionSystem.UI {
                     InscriptionPageUIController.Instance.inscriptionPage.redInscription.Remove(insbu.slotId);
                     break;
             }
-
-            InscriptionConst._instriptionBag.Add(insbu.inscriptionId);
             insbu.inscriptionId = 0;
 
             ///===============================================
