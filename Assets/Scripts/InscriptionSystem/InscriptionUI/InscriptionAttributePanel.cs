@@ -35,10 +35,10 @@ namespace InscriptionSystem.UI {
                 string text = a.attributeName;
                 if (a.valueType == AttributeValue.NUMBER)
                 {
-                    text += a._attributeValue.ToString();
+                    text += ("+"+a._attributeValue.ToString());
                 }
                 else {
-                    text += ((a._attributeValue * 100).ToString() + "%");
+                    text += ("+"+(a._attributeValue * 100).ToString() + "%");
                 }
                 attributeText.text += text;
                 attributeText.text += "\n";

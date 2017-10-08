@@ -1929,6 +1929,7 @@ GameObject:
   - component: {fileID: 1052425905}
   - component: {fileID: 1052425909}
   - component: {fileID: 1052425910}
+  - component: {fileID: 1052425911}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2035,7 +2036,7 @@ MonoBehaviour:
   noticePanel: {fileID: 873136287}
   MainPanel: {fileID: 361784250}
   ipAddress: 192.168.1.104
-  port: 1998
+  port: 2001
 --- !u!114 &1052425910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2053,6 +2054,17 @@ MonoBehaviour:
   noticeMessage: {fileID: 1669572626}
   loadImagePanel: {fileID: 1351658923}
   mainPanel: {fileID: 361784250}
+--- !u!114 &1052425911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1052425904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65b2a25a58fb084f8ce4f4a84c30c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1107302456
 GameObject:
   m_ObjectHideFlags: 0

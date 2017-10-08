@@ -18,6 +18,7 @@ namespace GameLoginSystem {
         public int port;
         // Use this for initialization
         void Start() {
+           // Debug.Log(TNManager.isConnected);
             if (TNManager.isConnected == false) {
                 TNManager.Connect(ipAddress, port);
             }

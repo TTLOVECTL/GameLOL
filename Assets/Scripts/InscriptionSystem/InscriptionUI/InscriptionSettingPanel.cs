@@ -11,7 +11,7 @@ namespace InscriptionSystem.UI
 
         private GameObject currentButton;
 
-        private List<Inscription> inscriptionList = new List<Inscription>();
+        //private List<Inscription> inscriptionList = new List<Inscription>();
 
         public GameObject initscerObj;
 
@@ -47,33 +47,29 @@ namespace InscriptionSystem.UI
 
 
         public void OnReceiveMessage() {
-            currentButton = InscriptionSlotButton.currentButton;                
+            currentButton = InscriptionSlotButton.currentButton;
             InitChooseFromBag();
         }
 
         private void InitChooseFromBag() {
-            for (int i = 0; i < contentObj.transform.childCount; i++)
+            Transform[] childsTransform = contentObj.GetComponentsInChildren<Transform>();
+            for (int i = 0; i < childsTransform.Length; i++)
             {
-                DestroyImmediate(contentObj.transform.GetChild(i).gameObject);
+                if (childsTransform[i].gameObject.tag == "SettingInscriptionButton")
+                    Destroy(childsTransform[i].gameObject);
             }
-            inscriptionList.Clear();
-
-            foreach (int a in InscriptionConst._instriptionBag)
-            {
-                Inscription inscription = InscriptionFactory.Instance.GetInscriptionById(a);
-                if (inscription.inscriptionColor == currentButton.GetComponent<InscriptionSlotButton>().slotColor)
-                {
-                    inscriptionList.Add(inscription);
-                }
-            }
-            if (inscriptionList.Count != 0) {
-                float he = inscriptionList.Count * (buttonheight+5)+5;
+            List<RestInscription> restList = InscriptionPageFactory.Instance.GetRestInscriptionList(currentButton.GetComponent<InscriptionSlotButton>().slotColor, 1);
+            if (restList.Count != 0) {
+                float he = restList.Count * (buttonheight+5)+5;
                 if (he < rectHeight) {
                     he = rectHeight;
                 }
                 contentObj.GetComponent<RectTransform>().sizeDelta = new Vector2(0,he);
                 int count = 0;
-                foreach(Inscription a in inscriptionList) {
+
+                
+                foreach(RestInscription rest in restList) {
+                    Inscription a = InscriptionFactory.Instance.GetInscriptionById(rest.inscriptionId);
                     GameObject ga = Instantiate(initscerObj) as GameObject;
 
                     ga.GetComponent<RectTransform>().SetParent(contentObj.transform);
@@ -86,6 +82,7 @@ namespace InscriptionSystem.UI
                     settingInscriptionButton.inscriptionId = a.inscriptionID;
                     settingInscriptionButton.iocnSprite.sprite = a.inscriptionIcon;
                     settingInscriptionButton.inscriptionName.text =a.inscriptionLevel+"级符文："+ a.inscriptionName;
+                    settingInscriptionButton.inscriptionNumber.text = "X" + rest.inscriptionNumber.ToString();
                     for (int i = 0; i < a.inscriptionAttribute.Count; i++) {
                         string value = "";
                         if (a.inscriptionAttribute[i].valueType == AttributeValue.PERCENTAGE) {

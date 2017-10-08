@@ -56,7 +56,7 @@ namespace InscriptionSystem.UI
         {
             inscriptionSettingPanel.SetActive(false);
             inscriptionPagePanel.SetActive(false);
-            inscriptionAttributePanel.SetActive(true);            
+            inscriptionAttributePanel.SetActive(true);
             inscriptionAttributePanel.SendMessage("OnReceiveMessage",insc);
 
         }

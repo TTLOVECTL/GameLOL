@@ -26,6 +26,15 @@ namespace DataSystem
 
         private static int inscriptionNumber = 500000;
 
+        public static int PlayerId {
+            get {
+                return playerId;
+            }
+            set {
+                playerId = value;
+            }
+        }
+
         /// <summary>
         /// 玩家昵称
         /// </summary>

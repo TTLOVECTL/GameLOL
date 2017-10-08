@@ -371,7 +371,7 @@ MonoBehaviour:
     _inscriptionLevel: 5
     _inscriptionName: "\u9E70\u773C"
     _inscriptionIcon: {fileID: 21300000, guid: 0a52f71e3e7c68843a0432134a9327f6, type: 3}
-    _inscriptionColor: 0
+    _inscriptionColor: 1
     _inscriptionAttribute:
     - _attributeId: 2
       _attributeName: "\u7269\u7406\u653B\u51FB"

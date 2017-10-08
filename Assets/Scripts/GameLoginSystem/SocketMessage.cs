@@ -29,6 +29,7 @@ namespace GameLoginSystem
                 case 2:
                     switch (reader.ReadInt32()) {
                         case 1:
+                            CenterMessage centerMessage = JsonMapper.ToObject<CenterMessage>(reader.ReadString());
                             flag = true;
                             break;
                         case 2:
