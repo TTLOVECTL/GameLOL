@@ -13,6 +13,9 @@ namespace GameLoginSystem
     public class LoadGameData : MonoBehaviour
     {
 
+        public static string centerServerIP;
+
+        public static int centerServerPort;
         // Use this for initialization
         void Start()
         {
@@ -122,7 +125,8 @@ namespace GameLoginSystem
                         }
                         PlayerInscriptionPageMessage.InscriptionPageList.Add(inscriptionPageMode._inscriptionPageId, inscriptionPageMode);
                     }
-
+                    Debug.Log(LoadGameData.centerServerIP);
+                    TNet.TNManager.Disconnect();
                     UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
                 }
             }

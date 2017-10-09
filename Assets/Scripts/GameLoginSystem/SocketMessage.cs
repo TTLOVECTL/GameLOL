@@ -5,6 +5,7 @@ using TNet;
 using System.IO;
 using System;
 using LitJson;
+using NetConnection;
 namespace GameLoginSystem
 {
     public class SocketMessage
@@ -30,6 +31,8 @@ namespace GameLoginSystem
                     switch (reader.ReadInt32()) {
                         case 1:
                             CenterMessage centerMessage = JsonMapper.ToObject<CenterMessage>(reader.ReadString());
+                            LoadGameData.centerServerIP = centerMessage.centerServerIp;
+                            LoadGameData.centerServerPort = centerMessage.centerServerPort;
                             flag = true;
                             break;
                         case 2:
