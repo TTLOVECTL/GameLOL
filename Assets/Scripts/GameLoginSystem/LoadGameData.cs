@@ -16,6 +16,8 @@ namespace GameLoginSystem
         public static string centerServerIP;
 
         public static int centerServerPort;
+
+        public static int loginPlayerId;
         // Use this for initialization
         void Start()
         {
@@ -33,7 +35,7 @@ namespace GameLoginSystem
 
         IEnumerator LoadData() {
 
-            WWW www = new WWW("http://60.205.213.83:8080/Gamelol/1.xml");
+            WWW www = new WWW("http://60.205.213.83:8080/Gamelol/"+LoadGameData.loginPlayerId.ToString()+".xml");
             try
             {
                 while (!www.isDone)
@@ -96,37 +98,45 @@ namespace GameLoginSystem
                                 inscriptionPageMode._inscriptionPageName = node.InnerText;
                             else if (node.Name == "BlueInscription")
                             {
-                                InscriptionModel inscriptionModel = new InscriptionModel();
-                                int soitId = int.Parse(((XmlElement)node).GetAttribute("SoitId"));
-                                inscriptionModel._inscriptionColor = InscriptionColor.BLUE;
-                                inscriptionModel._inscriptionID = int.Parse(node.InnerText);
-                                inscriptionModel._inscriptionPosId = soitId;
-                                inscriptionPageMode._inscriptionModelList.Add(inscriptionModel);
+                                if (int.Parse(node.InnerText) != 0)
+                                {
+                                    InscriptionModel inscriptionModel = new InscriptionModel();
+                                    int soitId = int.Parse(((XmlElement)node).GetAttribute("SoitId"));
+                                    inscriptionModel._inscriptionColor = InscriptionColor.BLUE;
+                                    inscriptionModel._inscriptionID = int.Parse(node.InnerText);
+                                    inscriptionModel._inscriptionPosId = soitId;
+                                    inscriptionPageMode._inscriptionModelList.Add(inscriptionModel);
+                                }
                             }
                             else if (node.Name == "RedInscription")
                             {
-                                InscriptionModel inscriptionModel = new InscriptionModel();
-                                int soitId = int.Parse(((XmlElement)node).GetAttribute("SoitId"));
-                                inscriptionModel._inscriptionColor = InscriptionColor.RED;
-                                inscriptionModel._inscriptionID = int.Parse(node.InnerText);
-                                inscriptionModel._inscriptionPosId = soitId;
-                                inscriptionPageMode._inscriptionModelList.Add(inscriptionModel);
-
+                                if (int.Parse(node.InnerText) != 0)
+                                {
+                                    InscriptionModel inscriptionModel = new InscriptionModel();
+                                    int soitId = int.Parse(((XmlElement)node).GetAttribute("SoitId"));
+                                    inscriptionModel._inscriptionColor = InscriptionColor.RED;
+                                    inscriptionModel._inscriptionID = int.Parse(node.InnerText);
+                                    inscriptionModel._inscriptionPosId = soitId;
+                                    inscriptionPageMode._inscriptionModelList.Add(inscriptionModel);
+                                }
                             }
                             else if (node.Name == "GreenInscription")
                             {
-                                InscriptionModel inscriptionModel = new InscriptionModel();
-                                int soitId = int.Parse(((XmlElement)node).GetAttribute("SoitId"));
-                                inscriptionModel._inscriptionColor = InscriptionColor.GREEN;
-                                inscriptionModel._inscriptionID = int.Parse(node.InnerText);
-                                inscriptionModel._inscriptionPosId = soitId;
-                                inscriptionPageMode._inscriptionModelList.Add(inscriptionModel);
+                                if (int.Parse(node.InnerText) != 0)
+                                {
+                                    InscriptionModel inscriptionModel = new InscriptionModel();
+                                    int soitId = int.Parse(((XmlElement)node).GetAttribute("SoitId"));
+                                    inscriptionModel._inscriptionColor = InscriptionColor.GREEN;
+                                    inscriptionModel._inscriptionID = int.Parse(node.InnerText);
+                                    inscriptionModel._inscriptionPosId = soitId;
+                                    inscriptionPageMode._inscriptionModelList.Add(inscriptionModel);
+                                }
                             }
                         }
                         PlayerInscriptionPageMessage.InscriptionPageList.Add(inscriptionPageMode._inscriptionPageId, inscriptionPageMode);
                     }
-                    Debug.Log(LoadGameData.centerServerIP);
-                    TNet.TNManager.Disconnect();
+                    LoginNetWork.Instance.socket.Close();
+                    NetConnection.NetWorkScript a= NetConnection.NetWorkScript.Instance;
                     UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
                 }
             }

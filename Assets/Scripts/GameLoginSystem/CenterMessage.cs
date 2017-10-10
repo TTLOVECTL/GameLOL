@@ -11,6 +11,6 @@ namespace GameLoginSystem
 
             public int centerServerPort;
 
-        
+            public int loginPlayerId;
     }
 }

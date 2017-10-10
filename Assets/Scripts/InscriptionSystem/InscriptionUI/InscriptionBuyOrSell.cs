@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
- 
+using MarketSystem.UI;
 using InscriptionSystem;
 namespace InscriptionSystem.UI
 {
@@ -16,11 +16,13 @@ namespace InscriptionSystem.UI
 
         public List<Text> attibuteList;
 
-        private int inscripptionId;
+        public int inscripptionId;
 
         public Text buyText;
 
         public Text SellText;
+
+        public GameObject buyInscriptionObject;
 
         public void OnSendMessageFromInscriptionButton(InscriptionButton inscriptionButton)
         {
@@ -63,9 +65,12 @@ namespace InscriptionSystem.UI
             SellText.text = text2;
         }
 
+
         public void OnInscriptionBuy()
         {
+            buyInscriptionObject.SetActive(true);
 
+            buyInscriptionObject.SendMessage("OnInitBuyInscriptionMessage", this);
         }
 
         public void OnInscritionSell()

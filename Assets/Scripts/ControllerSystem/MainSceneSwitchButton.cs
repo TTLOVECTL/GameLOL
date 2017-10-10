@@ -7,4 +7,8 @@ public class MainSceneSwitchButton : MonoBehaviour {
     public void OnSwitchInscriptionScene() {
         SceneManager.LoadScene("InscriptionScene");
     }
+
+    public void OnSwitchMarketScene() {
+        SceneManager.LoadScene("MarketScene");
+    }
 }

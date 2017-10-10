@@ -8,15 +8,26 @@ using LitJson;
 using NetConnection;
 namespace GameLoginSystem
 {
-    public class SocketMessage
+    public class SocketMessage:MonoBehaviour
     {
         public static bool flag = false;
 
-        public static void Receive(BinaryReader reader) {
-            int type = reader.ReadInt32();
+        void Update()
+        {
+            while (LoginNetWork.Instance.messageList.Count > 0)
+            {
+                SocketModel model = LoginNetWork.Instance.messageList[0];
+                LoginNetWork.Instance.messageList.RemoveAt(0);
+                StartCoroutine("MessageReceive", model);
+            }
+        }
+
+
+        private void MessageReceive(SocketModel modle) {
+            int type = modle.area;
             switch (type) {
                 case 1:
-                    switch (reader.ReadInt32()) {
+                    switch (modle.command) {
                         case 1:
                             NoticePanelSetting.Instance.loadImagePanel.SetActive(false);
                             NoticePanelSetting.Instance.SettingNoticeMessage("账号注册成功！",3);
@@ -28,11 +39,12 @@ namespace GameLoginSystem
                     }
                     break;
                 case 2:
-                    switch (reader.ReadInt32()) {
+                    switch (modle.command) {
                         case 1:
-                            CenterMessage centerMessage = JsonMapper.ToObject<CenterMessage>(reader.ReadString());
+                            CenterMessage centerMessage = JsonMapper.ToObject<CenterMessage>(modle.getMessage<string>());
                             LoadGameData.centerServerIP = centerMessage.centerServerIp;
                             LoadGameData.centerServerPort = centerMessage.centerServerPort;
+                            LoadGameData.loginPlayerId = centerMessage.loginPlayerId;
                             flag = true;
                             break;
                         case 2:

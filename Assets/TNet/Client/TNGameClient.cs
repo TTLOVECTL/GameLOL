@@ -1380,7 +1380,7 @@ public class GameClient : TNEvents
                     }
                 case Packet.SelfClientPacket:
                     {
-                        SocketMessage.Receive(reader);
+                        //SocketMessage.Receive(reader);
                         break;
                     }
             }

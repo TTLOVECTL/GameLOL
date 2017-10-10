@@ -28,7 +28,7 @@ namespace NetConnection
         // Update is called once per frame
         void Update()
         {
-            if (NetWorkScript.Instance.messageList.Count > 0)
+            while (NetWorkScript.Instance.messageList.Count > 0)
             {
                 SocketModel model = NetWorkScript.Instance.messageList[0];
                 NetWorkScript.Instance.messageList.RemoveAt(0);

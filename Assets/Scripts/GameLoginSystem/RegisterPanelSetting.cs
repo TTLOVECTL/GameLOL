@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using LitJson;
 namespace GameLoginSystem
 {
     public class RegisterPanelSetting : MonoBehaviour
@@ -49,7 +50,7 @@ namespace GameLoginSystem
                  LoginMessage loginMessage = new LoginMessage();
                  loginMessage.account = int.Parse(accountFiled.text);
                  loginMessage.password = firstPasswordField.text;
-                 SocketMessage.Send<LoginMessage>(loginMessage, 1);
+                 LoginNetWork.Instance.write(2, 1, 0, JsonMapper.ToJson(loginMessage));
                  loadImagePanel.SetActive(true);
             }
         }

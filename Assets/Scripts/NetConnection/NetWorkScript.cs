@@ -22,15 +22,17 @@ namespace NetConnection
 
         public List<SocketModel> messageList = new List<SocketModel>();
 
-        private Socket socket;
+        public Socket socket;
 
         private List<byte> cache = new List<byte>();
+
+        private static bool isInit = true;
 
         public static NetWorkScript Instance
         {
             get
             {
-                if (instance == null)
+                if (instance == null||!isInit)
                 {
                     instance = new NetWorkScript();
                     instance.init();
@@ -47,10 +49,12 @@ namespace NetConnection
                 socket.Connect(LoadGameData.centerServerIP, LoadGameData.centerServerPort);
                 socket.BeginReceive(readBuff, 0, 1024, SocketFlags.None, ReceiveCallBack, readBuff);
                 Debug.Log("连接服务器成功");
+                isInit = true;
             }
             catch (Exception e)
             {
                 Debug.Log("连接服务器失败" + e.Message);
+                isInit = false;
             }
         }
 

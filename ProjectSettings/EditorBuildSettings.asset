@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ManMachineScene.unity
     guid: 9908273a8257c9043b02936d586621d3
+  - enabled: 1
+    path: Assets/Scenes/MarketScene.unity
+    guid: 16d412a223c00ea4186c7cb2695ac7f6

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using InscriptionSystem;
-
+using DataSystem;
 namespace InscriptionSystem.UI
 {
     /// <summary>
@@ -70,6 +70,11 @@ namespace InscriptionSystem.UI
         /// </summary>
         private float buttonheight;
 
+        /// <summary>
+        /// 购买和销售界面
+        /// </summary>
+        public GameObject buyOrSellPanel;
+
         void Start()
         {
             _inscriptionList = XmlDataRead.inscriptionList;
@@ -80,6 +85,7 @@ namespace InscriptionSystem.UI
             buttonheight = buttonwidth / 2;
             typeButtonImage[0].sprite = yellowTyprImage;
             ChooseDeal();
+            
         }
 
         /// <summary>
@@ -89,6 +95,7 @@ namespace InscriptionSystem.UI
         public void OnChooseLevelButton(int level) {
             inscriptionLevel = level;
             ChooseDeal();
+            
         }
 
         /// <summary>
@@ -146,7 +153,15 @@ namespace InscriptionSystem.UI
                         inscriptionButton.level = inscription._inscriptionLevel;
                         inscriptionButton.inscriptionName.text = inscription.inscriptionLevel.ToString()+"级铭文："+inscription.inscriptionName;
                         inscriptionButton.inscriptionSprite.sprite = inscription._inscriptionIcon;
-                        inscriptionButton.otherJieShao.text = "未获得";
+                        if (PlayerInscriptionMessage.InscriptionList.ContainsKey(inscription.inscriptionID))
+                        {
+                            inscriptionButton.otherJieShao.text = "X" + PlayerInscriptionMessage.InscriptionList[inscription.inscriptionID].inscriptionNumber;
+                        }
+                        else
+                        {
+                            inscriptionButton.otherJieShao.text = "未获得";
+                        }
+                        inscriptionButton.inscriptionbuy = buyOrSellPanel;
                         int temp = 0;
                         foreach (InscriptionAttribute item in inscription.inscriptionAttribute) {
                             string value = "";
@@ -164,9 +179,6 @@ namespace InscriptionSystem.UI
                 }
             }
             
-           
-
-
         }
 
         /// <summary>
@@ -176,7 +188,7 @@ namespace InscriptionSystem.UI
         private List<Inscription> GetInScription() {
             List<Inscription> list = new List<Inscription>();
             foreach (Inscription insc in _inscriptionList) {
-                if ((insc.inscriptionLevel == inscriptionLevel)&& IsLookInscription(insc)){
+                if ((insc.inscriptionLevel == inscriptionLevel) && IsLookInscription(insc)){
                     list.Add(insc);
                 }
             }

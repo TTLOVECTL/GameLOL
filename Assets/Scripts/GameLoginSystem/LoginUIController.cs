@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TNet;
+
 namespace GameLoginSystem {
     public class LoginUIController : MonoBehaviour {
 
@@ -18,10 +18,6 @@ namespace GameLoginSystem {
         public int port;
         // Use this for initialization
         void Start() {
-           // Debug.Log(TNManager.isConnected);
-            if (TNManager.isConnected == false) {
-                TNManager.Connect(ipAddress, port);
-            }
         }
 
         // Update is called once per frame
@@ -31,7 +27,7 @@ namespace GameLoginSystem {
 
         public void OnLoginButtonEntry() {
             MainPanel.SetActive(false);
-            if (TNManager.isConnected == false) {
+            if (LoginNetWork.Instance.socket.Connected == false) {
                 NoticePanelSetting.Instance.SettingNoticeMessage("网络断开连接中！",3);
                 return;
             }
@@ -41,7 +37,7 @@ namespace GameLoginSystem {
 
         public void OnRegisterButtonEntry() {
             MainPanel.SetActive(false);
-            if(TNManager.isConnected == false) {
+            if(LoginNetWork.Instance.socket.Connected == false) {
                 NoticePanelSetting.Instance.SettingNoticeMessage("网络断开连接中！", 3);
                 return;
             }

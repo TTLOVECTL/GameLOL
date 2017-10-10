@@ -19,7 +19,7 @@ namespace InscriptionSystem.UI
 
         private void Start()
         {
-            inscriptionbuy = SwitchUI.Instcne.inscriptinBuy;
+            //inscriptionbuy = SwitchUI.Instcne.inscriptinBuy;
         }
 
         public void OnSearchInscription()

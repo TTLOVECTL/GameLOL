@@ -84,7 +84,7 @@ namespace InscriptionSystem.UI
                         if (inscriptionPage.redInscription.ContainsKey(inscriptionButtonList[i].slotId))
                         {
                             inscrptionCh = inscriptionPage.redInscription[inscriptionButtonList[i].slotId];
-                        }                  
+                        }
                         break;
                 }
                 if (inscrptionCh != null)

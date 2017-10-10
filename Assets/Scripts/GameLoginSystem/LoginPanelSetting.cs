@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using LitJson;
 
 namespace GameLoginSystem
 {
@@ -41,7 +42,7 @@ namespace GameLoginSystem
                 LoginMessage loginMessage = new LoginMessage();
                 loginMessage.account = int.Parse(accountField.text);
                 loginMessage.password = passwordField.text;
-                SocketMessage.Send<LoginMessage>(loginMessage, 2);
+                LoginNetWork.Instance.write(2,2,0, JsonMapper.ToJson(loginMessage));
                 loadImagePanel.SetActive(true);
             }
         }
